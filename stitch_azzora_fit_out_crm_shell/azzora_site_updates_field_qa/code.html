@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed":"#291800","on-secondary-container":"#785e3b","on-tertiary-container":"#b6dcbf","tertiary-fixed-dim":"#aacfb3","surface-container-lowest":"#ffffff","error":"#ba1a1a","surface-container-high":"#ece7e5","primary-container":"#9a3c25","on-background":"#1c1b1a","surface-variant":"#e6e2df","tertiary-fixed":"#c6ecce","inverse-primary":"#ffb4a2","on-surface-variant":"#56423d","secondary-fixed-dim":"#e3c197","primary-fixed":"#ffdad2","outline":"#89726c","on-secondary":"#ffffff","surface-tint":"#a04029","background":"#fdf8f6","secondary-fixed":"#ffddb4","surface-dim":"#ddd9d7","on-tertiary-fixed-variant":"#2d4e38","primary-fixed-dim":"#ffb4a2","on-tertiary-fixed":"#00210f","surface-bright":"#fdf8f6","surface-container-low":"#f7f3f0","on-primary":"#ffffff","tertiary":"#294a34","inverse-surface":"#31302f","tertiary-container":"#40624b","on-primary-fixed-variant":"#802914","on-surface":"#1c1b1a","on-primary-fixed":"#3c0700","inverse-on-surface":"#f4f0ee","on-error":"#ffffff","outline-variant":"#ddc0ba","secondary":"#745a37","surface":"#fdf8f6","on-tertiary":"#ffffff","surface-container":"#f2edeb","secondary-container":"#fedaae","on-secondary-fixed-variant":"#5a4222","surface-container-highest":"#e6e2df","primary":"#7b2510","error-container":"#ffdad6","on-primary-container":"#ffc4b6","on-error-container":"#93000a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2.5rem","gutter-mobile":"1rem","space-lg":"1.5rem","gutter":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-xl":"2.5rem","margin-mobile":"1.25rem","space-md":"1rem"},"fontFamily":{"display-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"label-md":["Space Grotesk"],"body-sm":["Inter"],"body-lg":["Inter"],"label-sm":["Space Grotesk"],"label-lg":["Space Grotesk"],"display-lg":["Space Grotesk"],"headline-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"headline-lg-mobile":["Space Grotesk"]},"fontSize":{"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-lg"><div class="px-space-lg flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="w-3 h-3 bg-primary-container rounded-DEFAULT"></span><span class="font-label-lg text-label-lg tracking-widest uppercase text-on-surface">AZZORA</span></div><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">design · build · fit-out</span></div><nav class="flex flex-col gap-space-xs px-space-md" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-lg">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-lg">apartment</span>Projects</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="planning-&amp;-gantt" href="#"><span class="material-symbols-outlined text-lg">calendar_month</span>Planning &amp; Gantt</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tasks" href="#"><span class="material-symbols-outlined text-lg">check_circle</span>Tasks</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm uppercase tracking-wider transition-colors bg-primary-container text-on-primary font-label-lg rounded-lg" data-path="site-updates" href="#"><span class="material-symbols-outlined text-lg">construction</span>Site Updates</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="team-&amp;-workload" href="#"><span class="material-symbols-outlined text-lg">group</span>Team &amp; Workload</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="documents" href="#"><span class="material-symbols-outlined text-lg">description</span>Documents</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="snags-&amp;-qa" href="#"><span class="material-symbols-outlined text-lg">rule</span>Snags &amp; QA</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-lg">settings</span>Settings</a></nav></div><div class="px-space-md"><div class="bg-surface-container p-space-md rounded-lg flex flex-col gap-space-xs"><span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Contract Standard</span><span class="font-body-sm text-body-sm text-on-surface">FIDIC Silver Book · UAE</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-space-xs rounded-lg"><span class="material-symbols-outlined text-base text-primary">location_city</span><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface">Downtown Corporate Office</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">AZ-026</span></div><span class="material-symbols-outlined text-sm text-on-surface-variant">unfold_more</span></div><div class="flex items-center gap-space-xs bg-secondary-container/40 px-space-sm py-space-xs rounded-DEFAULT text-on-secondary-container"><span class="material-symbols-outlined text-xs">pin_drop</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Downtown Dubai</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-xs w-64"><span class="material-symbols-outlined text-base text-on-surface-variant mr-space-xs">search</span><input class="bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline w-full" placeholder="Search drawings, tasks, snags..." type="text"/></div><div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-base">notifications</span><span class="absolute top-1 right-1 w-2 h-2 rounded-full bg-primary"></span></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/><div class="flex flex-col"><span class="font-label-md text-label-md text-on-surface leading-tight">T. Al-Mansoor</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Managing Director</span></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-background"><div class="flex flex-col w-full">
+<!-- TOP CONTEXT BAR & BREADCRUMBS -->
+<section class="px-margin pt-space-md pb-space-lg">
+<!-- Breadcrumb & Top Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider">
+<span class="hover:text-on-surface transition-colors cursor-pointer">Projects</span>
+<span class="text-outline">/</span>
+<span class="text-on-surface font-semibold">AZ-026 Downtown Corporate Office</span>
+<span class="text-outline">/</span>
+<span class="text-primary-container font-semibold">Site Updates &amp; QA</span>
+</div>
+<!-- Header CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-colors px-space-md py-space-xs rounded-lg flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">file_download</span>
+<span>Export Weekly Report</span>
+</button>
+<button class="bg-surface-container-lowest text-on-surface shadow-sm hover:bg-surface-container-high transition-colors px-space-md py-space-xs rounded-lg flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">add_a_photo</span>
+<span>Upload Photos</span>
+</button>
+<button class="bg-surface-container-lowest text-error shadow-sm hover:bg-error-container hover:text-on-error-container transition-colors px-space-md py-space-xs rounded-lg flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">report_problem</span>
+<span>Log Snag</span>
+</button>
+<button class="bg-primary-container text-on-primary hover:bg-primary transition-colors px-space-md py-space-xs rounded-lg shadow-sm flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">edit_calendar</span>
+<span>+ New Daily Log</span>
+</button>
+</div>
+</div>
+<!-- Main Title & Operational Pill -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md pt-space-xs">
+<div>
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="bg-primary/10 text-primary px-space-sm py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider font-semibold">Phase: Execution (Day 48 / 90)</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-space-sm py-0.5 rounded font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Live Field Shift
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Field Daily Log &amp; Quality Assurance</h1>
+</div>
+<!-- Weather & Live Manpower Badge -->
+<div class="flex items-center gap-space-md bg-surface-container-lowest shadow-sm rounded-xl px-space-md py-space-sm">
+<div class="flex items-center gap-space-xs pr-space-md">
+<span class="material-symbols-outlined text-secondary text-xl">wb_sunny</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Downtown Site Microclimate</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Dubai 34°C • Clear &amp; Dry</span>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-high"></div>
+<div class="flex items-center gap-space-xs pl-space-xs">
+<span class="material-symbols-outlined text-primary-container text-xl">badge</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Biometric Turnstile</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">21 Personnel On-Site</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI SUMMARY ROW (Architectural Stone Panels) -->
+<section class="px-margin pb-space-lg grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- KPI 1: Overall Progress -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Overall Project</span>
+<span class="material-symbols-outlined text-primary-container text-base">donut_large</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface leading-none font-semibold">68<span class="text-headline-md text-on-surface-variant font-normal">%</span></span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/60 px-space-xs py-0.5 rounded">ON TRACK</span>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<!-- KPI 2: Execution Phase -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Execution Phase</span>
+<span class="material-symbols-outlined text-secondary text-base">trending_up</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface leading-none font-semibold">55<span class="text-headline-md text-on-surface-variant font-normal">%</span></span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center font-semibold">+3% this wk</span>
+</div>
+<div class="w-full bg-surface-container mt-space-md h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+<!-- KPI 3: Total Manpower -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Manpower</span>
+<span class="material-symbols-outlined text-primary text-base">groups</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface leading-none font-semibold">21</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 Disciplines</span>
+</div>
+<div class="flex items-center gap-1 mt-space-md font-label-sm text-[10px] text-on-surface-variant truncate">
+<span>MEP: 6</span> • <span>Joinery: 5</span> • <span>Civil: 4</span> • <span>Ceiling: 4</span>
+</div>
+</div>
+<!-- KPI 4: Tasks Completed Today -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Milestones Today</span>
+<span class="material-symbols-outlined text-tertiary text-base">task_alt</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface leading-none font-semibold">04</span>
+<span class="font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/60 px-space-xs py-0.5 rounded">All Cleared</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md truncate">MEP hydrotest, Boardroom studs</p>
+</div>
+<!-- KPI 5: Active Snags -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Open Defects (QA)</span>
+<span class="material-symbols-outlined text-primary-container text-base">warning</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-primary-container leading-none font-semibold">03</span>
+<span class="font-label-sm text-label-sm text-primary-container bg-error-container/60 px-space-xs py-0.5 rounded font-semibold">1 Critical</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-md truncate">2 Minor non-compliances</p>
+</div>
+</section>
+<!-- TWO-COLUMN WORKSPACE: 65% LEFT (Logs, Trades, Photos) / 35% RIGHT (Snags & Live Drawer) -->
+<section class="px-margin pb-space-xl grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN (8 Columns = 66.6%) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg min-w-0">
+<!-- A. DAILY SUPERVISOR SITE UPDATE FORM & LOG FEED -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg relative overflow-hidden">
+<!-- Card Architectural Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-7 bg-primary-container rounded-sm"></div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Daily Execution Diary</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Site Supervisor Daily Log #DL-048</h2>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Today: 10 Oct 2024</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Day Shift (07:00 – 17:00)</span>
+</div>
+</div>
+<!-- Supervisor Form / Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-space-sm">
+<!-- Box 1: Work Completed -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-tertiary mb-space-xs">
+<span class="material-symbols-outlined text-base">check_circle</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Work Completed (Shift)</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface space-y-1.5 list-disc list-inside">
+<li>Completed MEP 1st fix pressure testing in Sector B (6.5 bar sign-off).</li>
+<li>Gypsum perimeter framing finalized in Executive Boardroom.</li>
+<li>Acoustic mineral batt (60kg/m³) installed inside partition cavities.</li>
+</ul>
+</div>
+<span class="font-label-sm text-[10px] text-tertiary uppercase tracking-wider font-semibold mt-space-sm pt-space-xs bg-tertiary-fixed/40 px-space-xs py-0.5 rounded w-fit">Inspection Cleared by QA</span>
+</div>
+<!-- Box 2: Work in Progress -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-secondary mb-space-xs">
+<span class="material-symbols-outlined text-base">hourglass_top</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Work in Progress</span>
+</div>
+<ul class="font-body-sm text-body-sm text-on-surface space-y-1.5 list-disc list-inside">
+<li>Ceiling grid suspension hangers installation across Open Workspace (45% done).</li>
+<li>Marble vanity reinforced sub-base prep in Restrooms &amp; VIP en-suite.</li>
+<li>Primary FCU ductwork thermal insulation lagging with vapor seal.</li>
+</ul>
+</div>
+<span class="font-label-sm text-[10px] text-on-secondary-container uppercase tracking-wider font-semibold mt-space-sm pt-space-xs bg-secondary-container/50 px-space-xs py-0.5 rounded w-fit">Active Shift Crew Working</span>
+</div>
+<!-- Box 3: Delay & Mitigation Note -->
+<div class="bg-surface-container-low p-space-md rounded-lg md:col-span-2">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-space-xs text-primary-container">
+<span class="material-symbols-outlined text-base">notification_important</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Site Deviation &amp; Supply Chain Mitigation</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary-container font-semibold bg-error-container/60 px-space-xs rounded">Supply Variance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<strong class="font-semibold text-on-surface">Chilled Water Riser Valve:</strong> Supplier delayed delivery by 24h due to customs clearance at JAFZA. Re-routed 4 MEP pipefitters to secondary condensate drain runs and tertiary branch balancing without halting critical path activities.
+            </p>
+</div>
+<!-- Box 4: Tomorrow's Scheduled Program -->
+<div class="bg-surface-container-low p-space-md rounded-lg md:col-span-2">
+<div class="flex items-center gap-space-xs text-on-surface mb-space-xs">
+<span class="material-symbols-outlined text-base text-outline">next_plan</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-semibold">Tomorrow's Lookahead Schedule (11 Oct 2024)</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm font-body-sm text-body-sm text-on-surface pt-space-xs">
+<div class="bg-surface-container-lowest p-space-xs rounded px-space-sm shadow-sm">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Ceiling Trade</span>
+                Drop-in acoustic tiles delivery in Sector A
+              </div>
+<div class="bg-surface-container-lowest p-space-xs rounded px-space-sm shadow-sm">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">MEP Trade</span>
+                Finalize VAV branch flex couplings &amp; dampers
+              </div>
+<div class="bg-surface-container-lowest p-space-xs rounded px-space-sm shadow-sm">
+<span class="font-label-sm text-[10px] text-on-surface-variant block uppercase">Flooring Trade</span>
+                Pour high-build resin primer for terrazzo screed
+              </div>
+</div>
+</div>
+</div>
+<!-- Footer Verification Strip -->
+<div class="mt-space-md pt-space-md bg-surface-container rounded-lg p-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-primary-container/10 flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-base">verified</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider block">Official Sign-Off</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">Verified by Riyas K. (Resident Site Engineer) • Arun P. (QA Lead)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Turnstile Gate 1:</span>
+<span class="font-label-md text-label-md bg-surface-container-lowest px-space-sm py-0.5 rounded text-on-surface shadow-sm font-semibold">21 Logged &amp; Geofenced</span>
+</div>
+</div>
+</div>
+<!-- B. SITE PROGRESS BY TRADE (Architectural Breakdown) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex items-center justify-between pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-7 bg-secondary rounded-sm"></div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Trade Breakdown &amp; Foremen</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Subcontractor Trade Progress Matrix</h2>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-space-sm py-space-xs rounded">Updated 2h ago</span>
+</div>
+<div class="space-y-space-md pt-space-xs">
+<!-- Trade 1: Civil -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Civil &amp; Masonry</span>
+<span class="font-label-sm text-[10px] text-tertiary bg-tertiary-fixed/60 px-space-xs py-0.5 rounded font-semibold uppercase">Completed • Passed Sign-off</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Rashid M.</span>
+<span class="text-on-surface font-semibold">100%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+<!-- Trade 2: MEP -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">MEP Services</span>
+<span class="font-label-sm text-[10px] text-secondary bg-secondary-container/60 px-space-xs py-0.5 rounded font-semibold uppercase">6 Technicians Active</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Sundaram K.</span>
+<span class="text-on-surface font-semibold">72%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Trade 3: Ceiling -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Ceiling &amp; Drywall</span>
+<span class="font-label-sm text-[10px] text-secondary bg-secondary-container/60 px-space-xs py-0.5 rounded font-semibold uppercase">Bulkhead Framing Phase</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Bilal H.</span>
+<span class="text-on-surface font-semibold">65%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Trade 4: Joinery -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Architectural Joinery</span>
+<span class="font-label-sm text-[10px] text-tertiary bg-tertiary-fixed/60 px-space-xs py-0.5 rounded font-semibold uppercase">Mock-up Approved</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Al-Sayed W.</span>
+<span class="text-on-surface font-semibold">55%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 55%;"></div>
+</div>
+</div>
+<!-- Trade 5: Flooring -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Flooring &amp; Terrazzo</span>
+<span class="font-label-sm text-[10px] text-secondary bg-secondary-container/60 px-space-xs py-0.5 rounded font-semibold uppercase">Acoustic Underlay Laid</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Qasim N.</span>
+<span class="text-on-surface font-semibold">40%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Trade 6: Painting & Finishes -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Painting &amp; Coatings</span>
+<span class="font-label-sm text-[10px] text-primary-container bg-error-container/60 px-space-xs py-0.5 rounded font-semibold uppercase">Meeting Suites Primer</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Tariq M.</span>
+<span class="text-on-surface font-semibold">20%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-dim h-full rounded-full" style="width: 20%;"></div>
+</div>
+</div>
+<!-- Trade 7: Architectural Lighting -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-md text-label-md text-on-surface font-semibold uppercase tracking-wider">Architectural Lighting</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded font-semibold uppercase">Conduits In Place • Stock In Store</span>
+</div>
+<div class="flex items-center gap-space-md font-label-md text-label-md">
+<span class="text-on-surface-variant">Foreman: Deepak R.</span>
+<span class="text-on-surface font-semibold">10%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-surface-dim h-full rounded-full" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- C. RECENT SITE PHOTOGRAPHS (Tactile Architectural Gallery) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-2.5 h-7 bg-primary-container rounded-sm"></div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Visual Evidence Vault</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Field Photography &amp; Inspections</h2>
+</div>
+</div>
+<!-- Tag Filter Tabs -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg overflow-x-auto">
+<button class="bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors font-semibold">All (18)</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors">Before (3)</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors">Progress (8)</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors">Completed (4)</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors">Issue (2)</button>
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm uppercase px-space-sm py-1 rounded transition-colors">Inspection (1)</button>
+</div>
+</div>
+<!-- Masonry / Responsive Photo Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-md pt-space-xs">
+<!-- Photo 1: Progress -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural photograph of a luxury corporate boardroom fit-out under construction in Dubai with acoustic wall framing studs, ceiling suspension channels, warm spotlighting, high ceilings, clean concrete floor, professional site environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYgnxdS77obZdXv63m2556AJdcwntD7f1jnOwzxarXhP6uUGUfbyCmytXrNtJOQEyQKoLkZGJuZQxv0kQOwov7AKcfyqrDEnm4peJHU2MO2D7IAQkBUhrurH4s0lBXzrALlzYvRvgbJ12UV_VYXnj5vM4VxgYpJayVGlxwFIoq2PgsmkFYGmydFxnmk8zORULcZLbnoegti3oO2ggsBHRXGKSLHCm26JSNbs3n4Q"/>
+<span class="absolute top-2 left-2 bg-secondary/90 text-on-secondary backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold">Progress</span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">10:15 AM</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-1">Boardroom Acoustic Framing &amp; Ceiling Suspension</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">Executive Boardroom (Zone B)</span>
+</div>
+</div>
+<!-- Photo 2: Inspection -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Close-up engineering photograph of industrial MEP copper and chilled water pipeline pressure gauge testing in Dubai corporate building fit-out, indicating 6.5 bar reading with inspection inspection tag and brass manifold fittings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4slxQh86mxH2-HKuqOBYUZbfX2rjsP92pbudqxxkix3lRozo4GsdbV5EANGNwDZeGH_JQMz3V0GOGYA-KDQIoReWZKnP3IvLYhVCODDZcTmnC_Zrf9q4GJ-Stmlqg0RPkQlV6smLJAbGBeMUjZCj3gf4EsphxO1DKduxB9wlf5KtUKA9Yb_fJaRd1xyfQTW4td8Xt1S4nZRNIRLX3_SZrW4QFJ-oLh1TDwx2Qgw"/>
+<span class="absolute top-2 left-2 bg-tertiary/90 text-on-tertiary backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold">Inspection Sign-off</span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">11:30 AM</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-1">Chilled Water Pipe Hydro-test (6.5 Bar Cleared)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">MEP Riser Shaft North</span>
+</div>
+</div>
+<!-- Photo 3: Issue (Snag linked) -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col ring-2 ring-primary-container/20">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Quality control inspection photograph focusing on uneven paint texture and orange peel roller marks near door frame jamb in a high-end luxury office, illuminated with harsh raking inspection light to reveal micro defects." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD83n0K4ZIGanr-_6cewf3fGJZ6O0ywFoFIM8x-pgTVdVwTx2sWxExVTyZg7g_4SHSz9mFNnozjYZsCJA4sgqxChUhkJ-sEDJAhmB05kVLLYuF4vMVwACvCgQe4QXXqJA5WimlPHmfsvKHfTLNMKIG5pB4Gy5qZqD_Q8JuUo8fvIIM-OrFPUvGDn_9Sjc8EMqzdPYNZTRpxcNebrRg7h033D09Q_VUS5Fecq2p83w"/>
+<span class="absolute top-2 left-2 bg-error text-on-error backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span> Issue (SN-018)
+              </span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">09:45 AM</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-primary-container line-clamp-1">Paint Blemish &amp; Uneven Plaster at Door Jamb</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">Meeting Room 02 Entrance</span>
+</div>
+</div>
+<!-- Photo 4: Completed -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Architectural photograph of polished book-matched Italian marble slabs dry-laid on restroom floor in high-end Dubai executive office, precision joints, calacatta gold veining, warm ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCunC75vhDospvAI-y08rUnC9xnmYmD3VqDPBPYsVsc43HGwXnSuV51KW0JdXvtqSz73XlVgW0b83vql0PxnNpVUoy1KrR0OhSTuhJIpZfWOUhx0KKf-s_OTBMaVS2dBVpg2T_u9Id6LXU7gjxTIk9AB3OEjor02owJKqtcKFNc7wlO13rutQMrZaDwqSfcj54YnorDRA0z7z2OXE912hBW_GD-mekKFJN1Mury1g"/>
+<span class="absolute top-2 left-2 bg-tertiary/90 text-on-tertiary backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold">Completed</span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">08:30 AM</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-1">Italian Porcelain Slab Dry Lay Inspection</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">Executive Restrooms</span>
+</div>
+</div>
+<!-- Photo 5: Progress -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="High-end architectural joinery installation in progress showing vertical fluted white oak timber wall panels, concealed recessed aluminum reveals, precise alignments in luxury corporate suite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo8AiXP1Lyl6ksgC5QHkDd6XG_E11h9HSsYB-l_qgaUx7Cj0jHX_MfzBYSurpqKkSxnSB1rSvN5LP5yVqq36qJlnm1YqSJhylS3lvrQm81N7kvb2Q3g9nWuDanUPnj-d6KW4o5g8fnIBYouwnSds4t-tZTIez_HStNywJEgHBFGBK_j_CkXDQOqPtirWC4zOmn3jLoYHsdA2TyPZ6HVmdo72vK7L13XRBCeB8C7g"/>
+<span class="absolute top-2 left-2 bg-secondary/90 text-on-secondary backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold">Progress</span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">Yesterday</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-1">Fluted Oak Panelling Alignment Mock-up</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">Managing Director Suite</span>
+</div>
+</div>
+<!-- Photo 6: Before -->
+<div class="bg-surface-container-low rounded-lg overflow-hidden group shadow-sm hover:shadow-md transition-all flex flex-col">
+<div class="relative h-44 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Construction site photograph of raw core and shell commercial space handover in Dubai with exposed concrete columns, high slab ceilings, perimeter curtain wall glazing overlooking Burj Khalifa before fit-out." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5NYOoBxzofzvQspHX5mynMSKVz7noqh_uR3oIcMokNom9WUVytNrhYCtZLUVMkDuSD5_hD6S4n_Y3w_2azS-TC26vNl-DgtXMbgw-967VG4w3_b5hxHfzWqJIq2a7OYlpBPht4QiuuO3KlOJNTLb9H9G5Z4TMb_w_VurnSrSf3hgCHdWZBkkqeA2tQrIX-gaIzhjs17sU2k7ybTXwsYI6l7q6j9kJaxM7_3qptw"/>
+<span class="absolute top-2 left-2 bg-surface-variant text-on-surface-variant backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px] uppercase font-semibold">Base Handover</span>
+<span class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface backdrop-blur-md px-space-xs py-0.5 rounded font-label-sm text-[10px]">15 Sep</span>
+</div>
+<div class="p-space-sm flex flex-col justify-between flex-1">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface line-clamp-1">Base Build Handover — Raw Slab Condition</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant pt-1">Full Floorplate AZ-026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (4 Columns = 33.3%) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg min-w-0">
+<!-- D. SNAGS & QA REGISTER (Interactive Table / List) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg flex flex-col">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary-container text-xl">fact_check</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Snags &amp; QA Log</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">7 Total</span>
+</div>
+<!-- Filter Tab Pill -->
+<div class="flex items-center gap-1 bg-surface-container p-1 rounded-lg my-space-sm">
+<button class="flex-1 bg-surface-container-lowest text-on-surface text-center py-1 rounded font-label-sm text-label-sm uppercase font-semibold shadow-sm">All (7)</button>
+<button class="flex-1 text-on-surface-variant hover:text-on-surface text-center py-1 rounded font-label-sm text-label-sm uppercase font-semibold">Open (3)</button>
+<button class="flex-1 text-on-surface-variant hover:text-on-surface text-center py-1 rounded font-label-sm text-label-sm uppercase font-semibold">Rectify (2)</button>
+<button class="flex-1 text-on-surface-variant hover:text-on-surface text-center py-1 rounded font-label-sm text-label-sm uppercase font-semibold">Closed (2)</button>
+</div>
+<!-- Snag List Items -->
+<div class="flex flex-col gap-space-sm mt-space-xs">
+<!-- ITEM 1 (Active Selected: SN-018) -->
+<div class="bg-surface-container-low p-space-md rounded-lg shadow-sm border-l-4 border-primary-container cursor-pointer transition-all">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-primary-container">SN-018</span>
+<span class="bg-error-container text-on-error-container font-label-sm text-[10px] px-space-xs py-0.5 rounded font-semibold uppercase">Open • High Priority</span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface">Paint finish uneven near entrance jamb</h3>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Mtg Room 02</span>
+<span>Al Sahel Finishes</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="text-error font-semibold">Due: Today (10 Oct)</span>
+<span class="text-primary-container font-semibold flex items-center gap-0.5">Active Drawer <span class="material-symbols-outlined text-xs">arrow_forward</span></span>
+</div>
+</div>
+<!-- ITEM 2: SN-017 -->
+<div class="bg-surface-container p-space-md rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">SN-017</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-[10px] px-space-xs py-0.5 rounded font-semibold uppercase">In Rectification</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface">Acoustic seal gap at glass partition header</h3>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Executive Boardroom</span>
+<span>Glazing Specialist</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Due: 12 Oct 2024</span>
+<span>Logged by Arun P.</span>
+</div>
+</div>
+<!-- ITEM 3: SN-016 -->
+<div class="bg-surface-container p-space-md rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-on-surface">SN-016</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] px-space-xs py-0.5 rounded font-semibold uppercase">Ready For Inspection</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface">AC diffuser linear slot misaligned by 12mm</h3>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Pantry Corridor</span>
+<span>MEP Crew (Sundaram)</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Due: 14 Oct 2024</span>
+<span>Fix uploaded</span>
+</div>
+</div>
+<!-- ITEM 4: SN-015 -->
+<div class="bg-surface-container p-space-md rounded-lg opacity-75 hover:opacity-100 transition-opacity cursor-pointer">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-md text-label-md font-semibold text-outline line-through">SN-015</span>
+<span class="bg-surface-variant text-on-surface-variant font-label-sm text-[10px] px-space-xs py-0.5 rounded font-semibold uppercase">Closed &amp; Approved</span>
+</div>
+<h3 class="font-body-md text-body-md text-on-surface line-through">Terrazzo corner edge chip repaired</h3>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Reception Lobby</span>
+<span>Flooring Subcon</span>
+</div>
+<div class="flex items-center justify-between pt-1 text-on-surface-variant font-label-sm text-label-sm">
+<span>Resolved: 08 Oct</span>
+<span class="text-tertiary font-semibold">Sign-off Riyas K.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- E. DETAIL DRAWER / INSPECTION FLYOUT (Docked Precision Card for SN-018) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md border-t-4 border-primary-container">
+<!-- Drawer Header -->
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-primary-container uppercase font-semibold">Defect Inspector</span>
+<span class="text-outline">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">FIDIC Silver Quality Protocol</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface pt-0.5">Snag Detail — SN-018</h3>
+</div>
+<span class="bg-error-container text-on-error-container font-label-sm text-label-sm px-space-sm py-0.5 rounded font-semibold uppercase">Open</span>
+</div>
+<!-- Metadata Attributes List -->
+<div class="bg-surface-container-low p-space-md rounded-lg grid grid-cols-2 gap-space-sm font-body-sm text-body-sm">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase block">Area Location</span>
+<span class="font-semibold text-on-surface">Mtg Room 02 (North Wall)</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase block">Priority Level</span>
+<span class="font-semibold text-primary">High (Client Viewpoint)</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase block">Contractor Party</span>
+<span class="font-semibold text-on-surface">Apex Finishes LLC / Al Sahel</span>
+</div>
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase block">Target Clearance</span>
+<span class="font-semibold text-error">Today, 10 Oct (17:00)</span>
+</div>
+</div>
+<!-- Description -->
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1">Issue Description</span>
+<p class="font-body-sm text-body-sm text-on-surface bg-surface-container-low p-space-sm rounded">
+            Paint finish uneven near entrance jamb. Slight orange-peel texture and roller marks visible under 4000K inspection floodlight. Requires sanding, fine feather skimming, and 2-coat repainting.
+          </p>
+</div>
+<!-- Side-by-Side Visual Comparison Proof -->
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-space-xs">Photographic Evidence</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Issue Photo with Callout Marker -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-primary-container font-semibold uppercase">Reported Issue</span>
+<div class="relative h-28 rounded-lg overflow-hidden shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Macro inspection photograph of drywall plaster surface showing uneven roller texture marks and paint stipple defect near luxury bronze door frame, warm architectural tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx1Y6jWPNCL5KGenWelnB-U-0W8XK9ghAaYZ9ebA4-xFHCpUa4pC8E65wCSvD7RsChPI_3sWS6FFR5WmqbJm6P3z9WuJ5b4K80jSPLpVl3MYvzswdEU7XJPM9LN9DMBeWtZ4w26qhw3dNxSqVTaRKKUOQW0JRzSXBBCdCq0hegdEw9ArBO3UJE56_VBpV8RCkz5nmk-B-2iIXSMVVqXkCohO9Q7pH5cmD1ZV_PFQ"/>
+<!-- Red Callout Circle overlay -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 rounded-full border-2 border-dashed border-error bg-error/10 animate-pulse"></div>
+</div>
+<span class="absolute bottom-1 left-1 bg-inverse-surface/80 text-inverse-on-surface px-1 text-[9px] rounded font-label-sm uppercase">Defect Callout</span>
+</div>
+</div>
+<!-- Target Rectification Photo Status -->
+<div class="flex flex-col gap-1">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase font-semibold">Rectification Upload</span>
+<div class="h-28 rounded-lg bg-surface-container flex flex-col items-center justify-center p-space-xs text-center border-dashed border-2 border-outline-variant/40">
+<span class="material-symbols-outlined text-outline text-2xl">add_photo_alternate</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase mt-1 leading-tight">Awaiting Contractor Upload</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Audit Trail & Timeline -->
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-space-xs">Audit History</span>
+<div class="space-y-space-xs font-body-sm text-body-sm text-on-surface">
+<div class="flex items-start gap-space-xs text-[11px] leading-tight">
+<span class="font-semibold text-on-surface-variant w-14 shrink-0">09:45 AM</span>
+<span>Logged by <strong>Riyas K.</strong> during morning QA walk.</span>
+</div>
+<div class="flex items-start gap-space-xs text-[11px] leading-tight">
+<span class="font-semibold text-on-surface-variant w-14 shrink-0">10:30 AM</span>
+<span>Formal notification dispatched to foreman <strong>Tariq M.</strong></span>
+</div>
+<div class="flex items-start gap-space-xs text-[11px] leading-tight">
+<span class="font-semibold text-on-surface-variant w-14 shrink-0">11:15 AM</span>
+<span>Materials allocated: Fine filler &amp; matte topcoat batch #402.</span>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full bg-primary-container text-on-primary hover:bg-primary transition-colors py-2.5 rounded-lg font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-base">verified_user</span>
+<span>Mark for Re-inspection</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">cloud_upload</span>
+<span>Upload Fix</span>
+</button>
+<button class="bg-surface-container text-error hover:bg-error-container hover:text-on-error-container transition-colors py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_upward</span>
+<span>Escalate Defect</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

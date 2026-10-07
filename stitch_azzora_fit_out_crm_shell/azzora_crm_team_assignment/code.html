@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-[#f7f3f0]" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AZZORA CRM — Team &amp; Assignment</title>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Space Grotesk & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              terracotta: '#9a3c25',
+              terracottaHover: '#83321e',
+              cream: '#fdf8f6',
+              surface: '#f7f3f0',
+              charcoal: '#1c1917',
+              border: '#e7e2de',
+              sand: '#d9cbbe',
+              taupe: '#b4a597',
+              olive: '#80826e',
+              muted: '#78716c'
+            }
+          },
+          fontFamily: {
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Architectural Aesthetic Styles -->
+<style data-purpose="architectural-theme">
+    body {
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+      -webkit-font-smoothing: antialiased;
+    }
+    /* Subtle custom scrollbar for luxury interior feel */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f7f3f0;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #d8d0c8;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #9a3c25;
+    }
+  </style>
+</head>
+<body class="h-full flex flex-col font-sans text-brand-charcoal overflow-hidden select-none bg-[#f7f3f0]">
+<!-- BEGIN: TopBar -->
+<header class="bg-brand-cream border-b border-brand-border h-16 shrink-0 z-30 px-6 flex items-center justify-between shadow-[0_1px_3px_rgba(0,0,0,0.02)]">
+<!-- Brand & Location Identifier -->
+<div class="flex items-center space-x-6">
+<div class="flex items-center space-x-3.5">
+<!-- Logo Image from DataStore -->
+<div class="h-10 w-8 flex items-center justify-center overflow-hidden">
+<img alt="AZZORA design . build" class="h-full w-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_RraWrkBnDQHY401GrCOUda5M-aABqhGa-u1Iw1AABmqboCYvFi_WCIKSZrM-sFtYont7wcgdzIgWfmYjBu6llVsqwEyqOFKJY0vVpoe6PeJGNnnUM464YssMuPe24rQvZcJc31DiXUOp_Hkmqg3pZ1Li9OIVvQw8AcPs8XcMt57u21rU6xGWZPduTc4FwWXr7h3kmne_5mGr6hmAi3PIKskbts2j8CSCSMKnpYdJR7gIylYquac"/>
+</div>
+<div class="flex flex-col border-l border-brand-border/70 pl-3.5">
+<span class="font-heading font-bold text-lg tracking-wider text-brand-charcoal leading-none">AZZORA</span>
+<span class="text-[9px] tracking-[0.25em] text-brand-terracotta uppercase font-semibold mt-0.5">design • build</span>
+</div>
+</div>
+<!-- Regional Context Indicator -->
+<div class="hidden md:flex items-center space-x-2 text-xs text-brand-muted bg-white/70 px-2.5 py-1 border border-brand-border rounded">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+<span class="font-medium text-brand-charcoal">Dubai &amp; Abu Dhabi</span>
+<span class="text-brand-taupe">|</span>
+<span class="text-[11px] font-mono">UAE Operations</span>
+</div>
+</div>
+<!-- Global Search -->
+<div class="flex-1 max-w-md mx-8 hidden lg:block">
+<div class="relative">
+<i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-muted text-xs"></i>
+<input class="w-full pl-9 pr-4 py-1.5 bg-white border border-brand-border text-xs focus:ring-1 focus:ring-brand-terracotta focus:border-brand-terracotta placeholder-brand-muted/70 transition-all rounded-sm" placeholder="Search teams, projects, disciplines, BOQs (e.g. AZ-026)..." type="text"/>
+<div class="absolute right-2.5 top-1/2 -translate-y-1/2 flex items-center space-x-1 text-[10px] text-brand-muted font-mono bg-brand-surface px-1.5 py-0.5 border border-brand-border rounded">
+<span>⌘K</span>
+</div>
+</div>
+</div>
+<!-- Utility & User Profile Info -->
+<div class="flex items-center space-x-4">
+<!-- Quick Status -->
+<div class="flex items-center space-x-2 border-r border-brand-border pr-4">
+<button class="relative p-2 text-brand-muted hover:text-brand-charcoal transition-colors">
+<i class="fa-regular fa-bell text-sm"></i>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-brand-terracotta"></span>
+</button>
+<button class="p-2 text-brand-muted hover:text-brand-charcoal transition-colors">
+<i class="fa-solid fa-sliders text-sm"></i>
+</button>
+</div>
+<!-- Executive Profile Badge -->
+<div class="flex items-center space-x-3 cursor-pointer pl-1">
+<div class="w-8 h-8 rounded-sm bg-brand-terracotta/10 border border-brand-terracotta/25 flex items-center justify-center font-heading font-semibold text-brand-terracotta text-xs">
+          TA
+        </div>
+<div class="flex flex-col text-left">
+<span class="text-xs font-semibold text-brand-charcoal leading-none">Tariq Al-Mansoor</span>
+<span class="text-[10px] text-brand-muted mt-0.5 font-medium">Director of Projects</span>
+</div>
+<i class="fa-solid fa-chevron-down text-[10px] text-brand-muted ml-1"></i>
+</div>
+</div>
+</header>
+<!-- END: TopBar -->
+<!-- BEGIN: PrimaryNav -->
+<nav class="bg-brand-cream/80 backdrop-blur border-b border-brand-border px-6 shrink-0 flex items-center justify-between overflow-x-auto text-xs font-medium">
+<div class="flex space-x-1">
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-solid fa-chart-pie text-xs opacity-70"></i>
+<span>Dashboard</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-solid fa-building text-xs opacity-70"></i>
+<span>Projects</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-regular fa-calendar-days text-xs opacity-70"></i>
+<span>Timeline</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-solid fa-list-check text-xs opacity-70"></i>
+<span>Tasks</span>
+</a>
+<!-- Active Tab: Team & Assignment -->
+<a class="px-3.5 py-2.5 text-brand-terracotta border-b-2 border-brand-terracotta font-semibold flex items-center space-x-2 bg-brand-terracotta/5" href="#">
+<i class="fa-solid fa-users text-xs"></i>
+<span>Team &amp; Assignment</span>
+<span class="ml-1 px-1.5 py-0.2 bg-brand-terracotta text-white rounded-full text-[9px] font-mono">24</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-solid fa-truck-ramp-box text-xs opacity-70"></i>
+<span>Procurement &amp; FF&amp;E</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-solid fa-clipboard-check text-xs opacity-70"></i>
+<span>Snagging &amp; QA</span>
+</a>
+<a class="px-3.5 py-2.5 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-2" href="#">
+<i class="fa-regular fa-file-lines text-xs opacity-70"></i>
+<span>Documents</span>
+</a>
+</div>
+<div class="hidden xl:flex items-center space-x-3 text-[11px] text-brand-muted">
+<span>Sprint 48: Week 42</span>
+<span class="text-brand-border">•</span>
+<span class="font-mono text-emerald-700 bg-emerald-50 px-2 py-0.5 border border-emerald-200 rounded">DEWA Approvals OK</span>
+</div>
+</nav>
+<!-- END: PrimaryNav -->
+<!-- BEGIN: MainContentLayout -->
+<div class="flex-1 flex overflow-hidden">
+<!-- Main Center Viewport -->
+<main class="flex-1 overflow-y-auto p-6 flex flex-col space-y-6">
+<!-- BEGIN: SectionHeader -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2 border-b border-brand-border/80">
+<div>
+<div class="flex items-center space-x-2.5 text-xs text-brand-terracotta uppercase font-mono tracking-wider font-semibold">
+<span>UAE Fit-Out Operations</span>
+<span>•</span>
+<span>Resource Matrix</span>
+</div>
+<h1 class="text-2xl font-heading font-bold text-brand-charcoal mt-1 tracking-tight">Team &amp; Assignment</h1>
+<p class="text-xs text-brand-muted mt-0.5">Manage project ownership, cross-discipline responsibilities, and workload allocations across active UAE luxury fit-outs.</p>
+</div>
+<!-- Action Controls -->
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- View Toggle -->
+<div class="bg-white border border-brand-border p-0.5 rounded flex items-center text-xs">
+<button class="px-2.5 py-1 bg-brand-surface font-semibold text-brand-charcoal shadow-sm rounded-sm flex items-center space-x-1.5">
+<i class="fa-solid fa-chart-gantt text-[11px] text-brand-terracotta"></i>
+<span>Capacity Matrix</span>
+</button>
+<button class="px-2.5 py-1 text-brand-muted hover:text-brand-charcoal transition-colors flex items-center space-x-1.5">
+<i class="fa-solid fa-address-book text-[11px]"></i>
+<span>Member Directory</span>
+</button>
+</div>
+<!-- Add Member Button -->
+<button class="px-3.5 py-1.5 bg-brand-terracotta hover:bg-brand-terracottaHover text-white text-xs font-semibold rounded-sm shadow-sm flex items-center space-x-2 transition-colors">
+<i class="fa-solid fa-plus text-[10px]"></i>
+<span>Add Team Member</span>
+</button>
+</div>
+</section>
+<!-- END: SectionHeader -->
+<!-- BEGIN: StatCards -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<div class="bg-white border border-brand-border p-4 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.02)] relative">
+<div class="text-[11px] font-medium text-brand-muted uppercase tracking-wider">Total Headcount</div>
+<div class="mt-2 flex items-baseline space-x-2">
+<span class="text-2xl font-heading font-bold text-brand-charcoal">24</span>
+<span class="text-xs text-brand-muted font-normal">specialists</span>
+</div>
+<p class="text-[11px] text-brand-muted mt-1">Design, Eng, Site PM &amp; QS</p>
+<div class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center text-brand-muted text-xs">
+<i class="fa-solid fa-user-group"></i>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white border border-brand-border p-4 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.02)] relative">
+<div class="text-[11px] font-medium text-brand-muted uppercase tracking-wider">Assigned Today</div>
+<div class="mt-2 flex items-baseline space-x-2">
+<span class="text-2xl font-heading font-bold text-brand-charcoal">19</span>
+<span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">79% Utilization</span>
+</div>
+<p class="text-[11px] text-brand-muted mt-1">Active on 8 UAE project sites</p>
+<div class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700 text-xs">
+<i class="fa-solid fa-briefcase"></i>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white border border-brand-border p-4 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.02)] relative">
+<div class="text-[11px] font-medium text-brand-muted uppercase tracking-wider">Available Capacity</div>
+<div class="mt-2 flex items-baseline space-x-2">
+<span class="text-2xl font-heading font-bold text-brand-charcoal">5</span>
+<span class="text-xs font-semibold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200">Mobilization Ready</span>
+</div>
+<p class="text-[11px] text-brand-muted mt-1">Ready for Palm &amp; DIFC bids</p>
+<div class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 text-xs">
+<i class="fa-solid fa-circle-check"></i>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white border border-brand-border p-4 rounded-sm shadow-[0_1px_2px_rgba(0,0,0,0.02)] relative">
+<div class="text-[11px] font-medium text-brand-muted uppercase tracking-wider">Over Capacity Alert</div>
+<div class="mt-2 flex items-baseline space-x-2">
+<span class="text-2xl font-heading font-bold text-brand-terracotta">2</span>
+<span class="text-xs font-semibold text-amber-800 bg-amber-50 px-1.5 py-0.5 rounded border border-amber-300">&gt;90% Allocated</span>
+</div>
+<p class="text-[11px] text-brand-muted mt-1">Sarah M. (95%), Riyas K. (100%)</p>
+<div class="absolute top-3.5 right-3.5 w-7 h-7 rounded-full bg-amber-50 border border-amber-200 flex items-center justify-center text-brand-terracotta text-xs">
+<i class="fa-solid fa-triangle-exclamation"></i>
+</div>
+</div>
+</section>
+<!-- END: StatCards -->
+<!-- BEGIN: FilterBar -->
+<section class="bg-white border border-brand-border p-3 rounded-sm flex flex-wrap items-center justify-between gap-3 text-xs">
+<div class="flex flex-wrap items-center gap-2">
+<!-- Search in List -->
+<div class="relative w-56">
+<i class="fa-solid fa-filter absolute left-2.5 top-1/2 -translate-y-1/2 text-brand-muted text-[11px]"></i>
+<input class="w-full pl-7 pr-3 py-1 bg-brand-surface border border-brand-border text-xs focus:ring-1 focus:ring-brand-terracotta focus:border-brand-terracotta rounded-sm" placeholder="Filter by name or discipline..." type="text"/>
+</div>
+<!-- Discipline Select -->
+<select class="py-1 px-2.5 bg-brand-surface border border-brand-border text-xs rounded-sm focus:ring-1 focus:ring-brand-terracotta text-brand-charcoal">
+<option>All Disciplines (Design, PM, MEP, Site)</option>
+<option>Project Management &amp; PMP</option>
+<option>Interior Architecture &amp; FF&amp;E</option>
+<option>Site Execution &amp; Civil</option>
+<option>MEP &amp; Authority Approvals</option>
+<option>Quantity Surveying &amp; BOQ</option>
+</select>
+<!-- Workload Status Pills -->
+<div class="flex items-center space-x-1 border-l border-brand-border pl-2">
+<button class="px-2.5 py-1 bg-brand-charcoal text-white rounded text-[11px] font-medium">All (24)</button>
+<button class="px-2.5 py-1 hover:bg-brand-surface text-brand-muted rounded text-[11px] font-medium">Balanced (17)</button>
+<button class="px-2.5 py-1 hover:bg-brand-surface text-brand-terracotta rounded text-[11px] font-medium bg-brand-terracotta/5">Overloaded (2)</button>
+<button class="px-2.5 py-1 hover:bg-brand-surface text-brand-muted rounded text-[11px] font-medium">Available (5)</button>
+</div>
+</div>
+<div class="flex items-center space-x-3 text-brand-muted text-[11px]">
+<span>Sorted by: <strong class="text-brand-charcoal font-medium">Allocation (Highest)</strong></span>
+<button class="p-1 hover:text-brand-charcoal"><i class="fa-solid fa-arrow-down-wide-short"></i></button>
+</div>
+</section>
+<!-- END: FilterBar -->
+<!-- BEGIN: TeamAllocationList -->
+<section class="space-y-3 pb-8">
+<!-- CARD 1: SELECTED STATE (Sarah Mansoor) -->
+<article class="bg-white border-2 border-brand-terracotta shadow-md rounded-sm p-4 relative transition-all">
+<div class="absolute -left-1 top-4 bottom-4 w-1 bg-brand-terracotta rounded-r"></div>
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<!-- Left Info: Name & Title -->
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-terracotta text-white flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0 shadow-inner">
+                SM
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Sarah Mansoor, PMP</h2>
+<span class="px-2 py-0.5 bg-amber-50 border border-amber-300 text-amber-900 text-[10px] font-semibold rounded uppercase tracking-wider">
+<i class="fa-solid fa-triangle-exclamation mr-1 text-brand-terracotta"></i> 95% Over Capacity
+                  </span>
+<span class="text-[10px] bg-brand-surface border border-brand-border px-1.5 py-0.5 text-brand-muted rounded">Active Selected</span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Senior Project Manager</span>
+<span class="text-brand-border">•</span>
+<span>10+ yrs UAE High-End Fit-Out</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-terracotta"></i> 14 Open Tasks</span>
+</div>
+</div>
+</div>
+<!-- Allocation Bar & Breakdown -->
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs font-bold text-brand-terracotta">95% Occupied <span class="text-brand-muted font-normal text-[10px]">(5% Free)</span></span>
+</div>
+<!-- Multi-segment progress bar -->
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-brand-terracotta" style="width: 40%;" title="AZ-026 Downtown Corporate (40%)"></div>
+<div class="h-full bg-[#b4a597]" style="width: 35%;" title="AZ-022 Palm Jumeirah (35%)"></div>
+<div class="h-full bg-[#80826e]" style="width: 20%;" title="AZ-028 Business Bay (20%)"></div>
+<div class="h-full bg-white opacity-40" style="width: 5%;" title="Free (5%)"></div>
+</div>
+<!-- Bar Legend -->
+<div class="flex items-center flex-wrap gap-x-3 gap-y-1 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span class="flex items-center"><span class="w-2 h-2 rounded-full bg-brand-terracotta mr-1 inline-block"></span> AZ-026 (40%)</span>
+<span class="flex items-center"><span class="w-2 h-2 rounded-full bg-[#b4a597] mr-1 inline-block"></span> AZ-022 (35%)</span>
+<span class="flex items-center"><span class="w-2 h-2 rounded-full bg-[#80826e] mr-1 inline-block"></span> AZ-028 (20%)</span>
+<span class="text-amber-800 font-sans font-medium"><i class="fa-regular fa-clock mr-1"></i> Handover AZ-022 in 12d</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-terracotta text-brand-terracotta hover:bg-brand-terracotta/5 font-medium rounded-sm">
+                Rebalance
+              </button>
+<button class="px-3 py-1 text-xs bg-brand-terracotta text-white hover:bg-brand-terracottaHover font-semibold rounded-sm shadow-sm flex items-center space-x-1">
+<span>Edit Assignment</span>
+<i class="fa-solid fa-chevron-right text-[9px]"></i>
+</button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Ahmed Al-Rashid -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                AR
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Ahmed Al-Rashid</h2>
+<span class="px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold rounded uppercase tracking-wider">
+                    85% Balanced
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Design Lead &amp; Interior Architect</span>
+<span class="text-brand-border">•</span>
+<span>Joinery &amp; Luxury FF&amp;E Specialist</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 8 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs text-brand-charcoal font-medium">85% Occupied <span class="text-brand-muted text-[10px]">(15% Free)</span></span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-stone-700" style="width: 35%;" title="Dubai Hills Residence (35%)"></div>
+<div class="h-full bg-stone-500" style="width: 30%;" title="DIFC Penthouse (30%)"></div>
+<div class="h-full bg-brand-terracotta" style="width: 20%;" title="Downtown Office AZ-026 Design (20%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>Dubai Hills (35%)</span>
+<span>DIFC Penthouse (30%)</span>
+<span>AZ-026 Design (20%)</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                View Roster
+              </button>
+<button class="px-3 py-1 text-xs border border-brand-border hover:border-brand-charcoal text-brand-charcoal font-semibold rounded-sm">
+                Assign Project
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Riyas K. -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                RK
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Riyas K.</h2>
+<span class="px-2 py-0.5 bg-red-50 border border-red-300 text-red-900 text-[10px] font-semibold rounded uppercase tracking-wider">
+<i class="fa-solid fa-bolt mr-1"></i> 100% Fully Booked
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Senior Site Engineer</span>
+<span class="text-brand-border">•</span>
+<span>Partitions, Drywalls, Ceilings QA</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 19 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs font-bold text-red-700">100% Allocated (Max Limit)</span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-brand-terracotta" style="width: 60%;" title="AZ-026 Downtown Site Lead (60%)"></div>
+<div class="h-full bg-[#80826e]" style="width: 40%;" title="AZ-028 Business Bay Retail (40%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>AZ-026 Execution Lead (60%)</span>
+<span>AZ-028 Site Eng (40%)</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                Delegate
+              </button>
+<button class="px-3 py-1 text-xs border border-brand-border hover:border-brand-charcoal text-brand-charcoal font-semibold rounded-sm">
+                Assign Project
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Mohammed Nasser -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                MN
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Mohammed Nasser</h2>
+<span class="px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold rounded uppercase tracking-wider">
+                    70% Optimal
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>MEP Project Engineer</span>
+<span class="text-brand-border">•</span>
+<span>DEWA, Civil Defence &amp; HVAC Approvals</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 6 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs text-brand-charcoal font-medium">70% Occupied <span class="text-brand-muted text-[10px]">(30% Free)</span></span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-brand-terracotta" style="width: 45%;" title="AZ-026 MEP 1st &amp; 2nd Fix (45%)"></div>
+<div class="h-full bg-amber-700" style="width: 25%;" title="Al Wasl Clinic MEP (25%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>AZ-026 MEP Fix (45%)</span>
+<span>Al Wasl Clinic (25%)</span>
+<span class="text-emerald-700 font-sans font-medium">+30% Capacity Open</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                View Roster
+              </button>
+<button class="px-3 py-1 text-xs border border-brand-border hover:border-brand-charcoal text-brand-charcoal font-semibold rounded-sm">
+                Assign Project
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 5: Fatima Noor -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                FN
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Fatima Noor</h2>
+<span class="px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-800 text-[10px] font-semibold rounded uppercase tracking-wider">
+                    55% Available Capacity
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Quantity Surveyor &amp; Contracts</span>
+<span class="text-brand-border">•</span>
+<span>BOQ Verification &amp; Variation Orders</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 5 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs text-brand-charcoal font-medium">55% Occupied <span class="text-blue-700 font-semibold text-[10px]">(45% Available)</span></span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-indigo-700" style="width: 35%;" title="Palm Villa Cost Review (35%)"></div>
+<div class="h-full bg-indigo-500" style="width: 20%;" title="Jumeirah Islands BOQ (20%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>Palm Villa (35%)</span>
+<span>Jumeirah Islands (20%)</span>
+<span class="text-blue-700 font-medium font-sans">Ready for next assignment</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                View Roster
+              </button>
+<button class="px-3 py-1 text-xs bg-brand-charcoal text-white hover:bg-black font-semibold rounded-sm">
+                + Assign New Project
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 6: Arun Prasad -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                AP
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Arun Prasad</h2>
+<span class="px-2 py-0.5 bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-semibold rounded uppercase tracking-wider">
+                    90% High Utilization
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Senior Site Supervisor</span>
+<span class="text-brand-border">•</span>
+<span>On-site Logistics &amp; Subcontractor Management</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 22 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs text-brand-charcoal font-medium">90% Occupied <span class="text-brand-muted text-[10px]">(10% Free)</span></span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-brand-terracotta" style="width: 70%;" title="AZ-026 Downtown Site Presence (70%)"></div>
+<div class="h-full bg-[#80826e]" style="width: 20%;" title="AZ-028 Business Bay (20%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>AZ-026 Full-Time Site (70%)</span>
+<span>AZ-028 Retail (20%)</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                View Roster
+              </button>
+<button class="px-3 py-1 text-xs border border-brand-border hover:border-brand-charcoal text-brand-charcoal font-semibold rounded-sm">
+                Assign Project
+              </button>
+</div>
+</div>
+</article>
+<!-- CARD 7: Elena Rostova -->
+<article class="bg-white border border-brand-border hover:border-brand-taupe transition-colors rounded-sm p-4">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+<div class="flex items-start space-x-3.5">
+<div class="w-11 h-11 rounded-sm bg-brand-surface border border-brand-border text-brand-charcoal flex items-center justify-center font-heading font-bold text-sm tracking-wider shrink-0">
+                ER
+              </div>
+<div>
+<div class="flex items-center space-x-2">
+<h2 class="text-sm font-heading font-bold text-brand-charcoal">Elena Rostova</h2>
+<span class="px-2 py-0.5 bg-blue-50 border border-blue-200 text-blue-800 text-[10px] font-semibold rounded uppercase tracking-wider">
+                    40% Available
+                  </span>
+</div>
+<div class="text-xs text-brand-muted mt-0.5 flex items-center space-x-3">
+<span>Procurement &amp; FF&amp;E Coordinator</span>
+<span class="text-brand-border">•</span>
+<span>Italian Marble &amp; Millwork Import Logistics</span>
+<span class="text-brand-border">•</span>
+<span class="text-brand-charcoal font-medium"><i class="fa-solid fa-list-check mr-1 text-brand-muted"></i> 4 Open Tasks</span>
+</div>
+</div>
+</div>
+<div class="flex-1 max-w-xl px-2">
+<div class="flex items-center justify-between text-xs mb-1.5">
+<span class="text-[11px] font-semibold text-brand-charcoal uppercase tracking-wider font-heading">Active Project Split</span>
+<span class="font-mono text-xs text-brand-charcoal font-medium">40% Occupied <span class="text-blue-700 font-semibold text-[10px]">(60% Available)</span></span>
+</div>
+<div class="h-2.5 w-full bg-brand-surface rounded-sm overflow-hidden flex border border-brand-border">
+<div class="h-full bg-brand-terracotta" style="width: 40%;" title="AZ-026 Italian Marble &amp; Joinery Package (40%)"></div>
+</div>
+<div class="flex items-center space-x-3 mt-1.5 text-[10px] text-brand-muted font-mono">
+<span>AZ-026 Marble Package (40%)</span>
+<span class="text-blue-700 font-sans font-medium">+60% High Capacity for new FF&amp;E</span>
+</div>
+</div>
+<div class="flex items-center space-x-2 shrink-0">
+<button class="px-2.5 py-1 text-xs border border-brand-border hover:bg-brand-surface text-brand-charcoal rounded-sm font-medium">
+                View Roster
+              </button>
+<button class="px-3 py-1 text-xs bg-brand-charcoal text-white hover:bg-black font-semibold rounded-sm">
+                + Assign New Project
+              </button>
+</div>
+</div>
+</article>
+</section>
+<!-- END: TeamAllocationList -->
+</main>
+<!-- BEGIN: AssignmentDrawer -->
+<aside class="w-[460px] bg-brand-cream border-l border-brand-border flex flex-col shrink-0 h-full shadow-2xl z-20 overflow-hidden">
+<!-- Drawer Header -->
+<div class="p-5 border-b border-brand-border bg-white flex items-start justify-between">
+<div>
+<div class="flex items-center space-x-2 text-[10px] text-brand-terracotta font-mono font-bold uppercase tracking-wider">
+<span>Assignment Drawer</span>
+<span>•</span>
+<span>Live Edit</span>
+</div>
+<h2 class="text-base font-heading font-bold text-brand-charcoal mt-0.5">Project Role &amp; Phase Delegation</h2>
+<p class="text-xs text-brand-muted mt-0.5">Assign team member to project phases, milestones and discipline deliverables.</p>
+</div>
+<button class="text-brand-muted hover:text-brand-charcoal p-1 text-xs rounded transition-colors" title="Close drawer">
+<i class="fa-solid fa-xmark text-base"></i>
+</button>
+</div>
+<!-- Drawer Scrollable Content -->
+<div class="flex-1 overflow-y-auto p-5 space-y-5 text-xs">
+<!-- Active Member Banner -->
+<div class="bg-brand-surface border border-brand-border p-3 rounded-sm flex items-center justify-between">
+<div class="flex items-center space-x-3">
+<div class="w-9 h-9 rounded-sm bg-brand-terracotta text-white flex items-center justify-center font-heading font-bold text-xs">
+              SM
+            </div>
+<div>
+<div class="font-bold text-brand-charcoal text-xs">Sarah Mansoor, PMP</div>
+<div class="text-[11px] text-brand-muted">Senior Project Manager • Total: <span class="text-brand-terracotta font-bold">95%</span></div>
+</div>
+</div>
+<span class="text-[10px] bg-amber-50 text-amber-900 border border-amber-300 px-1.5 py-0.5 font-semibold rounded uppercase">
+            Over Limit
+          </span>
+</div>
+<!-- FORM CONTROL: Project Selector -->
+<div>
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-1.5">
+            Select Active Project
+          </label>
+<div class="relative">
+<select class="w-full bg-white border border-brand-border text-xs rounded-sm py-2 px-3 focus:ring-1 focus:ring-brand-terracotta font-medium text-brand-charcoal">
+<option selected="">AZ-026 — Downtown Corporate Office Fit-Out (4,200 sq.m)</option>
+<option>AZ-022 — Palm Jumeirah Luxury Villa (Frond G)</option>
+<option>AZ-028 — Business Bay High-End Retail Boutique</option>
+<option>AZ-031 — DIFC Financial Executive Suites</option>
+</select>
+</div>
+<div class="flex items-center justify-between mt-1 text-[10px] text-brand-muted">
+<span>Project Status: Execution (Phase 4)</span>
+<span class="text-emerald-700 font-medium">Target Handover: 28 Nov 2024</span>
+</div>
+</div>
+<!-- FORM CONTROL: Role Delegation -->
+<div>
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-1.5">
+            Role on This Project
+          </label>
+<input class="w-full bg-white border border-brand-border text-xs rounded-sm py-2 px-3 focus:ring-1 focus:ring-brand-terracotta font-medium text-brand-charcoal" type="text" value="Project Director / PM Lead"/>
+</div>
+<!-- FORM CONTROL: Phase Ownership Multi-Selector -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider">
+              Project Phase Ownership
+            </label>
+<span class="text-[10px] text-brand-muted">Click to toggle responsibility</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<div class="p-2 border border-brand-border bg-white/70 rounded-sm flex items-center justify-between cursor-pointer">
+<span class="text-brand-muted text-[11px]">01 Planning</span>
+<span class="text-[9px] font-mono text-emerald-700 bg-emerald-50 px-1 rounded">100% DONE</span>
+</div>
+<div class="p-2 border border-brand-border bg-white/70 rounded-sm flex items-center justify-between cursor-pointer">
+<span class="text-brand-muted text-[11px]">02 Design Phase</span>
+<span class="text-[9px] font-mono text-emerald-700 bg-emerald-50 px-1 rounded">APPROVED</span>
+</div>
+<div class="p-2 border border-brand-border bg-white/70 rounded-sm flex items-center justify-between cursor-pointer">
+<span class="text-brand-muted text-[11px]">03 Procurement</span>
+<span class="text-[9px] font-mono text-brand-charcoal bg-stone-100 px-1 rounded">80% CLOSED</span>
+</div>
+<!-- Active Leading Phase -->
+<div class="p-2 border-2 border-brand-terracotta bg-brand-terracotta/5 rounded-sm flex items-center justify-between cursor-pointer">
+<span class="text-brand-terracotta font-semibold text-[11px]">04 Execution Lead</span>
+<span class="text-[9px] font-mono text-brand-terracotta font-bold">CURRENT</span>
+</div>
+<div class="p-2 border border-brand-border bg-white rounded-sm flex items-center justify-between cursor-pointer hover:border-brand-taupe">
+<span class="text-brand-charcoal text-[11px]">05 Snagging &amp; QA</span>
+<span class="text-[9px] font-mono text-brand-muted">PENDING</span>
+</div>
+<div class="p-2 border border-brand-border bg-white rounded-sm flex items-center justify-between cursor-pointer hover:border-brand-taupe">
+<span class="text-brand-charcoal text-[11px]">06 Final Handover</span>
+<span class="text-[9px] font-mono text-brand-muted">PLANNED</span>
+</div>
+</div>
+</div>
+<!-- FORM CONTROL: Discipline Checklist -->
+<div>
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-1.5">
+            Assigned Discipline Responsibilities
+          </label>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-1 bg-white border border-brand-terracotta text-brand-terracotta font-medium rounded text-[11px] flex items-center space-x-1.5 shadow-xs">
+<i class="fa-solid fa-check text-[9px]"></i>
+<span>Client Liaison</span>
+</span>
+<span class="px-2 py-1 bg-white border border-brand-terracotta text-brand-terracotta font-medium rounded text-[11px] flex items-center space-x-1.5 shadow-xs">
+<i class="fa-solid fa-check text-[9px]"></i>
+<span>Contract Administration</span>
+</span>
+<span class="px-2 py-1 bg-white border border-brand-terracotta text-brand-terracotta font-medium rounded text-[11px] flex items-center space-x-1.5 shadow-xs">
+<i class="fa-solid fa-check text-[9px]"></i>
+<span>Program Baseline</span>
+</span>
+<span class="px-2 py-1 bg-white border border-brand-border text-brand-muted rounded text-[11px] flex items-center space-x-1.5 hover:text-brand-charcoal cursor-pointer">
+<i class="fa-solid fa-plus text-[9px]"></i>
+<span>Site Handover Cert</span>
+</span>
+<span class="px-2 py-1 bg-white border border-brand-border text-brand-muted rounded text-[11px] flex items-center space-x-1.5 hover:text-brand-charcoal cursor-pointer">
+<i class="fa-solid fa-plus text-[9px]"></i>
+<span>MEP Sign-off</span>
+</span>
+</div>
+</div>
+<!-- FORM CONTROL: Workload Slider -->
+<div class="bg-white border border-brand-border p-3.5 rounded-sm">
+<div class="flex items-center justify-between mb-2">
+<label class="font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider">
+              Workload Allocation For AZ-026
+            </label>
+<div class="flex items-baseline space-x-1">
+<span class="text-base font-heading font-bold text-brand-terracotta">40</span>
+<span class="text-xs font-bold text-brand-terracotta">%</span>
+</div>
+</div>
+<input class="w-full accent-brand-terracotta bg-brand-surface h-1.5 rounded cursor-pointer" max="100" min="5" type="range" value="40"/>
+<div class="flex justify-between text-[10px] text-brand-muted mt-1.5 font-mono">
+<span>Minimum (5%)</span>
+<span>Half Time (50%)</span>
+<span>Full (100%)</span>
+</div>
+</div>
+<!-- Dates Range -->
+<div class="grid grid-cols-2 gap-3">
+<div>
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-1">
+              Start Date
+            </label>
+<input class="w-full bg-white border border-brand-border text-xs rounded-sm py-1.5 px-2.5 focus:ring-1 focus:ring-brand-terracotta font-mono" type="date" value="2024-09-01"/>
+</div>
+<div>
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-1">
+              Expected End Date
+            </label>
+<input class="w-full bg-white border border-brand-border text-xs rounded-sm py-1.5 px-2.5 focus:ring-1 focus:ring-brand-terracotta font-mono" type="date" value="2024-11-28"/>
+</div>
+</div>
+<!-- Assigned Key Tasks -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider">
+              Assigned Key Tasks (Sarah M.)
+            </label>
+<button class="text-[10px] text-brand-terracotta hover:underline font-semibold">+ Add Task</button>
+</div>
+<div class="space-y-1.5">
+<div class="bg-white border border-brand-border p-2 rounded-sm flex items-center justify-between text-[11px]">
+<span class="text-brand-charcoal truncate">Complete client milestone approval with Emaar</span>
+<span class="text-[10px] text-brand-terracotta font-medium ml-2 shrink-0">Due Oct 24</span>
+</div>
+<div class="bg-white border border-brand-border p-2 rounded-sm flex items-center justify-between text-[11px]">
+<span class="text-brand-charcoal truncate">Coordinate MEP site shutdown inspection</span>
+<span class="text-[10px] text-amber-700 font-medium ml-2 shrink-0">Due Oct 28</span>
+</div>
+<div class="bg-white border border-brand-border p-2 rounded-sm flex items-center justify-between text-[11px]">
+<span class="text-brand-charcoal truncate">Verify BOQ variation 03 for acoustic glazing</span>
+<span class="text-[10px] text-brand-muted font-medium ml-2 shrink-0">Due Nov 02</span>
+</div>
+</div>
+</div>
+<!-- Cross-discipline Project Team Roster on AZ-026 -->
+<div class="bg-brand-surface border border-brand-border p-3.5 rounded-sm">
+<label class="block font-heading font-semibold text-brand-charcoal text-[11px] uppercase tracking-wider mb-2">
+            AZ-026 Project Team Matrix
+          </label>
+<div class="space-y-2 text-[11px]">
+<div class="flex items-center justify-between">
+<span class="text-brand-muted">PM Lead:</span>
+<span class="font-medium text-brand-charcoal font-heading">Sarah Mansoor (40%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-brand-muted">Design Lead:</span>
+<span class="font-medium text-brand-charcoal font-heading">Ahmed Al-Rashid (20%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-brand-muted">Execution Lead:</span>
+<span class="font-medium text-brand-charcoal font-heading">Riyas K. (60%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-brand-muted">MEP Engineer:</span>
+<span class="font-medium text-brand-charcoal font-heading">Mohammed Nasser (45%)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-brand-muted">Site Supervisor:</span>
+<span class="font-medium text-brand-charcoal font-heading">Arun Prasad (70%)</span>
+</div>
+</div>
+</div>
+<!-- Destructive Operations / Hand-off -->
+<div class="pt-2 border-t border-brand-border flex items-center justify-between">
+<button class="text-[11px] text-brand-muted hover:text-brand-charcoal font-medium">
+<i class="fa-solid fa-user-pen mr-1"></i> Replace Person
+          </button>
+<button class="text-[11px] text-brand-muted hover:text-brand-charcoal font-medium">
+<i class="fa-solid fa-arrows-split-up-and-left mr-1"></i> Reassign Tasks
+          </button>
+<button class="text-[11px] text-red-700 hover:text-red-900 font-medium">
+<i class="fa-solid fa-trash mr-1"></i> Remove
+          </button>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-4 bg-white border-t border-brand-border flex items-center justify-end space-x-3 shrink-0">
+<button class="px-4 py-2 border border-brand-border hover:bg-brand-surface text-brand-charcoal text-xs font-semibold rounded-sm transition-colors">
+          Cancel
+        </button>
+<button class="px-5 py-2 bg-brand-terracotta hover:bg-brand-terracottaHover text-white text-xs font-semibold rounded-sm shadow-sm transition-colors flex items-center space-x-1.5">
+<i class="fa-solid fa-floppy-disk text-xs"></i>
+<span>Save Assignment</span>
+</button>
+</div>
+</aside>
+<!-- END: AssignmentDrawer -->
+</div>
+<!-- END: MainContentLayout -->
+</body></html>

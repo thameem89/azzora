@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "inverse-primary": "#ffb4a2", "on-primary-container": "#ffc4b6", "secondary-container": "#fedaae", "secondary-fixed-dim": "#e3c197", "primary-fixed": "#ffdad2", "error": "#ba1a1a", "on-secondary": "#ffffff", "inverse-on-surface": "#f4f0ee", "on-background": "#1c1b1a", "tertiary": "#294a34", "surface-variant": "#e6e2df", "on-surface-variant": "#56423d", "secondary-fixed": "#ffddb4", "on-error-container": "#93000a", "on-secondary-container": "#785e3b", "surface-container": "#f2edeb", "on-tertiary-fixed": "#00210f", "surface-tint": "#a04029", "on-surface": "#1c1b1a", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "background": "#fdf8f6", "surface": "#fdf8f6", "on-primary-fixed": "#3c0700", "primary-fixed-dim": "#ffb4a2", "surface-container-highest": "#e6e2df", "secondary": "#745a37", "on-tertiary-container": "#b6dcbf", "on-tertiary-fixed-variant": "#2d4e38", "on-secondary-fixed": "#291800", "on-secondary-fixed-variant": "#5a4222", "outline": "#89726c", "on-primary-fixed-variant": "#802914", "on-error": "#ffffff", "outline-variant": "#ddc0ba", "surface-dim": "#ddd9d7", "tertiary-container": "#40624b", "surface-container-low": "#f7f3f0", "surface-container-lowest": "#ffffff", "surface-bright": "#fdf8f6", "tertiary-fixed": "#c6ecce", "inverse-surface": "#31302f", "tertiary-fixed-dim": "#aacfb3", "primary": "#7b2510", "primary-container": "#9a3c25", "on-primary": "#ffffff", "surface-container-high": "#ece7e5" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-xs": "0.25rem", "gutter": "1.5rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin": "2.5rem", "space-lg": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "body-lg": ["Inter"], "body-sm": ["Inter"], "headline-md": ["Space Grotesk"], "label-md": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "display-lg-mobile": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-md": ["Inter"], "display-lg": ["Space Grotesk"], "headline-sm": ["Space Grotesk"] }, fontSize: { "body-lg": ["16px", { lineHeight: "26px", letterSpacing: "-0.01em", fontWeight: "400" }], "body-sm": ["12px", { lineHeight: "18px", letterSpacing: "0.01em", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }], "label-md": ["11px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", letterSpacing: "-0.01em", fontWeight: "500" }], "headline-lg": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "500" }], "display-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.12em", fontWeight: "600" }], "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.08em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", letterSpacing: "0em", fontWeight: "400" }], "display-lg": ["44px", { lineHeight: "52px", letterSpacing: "-0.03em", fontWeight: "600" }], "headline-sm": ["20px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "500" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface border-r border-outline-variant/40 z-50 flex flex-col justify-between py-6 px-5"><div class="flex flex-col gap-6"><div class="flex items-center gap-3 px-2"><img alt="AZZORA Architectural Logo" class="w-9 h-9 rounded object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface font-semibold leading-none">Azzora</span><span class="font-label-sm text-label-sm uppercase tracking-widest text-outline mt-1">Design · Build CRM</span></div></div><div class="h-px bg-outline-variant/30 mx-2"></div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-label-lg rounded-lg shadow-sm"><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-3 px-3 py-2.5 uppercase transition-all bg-primary-container text-on-primary font-label-lg rounded-lg shadow-sm" data-path="projects" href="#"><span class="material-symbols-outlined text-[20px]">domain</span><span>Projects</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="planning" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Planning</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span>Tasks</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="team" href="#"><span class="material-symbols-outlined text-[20px]">group</span><span>Team</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="site-updates" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span><span>Site Updates</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="snags-qa" href="#"><span class="material-symbols-outlined text-[20px]">verified</span><span>Snags &amp; QA</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="documents" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Documents</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="handover" href="#"><span class="material-symbols-outlined text-[20px]">key</span><span>Handover</span></a><div class="h-px bg-outline-variant/30 my-2 mx-2"></div><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">query_stats</span><span>Reports</span></a><a class="flex items-center gap-3 px-3 py-2.5 rounded-lg font-label-lg text-label-lg uppercase text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></nav></div><div class="p-3 bg-surface-container-low rounded-xl border border-outline-variant/20 flex flex-col gap-2"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase text-secondary">Phase Active</span><span class="font-label-sm text-label-sm uppercase text-tertiary font-semibold">Fit-out IV</span></div><div class="w-full bg-surface-variant h-1 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-3/4 rounded-full"></div></div><span class="font-body-sm text-body-sm text-on-surface-variant">Palace Penthouse Palm Jumeirah</span></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 z-40 px-gutter flex items-center justify-between"><div class="flex items-center gap-4 flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-lowest border border-outline-variant/40 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary-container transition-all" placeholder="Search projects, tasks, team..." type="text"/></div><div class="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary-container/30 border border-secondary/20 text-on-secondary-container whitespace-nowrap"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-sm text-label-sm uppercase font-semibold">Dubai / UAE HQ</span></div></div><div class="flex items-center gap-4"><button class="inline-flex items-center gap-2 h-10 px-4 bg-primary-container hover:bg-primary text-on-primary rounded-lg font-label-lg text-label-lg uppercase transition-all shadow-[0_1px_4px_rgba(154,60,37,0.2)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>New Project</span></button><button class="relative p-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-on-primary font-label-sm text-[9px] font-bold leading-none">3</span></button><div class="h-6 w-px bg-outline-variant/40 mx-1"></div><div class="flex items-center gap-3 pl-1"><div class="hidden sm:flex flex-col text-right"><span class="font-label-lg text-label-lg font-semibold text-on-surface leading-snug">Tariq Al-Mansoor</span><span class="font-label-sm text-label-sm uppercase text-outline leading-tight">Project Director</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/></div></div></header><main class="w-full pt-16 bg-background px-gutter py-space-lg min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Action Header -->
+<div class="flex flex-col gap-6 mb-8">
+<div class="flex flex-wrap items-center justify-between gap-4">
+<div class="flex flex-col gap-1">
+<nav class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Projects</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Directory</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold">+ New Project</span>
+</nav>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Create New Fit-Out Project</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Initialize project parameters, UAE site authority specifications, multi-discipline scope, and dedicated project delivery squad.
+        </p>
+</div>
+<div class="flex items-center gap-3 self-start sm:self-auto">
+<button class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg uppercase tracking-wider transition-all" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">bookmark_border</span>
+<span>Save Draft</span>
+</button>
+<button class="px-3 py-2.5 text-outline hover:text-error font-label-lg text-label-lg uppercase tracking-wider transition-colors" type="button">
+          Discard
+        </button>
+</div>
+</div>
+<!-- Horizontal 5-Step Stepper Component -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-4 sm:p-5 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-3 lg:gap-4 relative">
+<!-- Step 1 (Completed) -->
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Step 01</span>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">Project Details</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-0.5">DIFC HQ · Confirmed</span>
+</div>
+<!-- Step 2 (Completed) -->
+<div class="flex flex-col p-3 rounded-lg bg-surface-container-low transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Step 02</span>
+<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed text-xs">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface">Scope &amp; Location</span>
+<span class="font-body-sm text-body-sm text-tertiary mt-0.5">12,400 sq.ft · 8 Trades</span>
+</div>
+<!-- Step 3 (Active) -->
+<div class="flex flex-col p-3 rounded-lg bg-primary-container text-on-primary shadow-sm relative overflow-hidden">
+<div class="absolute -right-2 -bottom-2 w-12 h-12 rounded-full bg-on-primary opacity-10 pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container font-semibold">Step 03 · Active</span>
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-on-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-on-primary"></span>
+</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-primary">Project Team</span>
+<span class="font-body-sm text-body-sm text-on-primary-container mt-0.5">Allocating Key Leads</span>
+</div>
+<!-- Step 4 (Upcoming) -->
+<div class="flex flex-col p-3 rounded-lg bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Step 04</span>
+<span class="font-label-sm text-label-sm text-outline">04</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface-variant">Project Plan</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">18-Wk Fast Track</span>
+</div>
+<!-- Step 5 (Upcoming) -->
+<div class="flex flex-col p-3 rounded-lg bg-surface-container transition-all">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline font-semibold">Step 05</span>
+<span class="font-label-sm text-label-sm text-outline">05</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface-variant">Review &amp; Launch</span>
+<span class="font-body-sm text-body-sm text-outline mt-0.5">Final Governance</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Wizard Canvas: 2-Column Architectural Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- COLUMN 1: Active Multi-Step Configurator (65% width = 8 cols on desktop) -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Module A: Step 1 & 2 Completed Summaries (Collapsed Architectural Dossiers) -->
+<div class="flex flex-col gap-3">
+<!-- Collapsed Summary 01: Project Details -->
+<details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">01</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Pre-Configured Identity</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">AZ-027 · DIFC Executive Penthouse &amp; Headquarters</h3>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold uppercase">Edit Details</span>
+<span class="material-symbols-outlined text-outline text-[20px] group-open:rotate-180 transition-transform">expand_more</span>
+</div>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-variant flex flex-wrap gap-y-3 gap-x-8 text-body-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Client Entity</span>
+<span class="font-body-md text-body-md font-medium text-on-surface">Al-Futtaim Private Investments LLC</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Contract Value</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-primary-container">AED 4,850,000</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Typology</span>
+<span class="font-body-md text-body-md text-on-surface">Ultra-Prime Commercial / Corporate Fit-Out</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Target Commencement</span>
+<span class="font-body-md text-body-md text-on-surface">01 November 2024</span>
+</div>
+</div>
+</details>
+<!-- Collapsed Summary 02: Scope & Site Location -->
+<details class="group bg-surface-container-lowest rounded-xl p-5 shadow-sm transition-all" open="">
+<summary class="flex items-center justify-between cursor-pointer list-none">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">02</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Site &amp; Multi-Trade Envelope</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Gate Precinct 4, DIFC · Level 14 (12,400 sq.ft)</h3>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-secondary font-semibold uppercase">Edit Scope</span>
+<span class="material-symbols-outlined text-outline text-[20px] group-open:rotate-180 transition-transform">expand_more</span>
+</div>
+</summary>
+<div class="mt-4 pt-4 border-t border-surface-variant flex flex-col gap-3">
+<div class="flex items-center gap-2 text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary-container">pin_drop</span>
+<span>DIFC Authority Jurisdiction · Fit-Out Permit Track B · Commercial Core &amp; Shell</span>
+</div>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">architecture</span>Interior Design
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">foundation</span>Civil &amp; Partitions
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">hvac</span>MEP Engineering
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">handyman</span>Bespoke Joinery
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">graphic_eq</span>Acoustic Ceilings
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">texture</span>Italian Marble Flooring
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">lightbulb</span>Architectural Lighting
+              </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-surface-container-high text-on-surface font-label-sm text-label-sm tracking-wide">
+<span class="material-symbols-outlined text-[14px] text-primary">chair</span>Signature Loose Furniture
+              </span>
+</div>
+</div>
+</details>
+</div>
+<!-- Module B: ACTIVE STEP 3 — PROJECT TEAM ALLOCATION -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold uppercase">Step 03 Focus</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Workforce Matrix</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Assign Dedicated UAE Fit-Out Team</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time allocation calculated from live active Dubai site commitments and zone proximity.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Site Cluster:</span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold">Downtown / DIFC North</span>
+</div>
+</div>
+<div class="space-y-4">
+<!-- 1. Project Manager (Hero Role Card) -->
+<div class="p-4 sm:p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Headshot of a confident senior architect project director with tailored linen blazer in an architectural studio setting, neutral earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDYbJmkZRwaANJmS9Tt-uaHFjaFB64oFy74OeDlF_OrhLY5ROAUYeL7R34_UNyp44ELF72Is1N1_kjfTXzUyTeG9_N8y2NjoObPcMhHDzPiVKIo4b_Jr4H38OeDA1hqyQlp24md0lkYV8QnYw7QlXQ-JGzc4WcTlY9JpGqkEEgAejLQvfOMGTZNeju5niTUkaWw77jaGkCEuMPWiMqPBnzFXCay0VQ_e8dDSmqMA"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold">Project Lead</span>
+<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-tertiary-fixed text-on-tertiary-fixed rounded">PMP Certified</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tariq Al-Mansoor</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Senior Fit-Out Project Director · 12 yrs Dubai Luxury Fit-Out</span>
+</div>
+</div>
+<!-- Workload & Actions -->
+<div class="flex flex-col sm:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Workload Load: 65%</span>
+<div class="w-24 bg-surface-variant h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[65%] rounded-full"></div>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-outline">2 Active Sites (Downtown AZ-024, Palm Villa AZ-025)</span>
+<div class="flex items-center gap-3 mt-1">
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:underline font-semibold" type="button">Replace Lead</button>
+<span class="text-outline text-xs">·</span>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:underline font-semibold" type="button">View Calendar</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Lead Interior Designer -->
+<div class="p-4 sm:p-5 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover" data-alt="Portrait of professional female creative interior designer in minimal architectural setting, black turtleneck, warm natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSBLQJoO2llhkNV5tMBaNxA-WvoEl-Pt0kiWko8F401yX-H2Z3ESk4VSFoI34zdREBsR1dbOTwCcw0J9WZ79BieDlMPMGrAUQiHV-ZxMOUlJoY4v30976xlxXQcA8RAls_DYs3eQwMvurnxweo0GnA5TEl02vOurGFN6Y4hsomrKkIfaLb75hDPquuO3oPT8FMZG1prTOGeZGm2nfbbeHc4GhuhlXLX5HhhwwFmQ"/>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary ring-2 ring-surface-container-lowest"></span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Design &amp; FF&amp;E Director</span>
+<span class="px-1.5 py-0.5 text-[10px] font-semibold bg-secondary-fixed text-on-secondary-fixed rounded">RIBA Associate</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Elena Rostova</h4>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Commercial &amp; Hospitality Principal · Materiality Specialist</span>
+</div>
+</div>
+<!-- Workload & Actions -->
+<div class="flex flex-col sm:items-end gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Workload Load: 40%</span>
+<div class="w-24 bg-surface-variant h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[40%] rounded-full"></div>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-outline">1 Active Concept (DIFC AZ-019 Phase II)</span>
+<div class="flex items-center gap-3 mt-1">
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container hover:underline font-semibold" type="button">Change Designer</button>
+<span class="text-outline text-xs">·</span>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-secondary hover:underline font-semibold" type="button">Portfolio Board</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Site Engineer & MEP Engineer (Dual Column Row) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Site Engineer Card -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of an experienced civil site engineer wearing a refined taupe safety helmet and collared work shirt on construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeT4WpP-tcL7VInDO_BeETx5pTYEBik3UrKdLVSFTwdFeqzcDazh9FuYobUmRLd0KTfI0r-NpGkbqSRa_CatubSeHv6LKCRqqJTOPqbMkh0WhsGXWVizLC9fXidVQblaRVFu6hd8mePacOGHwVuU-cO7ZLot3XEfDZEQx6JFSHnMPcwpr5yQwhwf0a38zp4TlW10K7RBj7oxWH7wbi75NjI2gxkwZcdVFe1R9HNw"/>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Site Engineer</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Zaid K.</h5>
+<span class="font-body-sm text-body-sm text-outline">Dubai South / DIFC Zones</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">75% Load</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[75%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-outline">3 Active Sites Handled</span>
+<button class="font-label-sm text-label-sm uppercase text-primary-container font-semibold hover:underline" type="button">Reassign</button>
+</div>
+</div>
+<!-- MEP Engineer Card -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<img class="w-11 h-11 rounded-full object-cover" data-alt="Portrait of an Indian MEP mechanical electrical plumbing engineer in Dubai consulting technical schematic blueprints" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS4KNVxeQ5DBgQlVw46wopK5Y-VZF5SQWEA4gycmXAlLKKs6k_L6ufscBazQaWx000ifqN5n5EB8LOou6WH7j-XkHmmK5IwxZ_gXivdgYwBiha7jhHp6CRBEy_B2nsrnKpmMY_8NSESbwPywqxdeUGdLRt21DQVyQAdi6ESioseX0oHVftsKDEC4lFD6fudBe9_8tvSveuy5rI_IvcGhQt50GjVaIRgF3npKmZ7w"/>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">MEP Engineer</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Harish Nair</h5>
+<span class="font-body-sm text-body-sm text-outline">DEWA &amp; Civil Defense Certified</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">50% Load</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[50%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-outline">2 Active Projects in Parallel</span>
+<button class="font-label-sm text-label-sm uppercase text-primary-container font-semibold hover:underline" type="button">Reassign</button>
+</div>
+</div>
+</div>
+<!-- 4. QS & Procurement Specialist (Dual Column Row) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Quantity Surveyor -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed-dim/30 flex items-center justify-center font-headline-sm text-secondary font-semibold">FA</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Quantity Surveyor (QS)</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Fatima Al-Zaabi</h5>
+<span class="font-body-sm text-body-sm text-outline">RICS Certified · Commercial Contracts</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">30% Load</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full w-[30%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-outline">1 Active Auditing Project</span>
+<button class="font-label-sm text-label-sm uppercase text-primary-container font-semibold hover:underline" type="button">Reassign</button>
+</div>
+</div>
+<!-- Procurement Specialist -->
+<div class="p-4 rounded-xl bg-surface-container-low flex flex-col justify-between gap-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed-dim/30 flex items-center justify-center font-headline-sm text-secondary font-semibold">MC</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Procurement Specialist</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface font-semibold leading-snug">Marcus Chen</h5>
+<span class="font-body-sm text-body-sm text-outline">Custom Joinery &amp; Italian Stone</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm font-semibold">60% Load</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[60%] rounded-full"></div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-[11px] text-outline">Direct European Mill Pipeline</span>
+<button class="font-label-sm text-label-sm uppercase text-primary-container font-semibold hover:underline" type="button">Reassign</button>
+</div>
+</div>
+</div>
+<!-- 5. Site Supervisor -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center justify-between gap-4">
+<div class="flex items-center gap-3.5">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline-sm font-semibold">RA</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase text-outline block">Full-Time Site Supervisor</span>
+<h5 class="font-headline-sm text-[16px] text-on-surface font-semibold">Rashid Ahmed</h5>
+<span class="font-body-sm text-body-sm text-outline">Snagging &amp; Daily Subcontractor Log Oversight</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden sm:flex flex-col text-right">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase">100% Dedicated</span>
+<span class="font-body-sm text-[11px] text-outline">Zero overlap sites</span>
+</div>
+<button class="p-2 text-outline hover:text-on-surface rounded-lg bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Module C: STEP 4 PREVIEW — FIT-OUT LIFECYCLE PLANNER -->
+<section class="bg-surface-container-lowest rounded-2xl p-6 sm:p-7 shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-3">
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Step 04 Preview</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm font-medium">Standard UAE Fast-Track</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">Fit-Out Lifecycle &amp; Authority Milestones</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dubai Municipality, Civil Defense &amp; DIFC Authority statutory approval tracking.</p>
+</div>
+<!-- Plan Template Toggle Switch -->
+<div class="inline-flex p-1 rounded-lg bg-surface-container-low self-start sm:self-auto">
+<button class="px-3 py-1.5 rounded-md bg-surface-container-lowest text-on-surface shadow-xs font-label-sm text-label-sm font-semibold uppercase" type="button">
+              Standard 18-Wk Fast Track
+            </button>
+<button class="px-3 py-1.5 rounded-md text-outline hover:text-on-surface font-label-sm text-label-sm uppercase transition-colors" type="button">
+              Custom Phased Plan
+            </button>
+</div>
+</div>
+<!-- Visual Milestone Linear Timeline Bar -->
+<div class="relative py-2">
+<!-- Horizontal connector rule -->
+<div class="hidden md:block absolute top-[27px] left-4 right-4 h-0.5 bg-surface-variant z-0"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative z-10">
+<!-- Phase 1 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-xs font-semibold">1</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">2 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Planning &amp; Kickoff</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">01 Nov — 14 Nov</span>
+<span class="font-body-sm text-[11px] text-tertiary">Site hand-over signoff</span>
+</div>
+<!-- Phase 2 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">2</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">3 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Concept &amp; Detailed Design</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">15 Nov — 05 Dec</span>
+<span class="font-body-sm text-[11px] text-outline">3D Renders &amp; Tender Pack</span>
+</div>
+<!-- Phase 3 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">3</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">3.5 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">DM &amp; Civil Defense NOC</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">06 Dec — 28 Dec</span>
+<span class="font-body-sm text-[11px] text-secondary font-medium">Critical Authority Path</span>
+</div>
+<!-- Phase 4 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">4</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">5 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Joinery &amp; Marble Orders</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">20 Dec — 25 Jan</span>
+<span class="font-body-sm text-[11px] text-outline">Long-lead Italy delivery</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4 relative z-10">
+<!-- Phase 5 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">5</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">2 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Mobilization &amp; Strip Out</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">10 Jan — 22 Jan</span>
+<span class="font-body-sm text-[11px] text-outline">Site security fencing</span>
+</div>
+<!-- Phase 6 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">6</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">5 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">MEP 1st &amp; 2nd Fix</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">23 Jan — 25 Feb</span>
+<span class="font-body-sm text-[11px] text-outline">DEWA inspection gate</span>
+</div>
+<!-- Phase 7 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold">7</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">3.5 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Finishes &amp; Architectural Snag</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">26 Feb — 20 Mar</span>
+<span class="font-body-sm text-[11px] text-outline">Azzora 0-Snag Standard</span>
+</div>
+<!-- Phase 8 -->
+<div class="p-3.5 rounded-xl bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary flex items-center justify-center font-label-sm text-xs font-semibold">8</span>
+<span class="font-label-sm text-[10px] uppercase text-outline">1.5 Wks</span>
+</div>
+<h6 class="font-headline-sm text-[14px] text-on-surface font-semibold mt-1">Final TOC &amp; Handover</h6>
+<span class="font-body-sm text-[12px] text-on-surface-variant">21 Mar — 30 Mar</span>
+<span class="font-body-sm text-[11px] text-tertiary">Building Management Pass</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fast-track template complies with DIFC building operational regulations and night-shift noise curfew protocols.</span>
+</div>
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-primary-container font-semibold hover:underline flex items-center gap-1" type="button">
+<span>Configure Phasing</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<!-- COLUMN 2: Sticky Right Rail — "Project Passport & Live Review" (35% width = 4 cols) -->
+<aside class="lg:col-span-4 sticky top-20 flex flex-col gap-5">
+<!-- The Architectural Project Passport Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-md flex flex-col gap-5">
+<!-- Passport Header with Mono Badge -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-primary-fixed text-on-primary-fixed font-label-md text-label-md tracking-widest font-semibold uppercase">AZ-027</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Passport</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-1 leading-tight">DIFC Executive HQ</h3>
+<span class="font-body-sm text-body-sm text-outline">Al-Futtaim Private Investments LLC</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">architecture</span>
+</div>
+<!-- Architectural Image Visualizer -->
+<div class="relative w-full h-44 rounded-xl overflow-hidden shadow-xs">
+<img class="w-full h-full object-cover" data-alt="High-end photorealistic 3D interior architectural render of executive boardroom in DIFC Dubai with panoramic skyline glass facade, fluted oak wall paneling, brushed brass detailing, and terrazzo flooring, architectural photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC88Hw1StqQPnDnFw5mb944_0iymlIVm2VQOU1ad_YMklZATuqLCTuDcPYamaCHvWAkuh7kRqxziA-nCBw4EeIj9uoPvxmoMbrzDskI5op0ZRH0u7g1zrbBswBJD-1Pt4Ebd27EbLkzy-GrETXpSH5ZrDujC4KUwqmTaDdfV4G70GBamd0BsxAz8SH_GFUC5_N9bLaYo7Nu2OTMIukJj-mwtwg0rbj54BwzevxkCg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex items-center gap-1.5 font-label-sm text-[11px] uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px] text-secondary-container">domain</span>
+<span>Level 14 · DIFC Gate 04</span>
+</div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider px-2 py-0.5 rounded bg-surface-container-lowest/20 backdrop-blur-sm">Commercial</span>
+</div>
+</div>
+<!-- Financial & Dimensional Metrics Matrix -->
+<div class="grid grid-cols-2 gap-3 py-1">
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Total Contract</span>
+<span class="font-headline-sm text-[18px] text-primary-container font-semibold block mt-0.5">AED 4,850,000</span>
+<span class="font-body-sm text-[11px] text-outline">Fixed Sum Turnkey</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline block">Unit Area</span>
+<span class="font-headline-sm text-[18px] text-on-surface font-semibold block mt-0.5">12,400 sq.ft</span>
+<span class="font-body-sm text-[11px] text-secondary font-medium">AED 391 / sq.ft</span>
+</div>
+</div>
+<!-- Timeline & Progress Readiness Gauge -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Execution Window</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">150 Calendar Days</span>
+</div>
+<div class="flex items-center justify-between font-body-sm text-body-sm text-on-surface-variant">
+<span>01 Nov 2024</span>
+<span class="text-outline text-xs">━━━━━━━━</span>
+<span>30 Mar 2025</span>
+</div>
+<!-- Wizard Readiness Meter -->
+<div class="mt-3 p-3 rounded-xl bg-surface-container">
+<div class="flex items-center justify-between mb-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-semibold">Wizard Readiness</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">85% Complete</span>
+</div>
+<div class="w-full bg-surface-variant h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[85%] rounded-full transition-all"></div>
+</div>
+<div class="flex items-center justify-between mt-2 text-[11px] text-on-surface-variant">
+<span>Step 3 of 5 In Progress</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                Scope Pre-approved
+              </span>
+</div>
+</div>
+</div>
+<!-- Team Avatar Stack Preview -->
+<div class="flex flex-col gap-2 pt-2 border-t border-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Assigned Specialist Squad (6)</span>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2 overflow-hidden">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-xs font-semibold ring-2 ring-surface-container-lowest">TA</div>
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-label-sm text-xs font-semibold ring-2 ring-surface-container-lowest">ER</div>
+<div class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-label-sm text-xs font-semibold ring-2 ring-surface-container-lowest">ZK</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-label-sm text-xs font-semibold ring-2 ring-surface-container-lowest">HN</div>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-xs font-semibold ring-2 ring-surface-container-lowest">FA</div>
+</div>
+<span class="font-body-sm text-[12px] text-tertiary font-semibold">All Slots Validated</span>
+</div>
+</div>
+<!-- Wizard Navigation & Primary Actions -->
+<div class="flex flex-col gap-2.5 pt-3">
+<button class="w-full py-3.5 px-6 rounded-lg bg-primary-container hover:bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-wider font-semibold transition-all shadow-[0_2px_8px_rgba(154,60,37,0.25)] flex items-center justify-center gap-2" type="button">
+<span>Continue to Review &amp; Launch</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-2.5 px-4 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-lg text-label-lg uppercase tracking-wider transition-colors" type="button">
+            Save as Draft (AZ-027)
+          </button>
+<div class="text-center mt-1">
+<button class="font-label-sm text-label-sm uppercase tracking-wider text-outline hover:text-on-surface transition-colors flex items-center justify-center gap-1 mx-auto" type="button">
+<span class="material-symbols-outlined text-[14px]">arrow_back</span>
+<span>Back to Scope &amp; Location</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Compliance Badge Panel -->
+<div class="p-4 rounded-xl bg-surface-container-low flex items-center gap-3 shadow-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface font-semibold">DIFC Authority Green Code</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">All statutory fire damper, sprinkler &amp; egress tolerances pre-checked.</span>
+</div>
+</div>
+</aside>
+</div>
+</div></main></div></body></html>

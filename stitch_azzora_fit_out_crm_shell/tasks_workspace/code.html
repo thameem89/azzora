@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-error":"#ffffff","secondary-fixed":"#ffddb4","on-primary-container":"#ffc4b6","primary-fixed":"#ffdad2","outline-variant":"#ddc0ba","inverse-on-surface":"#f4f0ee","on-primary":"#ffffff","inverse-primary":"#ffb4a2","on-tertiary-container":"#b6dcbf","primary-container":"#9a3c25","secondary-fixed-dim":"#e3c197","on-error-container":"#93000a","surface-tint":"#a04029","on-surface":"#1c1b1a","surface":"#fdf8f6","surface-container-low":"#f7f3f0","secondary-container":"#fedaae","tertiary-container":"#40624b","surface-container-high":"#ece7e5","on-secondary-fixed-variant":"#5a4222","on-tertiary-fixed-variant":"#2d4e38","on-surface-variant":"#56423d","background":"#fdf8f6","on-secondary-container":"#785e3b","on-tertiary":"#ffffff","surface-dim":"#ddd9d7","on-primary-fixed-variant":"#802914","error-container":"#ffdad6","surface-container":"#f2edeb","on-primary-fixed":"#3c0700","surface-variant":"#e6e2df","tertiary":"#294a34","on-tertiary-fixed":"#00210f","primary-fixed-dim":"#ffb4a2","on-background":"#1c1b1a","on-secondary":"#ffffff","inverse-surface":"#31302f","surface-container-highest":"#e6e2df","secondary":"#745a37","on-secondary-fixed":"#291800","tertiary-fixed-dim":"#aacfb3","outline":"#89726c","error":"#ba1a1a","surface-bright":"#fdf8f6","primary":"#7b2510","tertiary-fixed":"#c6ecce","surface-container-lowest":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-sm":"0.5rem","margin":"2.5rem","gutter":"1.5rem","space-lg":"1.5rem","space-xs":"0.25rem","space-xl":"2.5rem","space-md":"1rem","margin-mobile":"1.25rem","gutter-mobile":"1rem"},fontFamily:{"display-lg":["Space Grotesk"],"body-md":["Inter"],"body-sm":["Inter"],"headline-md":["Space Grotesk"],"label-md":["Space Grotesk"],"body-lg":["Inter"],"label-lg":["Space Grotesk"],"display-lg-mobile":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-sm":["Space Grotesk"]},fontSize:{"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="font-headline-sm text-headline-sm tracking-tight">A</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-wider uppercase text-on-surface">AZZORA</span><span class="font-label-sm text-label-sm text-outline uppercase">DESIGN · BUILD</span></div></div><span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">UAE</span></div><div class="px-space-lg py-space-sm"><div class="p-space-sm bg-surface-container rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-outline text-lg">apartment</span><div class="flex flex-col"><span class="font-label-md text-label-md uppercase text-on-surface">Dubai Regional HQ</span><span class="font-body-sm text-body-sm text-outline">DIFC Gate Precinct 4</span></div></div><span class="material-symbols-outlined text-outline text-base">unfold_more</span></div></div><div class="px-space-lg pt-space-md pb-space-xs"><span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Operational Modules</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span><span>Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="projects" href="#"><span class="material-symbols-outlined text-xl">domain</span><span>Projects</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="planning-gantt" href="#"><span class="material-symbols-outlined text-xl">timeline</span><span>Planning &amp; Gantt</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-sm" data-path="tasks" href="#"><span class="material-symbols-outlined text-xl">task_alt</span><span>Tasks</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="team-workload" href="#"><span class="material-symbols-outlined text-xl">group</span><span>Team &amp; Workload</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="documents" href="#"><span class="material-symbols-outlined text-xl">folder_open</span><span>Documents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="snags-qa" href="#"><span class="material-symbols-outlined text-xl">fact_check</span><span>Snags &amp; QA</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-label-lg text-label-lg rounded-lg" data-path="settings" href="#"><span class="material-symbols-outlined text-xl">tune</span><span>Settings</span></a></nav></div><div class="p-space-md"><div class="p-space-md bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-2.5 h-2.5 rounded-full bg-tertiary"></div><div class="flex flex-col"><span class="font-label-md text-label-md uppercase text-on-surface">Site Telemetry</span><span class="font-body-sm text-body-sm text-outline">14 Active Sites</span></div></div><span class="font-label-sm text-label-sm text-tertiary px-space-xs py-0.5 rounded bg-surface-container-highest uppercase font-semibold">Sync Live</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-xl pointer-events-none">search</span><input class="w-full h-11 pl-10 pr-space-md bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Search projects, CAD revisions, BOQs or site snags..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="hidden lg:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface-variant uppercase"><span class="material-symbols-outlined text-base text-outline">location_on</span><span>UAE · Dubai Marina &amp; Palm Jumeirah Sector</span></div><button class="h-10 px-space-md rounded-lg bg-primary text-on-primary font-label-lg text-label-lg tracking-wider uppercase hover:bg-primary-container transition-colors flex items-center gap-space-xs shadow-sm" type="button"><span class="material-symbols-outlined text-base">add</span><span>New Directive</span></button><button class="h-10 w-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors relative" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Rashid Al-Maktoum</span><span class="font-label-sm text-label-sm text-outline uppercase">Director of Architecture</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/></div></div></header><main class="relative pt-20 w-full px-space-xl bg-surface min-h-screen"><div class="flex flex-col w-full pb-space-xl">
+<!-- PAGE HEADER & AMBIENT ANCHOR -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<!-- Top Meta Row -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-outline mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Azzora Operative Desk</span>
+<span class="text-outline text-xs">/</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Dubai Site Portfolios</span>
+</div>
+<div class="flex items-baseline gap-space-md">
+<h1 class="font-display-lg text-display-lg tracking-tight text-on-surface">Tasks</h1>
+<span class="font-body-md text-body-md text-outline hidden md:inline-block">Track, prioritize and resolve site &amp; design deliverables across active UAE fit-outs.</span>
+</div>
+</div>
+<!-- Action Group -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<div class="inline-flex p-1 bg-surface-container rounded-lg">
+<button class="px-space-md py-1.5 rounded-md text-on-primary bg-primary font-label-md text-label-md uppercase tracking-wider shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">view_kanban</span>
+<span>Board</span>
+</button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">format_list_bulleted</span>
+<span>List</span>
+</button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high font-label-md text-label-md uppercase tracking-wider transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">timeline</span>
+<span>Timeline</span>
+</button>
+</div>
+<div class="h-6 w-px bg-surface-container-highest mx-1 hidden sm:block"></div>
+<button class="h-10 px-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md tracking-wider uppercase transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base text-outline">checklist</span>
+<span>Bulk Actions</span>
+</button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-md text-label-md tracking-wider uppercase transition-colors flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base text-outline">file_download</span>
+<span>Export</span>
+</button>
+<button class="h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label-md text-label-md tracking-wider uppercase hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span>New Task</span>
+</button>
+</div>
+</div>
+<!-- Scope Switcher Tabs & Keyboard Anchor -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex items-center gap-space-xs p-1 bg-surface-container-low rounded-xl w-fit">
+<button class="px-space-md py-1.5 bg-surface-container-lowest text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg shadow-sm flex items-center gap-2" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>My Tasks</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-primary font-semibold text-[10px]">14</span>
+</button>
+<button class="px-space-md py-1.5 text-on-surface-variant hover:text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg transition-colors flex items-center gap-2" type="button">
+<span>All Project Tasks</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-outline font-semibold text-[10px]">88</span>
+</button>
+</div>
+<div class="flex items-center gap-space-sm text-outline font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Site Sync: 8m ago</span>
+<span class="text-surface-container-highest">·</span>
+<span class="font-label-sm text-label-sm uppercase">UAE Standard Time (GST)</span>
+</div>
+</div>
+</div>
+<!-- SUMMARY STATS OVERVIEW (Architectural Tectonic Panels) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<!-- Stat 1: Total Active -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase text-outline tracking-wider">Total Active Tasks</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-base">assignment</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-3">
+<span class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">42</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase bg-tertiary-fixed px-2 py-0.5 rounded font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">trending_flat</span> 7 Projects
+        </span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<!-- Stat 2: In Progress -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase text-outline tracking-wider">In Progress</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-base">autorenew</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-3">
+<span class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">19</span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase bg-surface-container px-2 py-0.5 rounded font-semibold">
+          75% On Track
+        </span>
+</div>
+<div class="flex items-center gap-2 mt-3 font-body-sm text-body-sm text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-tertiary"></span>
+<span>14 high-priority MEP &amp; joinery fixes</span>
+</div>
+</div>
+<!-- Stat 3: Blocked -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase text-primary font-semibold tracking-wider">Site Blocked</span>
+<div class="w-8 h-8 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-base">front_hand</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-3">
+<span class="font-display-lg text-display-lg text-primary font-semibold tracking-tight">03</span>
+<span class="font-label-sm text-label-sm text-primary uppercase bg-error-container/60 px-2 py-0.5 rounded font-semibold">
+          Critical Path
+        </span>
+</div>
+<div class="flex items-center gap-1.5 mt-3 font-body-sm text-body-sm text-on-surface-variant truncate">
+<span class="material-symbols-outlined text-xs text-primary">warning</span>
+<span class="truncate">Awaiting MEP inspection sign-off</span>
+</div>
+</div>
+<!-- Stat 4: Overdue -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase text-outline tracking-wider">Overdue Review</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-base">event_busy</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-3">
+<span class="font-display-lg text-display-lg text-on-surface font-semibold tracking-tight">02</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase bg-surface-container px-2 py-0.5 rounded font-semibold">
+          -1 to -3 Days
+        </span>
+</div>
+<div class="flex items-center gap-1.5 mt-3 font-body-sm text-body-sm text-outline truncate">
+<span class="material-symbols-outlined text-xs">hourglass_bottom</span>
+<span class="truncate">Palm Jumeirah &amp; Downtown suites</span>
+</div>
+</div>
+</div>
+<!-- REFINED ARCHITECTURAL FILTER BAR -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm mb-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<!-- Search with ⌘K Badge -->
+<div class="relative min-w-[260px] flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span>
+<input class="w-full h-10 pl-9 pr-14 bg-surface-container-low text-on-surface rounded-lg font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" placeholder="Filter tasks, drawing IDs, subcontractors..." type="text"/>
+<span class="absolute right-2.5 top-1/2 -translate-y-1/2 px-1.5 py-0.5 rounded bg-surface-container-high text-outline font-label-sm text-[10px] tracking-tight uppercase">⌘K</span>
+</div>
+<!-- Quick Select Dropdowns -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Project Dropdown -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg appearance-none cursor-pointer hover:bg-surface-container-high transition-colors focus:outline-none">
+<option>All Projects (7)</option>
+<option selected="">Downtown Corporate Office (AZ-026)</option>
+<option>Palm Jumeirah Villa (AZ-028)</option>
+<option>DIFC Financial Suite (AZ-031)</option>
+<option>Business Bay Retail Lounge</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-base pointer-events-none">expand_more</span>
+</div>
+<!-- Phase Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg appearance-none cursor-pointer hover:bg-surface-container-high transition-colors focus:outline-none">
+<option>All Phases</option>
+<option>01 Planning</option>
+<option>02 Design</option>
+<option>03 Procurement</option>
+<option>04 Mobilization</option>
+<option selected="">05 Execution</option>
+<option>06 Snags &amp; QA</option>
+<option>07 Handover</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-base pointer-events-none">tune</span>
+</div>
+<!-- Assignee Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg appearance-none cursor-pointer hover:bg-surface-container-high transition-colors focus:outline-none">
+<option selected="">All Assignees</option>
+<option>Riyas K. (Site Eng)</option>
+<option>Tariq K. (Procurement)</option>
+<option>Sarah M. (Lead PM)</option>
+<option>Mohammed N. (MEP)</option>
+<option>Karim Z. (Joinery)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-base pointer-events-none">person</span>
+</div>
+<!-- Priority Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg appearance-none cursor-pointer hover:bg-surface-container-high transition-colors focus:outline-none">
+<option selected="">Priority: All</option>
+<option>High Priority</option>
+<option>Medium Priority</option>
+<option>Low Priority</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-base pointer-events-none">flag</span>
+</div>
+<!-- Due Filter -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 bg-surface-container text-on-surface font-label-md text-label-md uppercase tracking-wider rounded-lg appearance-none cursor-pointer hover:bg-surface-container-high transition-colors focus:outline-none">
+<option>Due: Any Time</option>
+<option selected="">Due: This Week</option>
+<option>Overdue (2)</option>
+<option>Upcoming (Next 14d)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-base pointer-events-none">calendar_month</span>
+</div>
+<button class="h-10 px-3 bg-surface-container text-outline hover:text-on-surface hover:bg-surface-container-high rounded-lg font-label-md text-label-md uppercase tracking-wider transition-colors flex items-center gap-1" title="Clear all filters" type="button">
+<span class="material-symbols-outlined text-sm">restart_alt</span>
+<span class="hidden sm:inline">Reset</span>
+</button>
+</div>
+</div>
+</div>
+<!-- WORKSPACE MAIN CANVAS: KANBAN LANES + FIXED/ACTIVE SLIDE-OUT DRAWER -->
+<div class="flex gap-space-lg items-start w-full relative">
+<!-- KANBAN COLUMNS CONTAINER (Scrollable Horizontally on smaller screens) -->
+<div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-5 gap-space-md min-w-0">
+<!-- COLUMN 1: NOT STARTED -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Col Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Not Started</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-outline font-label-sm text-[10px]">6</span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors p-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<!-- Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1.1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">DIFC Suite · Ph.03</span>
+<span class="font-label-sm text-[10px] uppercase text-secondary bg-surface-container px-1.5 py-0.5 rounded font-semibold">Medium</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">Acoustic Wall Panel Delivery</h2>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline mt-1">
+<span class="material-symbols-outlined text-sm">link</span>
+<span class="truncate">Dep: BOQ Signoff</span>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface-variant font-semibold">TK</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tariq K.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Due 18 Oct</span>
+</div>
+</div>
+<!-- Card 1.2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Downtown · Ph.05</span>
+<span class="font-label-sm text-[10px] uppercase text-outline bg-surface-container px-1.5 py-0.5 rounded font-semibold">Normal</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">Final Coat Paint — Level 14</h2>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline mt-1">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span>Dep: Sanding &amp; Primer</span>
+</div>
+<div class="flex items-center justify-between pt-2 mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface-variant font-semibold">AP</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Arun P.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Due 25 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 2: IN PROGRESS -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Col Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">In Progress</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-primary font-label-sm text-[10px] font-semibold">9</span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors p-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<!-- Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 2.1 (ACTIVE / SELECTED - Anchored to details drawer) -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-md ring-2 ring-primary flex flex-col gap-space-xs cursor-pointer relative overflow-hidden transition-all">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-center justify-between pl-1">
+<span class="font-label-sm text-[10px] text-primary uppercase tracking-wider font-semibold">Downtown AZ-026 · Ph.05</span>
+<span class="font-label-sm text-[10px] uppercase text-primary bg-primary-fixed px-1.5 py-0.5 rounded font-semibold">High Priority</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface pl-1 leading-snug">Complete ceiling framework</h2>
+<!-- Progress indicator -->
+<div class="pl-1 mt-1">
+<div class="flex items-center justify-between text-body-sm text-outline mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Framing Progress</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">75%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 75%;"></div>
+</div>
+</div>
+<!-- Dependencies & Subtasks -->
+<div class="flex items-center justify-between pl-1 text-body-sm text-outline pt-2">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm">alt_route</span>
+<span class="text-[11px] font-medium">MEP First Fix</span>
+</div>
+<span class="text-[11px] bg-surface-container px-2 py-0.5 rounded text-on-surface-variant font-label-sm">3 / 4 Done</span>
+</div>
+<div class="flex items-center justify-between pt-2 pl-1">
+<div class="flex items-center gap-1.5">
+<img alt="Riyas K." class="w-6 h-6 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Riyas K.</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">timer</span> Due 14 Oct
+              </span>
+</div>
+</div>
+<!-- Card 2.2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">DIFC Suite · Ph.05</span>
+<span class="font-label-sm text-[10px] uppercase text-primary bg-primary-fixed px-1.5 py-0.5 rounded font-semibold">High</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">Custom Marble Reception Desk Fabrication</h2>
+<div class="mt-1">
+<div class="flex items-center justify-between text-body-sm text-outline mb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase">Joinery &amp; Stone</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">60%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 60%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-outline pt-2">
+<span class="material-symbols-outlined text-sm">description</span>
+<span class="truncate">Shop Drawings v3</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface-variant font-semibold">KZ</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Karim Z.</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Due 16 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 3: WAITING -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Col Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Waiting</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-[10px] font-semibold">4</span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors p-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<!-- Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 3.1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Palm Villa · Ph.04</span>
+<span class="font-label-sm text-[10px] uppercase text-secondary bg-secondary-fixed px-1.5 py-0.5 rounded font-semibold">Permit Review</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">Civil Defense Permit Sign-off</h2>
+<div class="p-2 bg-surface-container-low rounded-lg text-body-sm text-on-surface-variant mt-1">
+<div class="flex items-center gap-1 font-semibold text-[11px] text-secondary mb-0.5">
+<span class="material-symbols-outlined text-xs">info</span> Authority Dependency
+              </div>
+<span class="text-[12px] leading-snug">Pending Dubai Municipality &amp; Civil Defense Stamp.</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[10px] font-semibold">SM</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sarah M.</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Due 13 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 4: BLOCKED (Highlighted Tastefully in warm Terracotta tint) -->
+<div class="flex flex-col gap-space-md bg-error-container/20 p-space-md rounded-xl">
+<!-- Col Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary flex items-center justify-center">
+<span class="w-1 h-1 rounded-full bg-surface"></span>
+</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Blocked</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">3</span>
+</div>
+<button class="text-primary hover:text-on-surface transition-colors p-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+</button>
+</div>
+<!-- Cards -->
+<div class="flex flex-col gap-space-sm">
+<!-- Card 4.1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-primary uppercase tracking-wider font-semibold">Downtown · Ph.05</span>
+<span class="font-label-sm text-[10px] uppercase text-on-error bg-primary px-1.5 py-0.5 rounded font-semibold">Site Halt</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">Glass Partition Installation — Boardroom</h2>
+<div class="p-2 bg-error-container/40 rounded-lg text-body-sm text-on-surface mt-1">
+<div class="flex items-center gap-1 font-semibold text-[11px] text-primary mb-0.5">
+<span class="material-symbols-outlined text-xs">block</span> Block Reason:
+              </div>
+<span class="text-[12px] leading-tight text-on-surface-variant">Delayed due to MEP Duct Relocation in Grid B4.</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface-variant font-semibold">MN</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mohammed N.</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">history</span> Overdue
+              </span>
+</div>
+</div>
+<!-- Card 4.2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Business Bay · Ph.05</span>
+<span class="font-label-sm text-[10px] uppercase text-primary bg-primary-fixed px-1.5 py-0.5 rounded font-semibold">MEP Hold</span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface leading-snug group-hover:text-primary transition-colors">HVAC Chilled Water Pipe Testing</h2>
+<div class="p-2 bg-error-container/40 rounded-lg text-body-sm text-on-surface mt-1">
+<span class="text-[12px] leading-tight text-on-surface-variant">Awaiting building facility manager water main shutoff window.</span>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-label-sm text-label-sm text-outline">Dep: Facility Window</span>
+<span class="font-label-sm text-label-sm text-outline">Due 17 Oct</span>
+</div>
+</div>
+</div>
+</div>
+<!-- COLUMN 5: COMPLETED -->
+<div class="flex flex-col gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<!-- Col Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Completed</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary font-label-sm text-[10px] font-semibold">20</span>
+</div>
+<button class="text-outline hover:text-on-surface transition-colors p-1 rounded hover:bg-surface-container" type="button">
+<span class="material-symbols-outlined text-base">more_horiz</span>
+</button>
+</div>
+<!-- Cards -->
+<div class="flex flex-col gap-space-sm opacity-90">
+<!-- Card 5.1 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Downtown AZ-026</span>
+<span class="font-label-sm text-[10px] uppercase text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check</span> 100%
+              </span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface line-through decoration-outline/50 leading-snug">MEP First Fix Inspection</h2>
+<div class="flex items-center justify-between pt-2 mt-1">
+<div class="flex items-center gap-1.5">
+<div class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center font-label-sm text-[10px] text-on-surface-variant font-semibold">MN</div>
+<span class="font-body-sm text-body-sm text-outline">Mohammed N.</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Passed 09 Oct</span>
+</div>
+</div>
+<!-- Card 5.2 -->
+<div class="p-space-md bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col gap-space-xs group">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-wider">Downtown AZ-026</span>
+<span class="font-label-sm text-[10px] uppercase text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded font-semibold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check</span> 100%
+              </span>
+</div>
+<h2 class="font-headline-sm text-[15px] font-semibold text-on-surface line-through decoration-outline/50 leading-snug">Sub-floor Leveling &amp; Screed</h2>
+<div class="flex items-center justify-between pt-2 mt-1">
+<span class="font-label-sm text-label-sm text-outline">Curing Verified</span>
+<span class="font-label-sm text-label-sm text-outline">04 Oct</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT-SIDE SLIDE-OUT TASK DETAILS DRAWER (Expanded for 'Complete ceiling framework') -->
+<div class="w-[480px] shrink-0 bg-surface-container-lowest rounded-2xl shadow-xl flex flex-col self-start sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto" id="task-drawer">
+<!-- Drawer Top Bar -->
+<div class="p-space-lg bg-surface-container-low/60 flex flex-col gap-space-xs sticky top-0 backdrop-blur z-20">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 text-outline">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Downtown (AZ-026)</span>
+<span>›</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">05 Execution</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" title="Pop out / Full view" type="button">
+<span class="material-symbols-outlined text-base">open_in_new</span>
+</button>
+<button class="w-8 h-8 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" onclick="document.getElementById('task-drawer').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-2">
+<!-- Status Dropdown Pill -->
+<div class="relative">
+<select class="h-7 pl-2.5 pr-7 bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider rounded-md appearance-none cursor-pointer hover:bg-primary-container transition-colors focus:outline-none font-semibold">
+<option>Not Started</option>
+<option selected="">In Progress</option>
+<option>Waiting</option>
+<option>Blocked</option>
+<option>Completed</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-on-primary text-sm pointer-events-none">arrow_drop_down</span>
+</div>
+<!-- Priority Badge -->
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary bg-primary-fixed px-2 py-1 rounded font-semibold">
+              High Priority
+            </span>
+</div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">TSK-DUB-05-182</span>
+</div>
+</div>
+<!-- Drawer Body Content -->
+<div class="p-space-lg flex flex-col gap-space-lg">
+<!-- Task Title & Scope -->
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface leading-tight">
+            Complete ceiling framework &amp; acoustic baffles
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Coordinate perimeter drop levels, suspension hangers, and integrate timber acoustic baffles with MEP primary ducts.
+          </p>
+</div>
+<!-- Assignee & Co-owners Section -->
+<div class="p-space-md bg-surface-container-low rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img alt="Riyas K." class="w-10 h-10 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[14px] font-semibold text-on-surface">Riyas K.</span>
+<span class="font-body-sm text-body-sm text-outline">Lead Site Engineer · Azzora UAE</span>
+</div>
+</div>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-sm text-primary">person_add</span>
+<span>+ Co-owner</span>
+</button>
+</div>
+<!-- Dates & Duration Matrix -->
+<div class="grid grid-cols-3 gap-space-sm p-space-md bg-surface-container-low rounded-xl">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Start Date</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">02 Oct 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-primary font-semibold">Due Target</span>
+<span class="font-label-md text-label-md text-primary font-bold mt-0.5">14 Oct 2024</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Duration</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold mt-0.5">12 Days</span>
+</div>
+</div>
+<!-- Progress Dial & Checkpoints -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Framing Deliverables</span>
+<span class="font-label-md text-label-md text-primary font-bold">75% Complete</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all" style="width: 75%;"></div>
+</div>
+<!-- Step Checkpoints -->
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<div class="flex items-center gap-2 p-2 bg-surface-container-low rounded-lg text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+<span class="text-on-surface text-xs">Sub-framing (100%)</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-surface-container-low rounded-lg text-body-sm">
+<span class="material-symbols-outlined text-tertiary text-base">check_circle</span>
+<span class="text-on-surface text-xs">Primary Channels (100%)</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-surface-container-low rounded-lg text-body-sm">
+<span class="material-symbols-outlined text-primary text-base">hourglass_top</span>
+<span class="text-on-surface font-medium text-xs">Acoustic Hangers (60%)</span>
+</div>
+<div class="flex items-center gap-2 p-2 bg-surface-container-low rounded-lg text-body-sm opacity-60">
+<span class="material-symbols-outlined text-outline text-base">radio_button_unchecked</span>
+<span class="text-outline text-xs">Final Align &amp; Laser (0%)</span>
+</div>
+</div>
+</div>
+<!-- Architectural Dependencies Map -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Critical Path Dependencies</span>
+<div class="flex flex-col gap-2 mt-1">
+<!-- Predecessor -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-base">link</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase">Predecessor</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">MEP First Fix Inspection</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] uppercase text-tertiary bg-tertiary-fixed px-1.5 py-0.5 rounded font-semibold">Done 09 Oct</span>
+</div>
+<!-- Successor -->
+<div class="flex items-center justify-between p-space-sm bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-base">arrow_forward</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-outline uppercase">Successor Task</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Ceiling Closure &amp; Gypsum Board</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] uppercase text-outline bg-surface-container px-1.5 py-0.5 rounded">Sched. 16 Oct</span>
+</div>
+</div>
+</div>
+<!-- Specifications & Site Engineering Notes -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Specifications &amp; Site Directive</span>
+<div class="p-space-md bg-surface-container-low rounded-xl text-body-sm text-on-surface-variant leading-relaxed">
+            Ensure minimum <strong class="text-on-surface">2.8m clear finished ceiling height</strong> per approved architectural drawing <span class="text-primary font-mono font-medium">AR-104-RevC</span>. Double acoustic isolation damping clips required at perimeter interfaces to avoid structural reverberation into executive boardroom suites.
+          </div>
+</div>
+<!-- Attachments & Drawings -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Site Drawings &amp; Field Photos (2)</span>
+<button class="text-primary font-label-sm text-label-sm uppercase font-semibold flex items-center gap-1 hover:underline" type="button">
+<span class="material-symbols-outlined text-xs">upload</span> Upload
+            </button>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<!-- Attachment 1: Drawing PDF -->
+<div class="p-2.5 bg-surface-container-low rounded-xl flex items-center gap-2.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">AR-104_Ceiling_Detail.pdf</span>
+<span class="font-body-sm text-[11px] text-outline">4.2 MB · Rev C</span>
+</div>
+</div>
+<!-- Attachment 2: Site Survey Photo -->
+<div class="p-2.5 bg-surface-container-low rounded-xl flex items-center gap-2.5 hover:bg-surface-container transition-colors cursor-pointer group">
+<img class="w-10 h-10 rounded-lg object-cover shrink-0" data-alt="High quality architectural photograph of an interior commercial office ceiling under construction in Dubai with exposed metal studs, acoustic suspension wiring, and neatly organized ductwork with natural daylight filtering in." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApQsHxiCgVBA6iyAHmN02b4dYOVxH_PMGnQ-RMaaE7pv63v3jbzAPDLxX59fmq8DU5L-FELe6lGntIiAKSJ9tIUAyszRXGb8D8UVLwFykOCcAKG3hTqkplBJYXykIPtYPakVmsqd6k2VTx6EEjQ1nNxfGOe3Y_CEvbbS6C4aNRERHwZT3APUJbCMBbt-RaxiYI-ACZVGNnD2Zu81LQ5qcDRILRdwexlf2f4utvuA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface truncate group-hover:text-primary transition-colors">Site_Survey_GridC.jpg</span>
+<span class="font-body-sm text-[11px] text-outline">Yesterday · 1.8 MB</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Feed & Site Discussion -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-md text-label-md uppercase tracking-wider text-outline">Site Coordination Log</span>
+<div class="flex flex-col gap-space-md pl-2 border-l-2 border-surface-container-high">
+<!-- Comment 1 -->
+<div class="flex flex-col gap-1 pl-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Riyas K. (Site Engineer)</span>
+<span class="font-body-sm text-[11px] text-outline">2 hours ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Grid C framework aligned today. Laser calibration verified at 2.82m clear. Ready for MEP second fix drop coordination.
+              </p>
+</div>
+<!-- Comment 2 -->
+<div class="flex flex-col gap-1 pl-3">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold text-primary">Sarah M. (Lead PM)</span>
+<span class="font-body-sm text-[11px] text-outline">1 hour ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Approved for acoustic clip installation. Please ensure tolerance is held strictly within ±3mm before drywall crew mobilizes.
+              </p>
+</div>
+</div>
+<!-- Quick Comment Input -->
+<div class="mt-2 flex flex-col gap-space-xs p-2.5 bg-surface-container-low rounded-xl">
+<textarea class="w-full bg-transparent text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none resize-none" placeholder="Add site update, flag snag, or mention @subcontractor..." rows="2"></textarea>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-center gap-1 text-outline">
+<button class="p-1 rounded hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">alternate_email</span>
+</button>
+<button class="p-1 rounded hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">add_a_photo</span>
+</button>
+<button class="p-1 rounded hover:text-on-surface hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-base">attach_file</span>
+</button>
+</div>
+<button class="px-space-md py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary-container transition-colors" type="button">
+                Send
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Drawer Footer Actions -->
+<div class="p-space-lg bg-surface-container-low/80 sticky bottom-0 backdrop-blur z-20 flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<button class="h-10 px-space-lg rounded-lg bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary-container transition-all shadow-sm font-semibold" type="button">
+            Save Changes
+          </button>
+<button class="h-10 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container transition-colors" type="button">
+            Mark Complete
+          </button>
+</div>
+<button class="h-10 w-10 rounded-lg bg-surface-container-lowest text-outline hover:text-on-surface hover:bg-surface-container flex items-center justify-center transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

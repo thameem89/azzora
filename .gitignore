@@ -1,0 +1,48 @@
+# Dependencies and production output
+node_modules/
+dist/
+coverage/
+
+# Generated browser/test results (preserve original Stitch reference images)
+playwright-report/
+playwright/.cache/
+playwright/.auth/
+test-results/
+blob-report/
+/artifacts/
+/screenshots/
+/docs/dashboard-desktop.png
+/docs/dashboard-mobile.png
+/docs/settings-mobile.png
+/docs/handover-verified.png
+/docs/browser-validation.json
+
+# Environment values and local credentials
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local
+.npmrc
+.aws/
+.credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local agent/editor state and temporary files
+.codex/
+.agents/
+.DS_Store
+*.log
+*.tsbuildinfo
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+/tmp/
+/temp/
+.vscode/
+.idea/

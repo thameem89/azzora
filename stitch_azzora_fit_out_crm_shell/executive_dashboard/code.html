@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-low":"#f7f3f0","tertiary-fixed":"#c6ecce","surface-container-highest":"#e6e2df","error-container":"#ffdad6","on-secondary-fixed-variant":"#5a4222","error":"#ba1a1a","primary-fixed-dim":"#ffb4a2","outline-variant":"#ddc0ba","surface-tint":"#a04029","on-error-container":"#93000a","on-primary-fixed":"#3c0700","surface":"#fdf8f6","secondary-container":"#fedaae","on-background":"#1c1b1a","on-tertiary-fixed":"#00210f","on-secondary-container":"#785e3b","background":"#fdf8f6","on-primary":"#ffffff","primary-container":"#9a3c25","outline":"#89726c","on-secondary-fixed":"#291800","on-tertiary-fixed-variant":"#2d4e38","tertiary":"#294a34","on-primary-container":"#ffc4b6","surface-container":"#f2edeb","on-surface-variant":"#56423d","tertiary-fixed-dim":"#aacfb3","on-tertiary":"#ffffff","surface-bright":"#fdf8f6","on-error":"#ffffff","surface-variant":"#e6e2df","inverse-surface":"#31302f","on-secondary":"#ffffff","surface-dim":"#ddd9d7","secondary-fixed-dim":"#e3c197","surface-container-lowest":"#ffffff","inverse-on-surface":"#f4f0ee","inverse-primary":"#ffb4a2","secondary-fixed":"#ffddb4","primary-fixed":"#ffdad2","tertiary-container":"#40624b","on-surface":"#1c1b1a","on-tertiary-container":"#b6dcbf","surface-container-high":"#ece7e5","primary":"#7b2510","on-primary-fixed-variant":"#802914","secondary":"#745a37"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-md":"1rem","space-xs":"0.25rem","space-xl":"2.5rem","margin-mobile":"1.25rem","gutter-mobile":"1rem","space-lg":"1.5rem","margin":"2.5rem","gutter":"1.5rem","space-sm":"0.5rem"},fontFamily:{"headline-lg":["Space Grotesk"],"display-lg-mobile":["Space Grotesk"],"label-lg":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["Inter"],"label-md":["Space Grotesk"],"label-sm":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-lg":["Inter"],"display-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"body-sm":["Inter"]},fontSize:{"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"500"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.08em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.1em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.12em",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"400"}],"display-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"500"}],"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col flex-1 min-h-0"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm font-semibold tracking-tight shadow-[0_1px_8px_rgba(0,0,0,0.04)]">AZ</div><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase">AZZORA</span></div><span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">design . build</span></div></div><div class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider">DXB</div></div><div class="px-space-lg mb-space-sm"><div class="p-space-sm rounded-lg bg-surface flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center gap-space-sm min-w-0"><span class="w-2 h-2 rounded-full bg-tertiary flex-shrink-0"></span><div class="truncate"><p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Active Site</p><p class="font-label-lg text-label-lg text-on-surface truncate">One Canal Penthouse</p></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-space-md py-space-xs space-y-space-md"><div class="space-y-1"><p class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Project Execution</p><nav class="flex flex-col space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg transition-all group bg-primary-container text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[19px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="projects" href="#"><span class="material-symbols-outlined text-[19px]">apartment</span><span class="font-label-lg text-label-lg">Projects</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="planning" href="#"><span class="material-symbols-outlined text-[19px]">calendar_view_week</span><span class="font-label-lg text-label-lg">Planning</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="tasks" href="#"><span class="material-symbols-outlined text-[19px]">task_alt</span><span class="font-label-lg text-label-lg">Tasks</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="team" href="#"><span class="material-symbols-outlined text-[19px]">groups</span><span class="font-label-lg text-label-lg">Team</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="site-updates" href="#"><span class="material-symbols-outlined text-[19px]">construction</span><span class="font-label-lg text-label-lg">Site Updates</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="snags-qa" href="#"><span class="material-symbols-outlined text-[19px]">rule</span><span class="font-label-lg text-label-lg">Snags &amp; QA</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-space-container-high hover:text-on-surface transition-all group" data-path="documents" href="#"><span class="material-symbols-outlined text-[19px]">description</span><span class="font-label-lg text-label-lg">Documents</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="handover" href="#"><span class="material-symbols-outlined text-[19px]">key</span><span class="font-label-lg text-label-lg">Handover</span></a></nav></div><div class="h-[1px] bg-surface-container-highest mx-space-sm"></div><div class="space-y-1"><p class="px-space-sm pb-space-xs font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Governance</p><nav class="flex flex-col space-y-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="reports" href="#"><span class="material-symbols-outlined text-[19px]">insert_chart</span><span class="font-label-lg text-label-lg">Reports</span></a><a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all group" data-path="settings" href="#"><span class="material-symbols-outlined text-[19px]">tune</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div></div></div><div class="p-space-md m-space-md rounded-xl bg-surface-container flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-wider">Dubai HQ Studio</span><span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>Live Sync</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">GST +4 • Lat 25.1972° N</p></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-lg text-label-lg text-on-surface uppercase tracking-wide">Dubai &amp; Northern Emirates</span><span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container-highest px-1.5 py-0.5 rounded">Tier 1 Portfolio</span></div></div><div class="flex items-center flex-1 max-w-md mx-space-lg"><div class="w-full flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">search</span><input class="w-full bg-transparent border-0 outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Search projects, tasks, drawings or team..." type="text"/><span class="font-label-sm text-label-sm bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface-variant font-mono">⌘K</span></div></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-sm py-1 rounded bg-secondary-container/40 text-on-secondary-container font-label-md text-label-md"><span class="font-headline-sm text-label-md font-semibold">AED</span><span class="font-body-sm text-body-sm">Dirham</span></div><button class="relative p-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all shadow-[0_1px_8px_rgba(0,0,0,0.04)] active:scale-[0.99]"><span class="material-symbols-outlined text-[18px]">add</span><span>Quick Add</span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/><div class="hidden xl:flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Tariq Al-Mansoor</span><span class="font-label-sm text-label-sm text-on-surface-variant tracking-normal">Principal Fit-Out Director</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- INTERACTIVE APP CONTAINER -->
+<div class="px-space-lg lg:px-margin py-space-lg max-w-[1720px] mx-auto w-full space-y-space-xl">
+<!-- 1. DASHBOARD HEADER & FILTER BAR -->
+<header class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg pb-space-md border-b border-surface-container-highest">
+<div class="space-y-1">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container font-semibold">Directorate Control Cockpit</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-mono">CYCLE 24.Q4</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-medium">Executive Overview</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+          Active fit-out operations, milestone deliverables, and site health across UAE projects.
+        </p>
+</div>
+<!-- Control Group -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Timeframe Selector -->
+<div class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+<span class="font-label-lg text-label-lg text-on-surface">Q4 2024 / October</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<!-- Location Filter Toggle Pill -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low shadow-inner">
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md transition-all bg-surface-container-lowest text-on-surface shadow-sm font-semibold" type="button">
+            All UAE
+          </button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">
+            Dubai (9)
+          </button>
+<button class="px-space-md py-1.5 rounded-md font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" type="button">
+            Abu Dhabi (3)
+          </button>
+</div>
+<!-- Export Action -->
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg hover:bg-surface-container-low transition-all shadow-sm active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Export Weekly Report</span>
+</button>
+</div>
+</header>
+<!-- 2. TOP SUMMARY (4 COMPACT PREMIUM KPI CARDS) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Card 1: Active Projects -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Active Projects</p>
+<h3 class="font-display-lg text-display-lg text-on-surface mt-1 leading-none font-semibold">12</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm space-y-1">
+<p class="font-body-sm text-body-sm text-on-surface font-medium">9 in Dubai • 3 in Abu Dhabi</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[15px]">trending_up</span>
+<span>2 starting site handover this month</span>
+</div>
+</div>
+</div>
+<!-- Card 2: Due This Week -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Due This Week</p>
+<h3 class="font-display-lg text-display-lg text-on-surface mt-1 leading-none font-semibold">7</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[22px]">calendar_month</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm space-y-1">
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Site milestones &amp; submittals</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>3 authority inspections confirmed</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Delayed Tasks -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div>
+<div class="flex items-center gap-space-xs">
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Delayed Tasks</p>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-error-container text-on-error-container font-label-sm uppercase font-semibold">Action Required</span>
+</div>
+<h3 class="font-display-lg text-display-lg text-primary-container mt-1 leading-none font-semibold">4</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-error-container/40 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">pending_actions</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm space-y-1">
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Across 2 projects</p>
+<p class="font-label-sm text-label-sm text-outline tracking-normal">2 MEP submittals, 2 joinery approvals</p>
+</div>
+</div>
+<!-- Card 4: Near Handover -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between group">
+<div class="flex items-start justify-between">
+<div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Near Handover</p>
+<h3 class="font-display-lg text-display-lg text-tertiary mt-1 leading-none font-semibold">3</h3>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">key</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm space-y-1">
+<p class="font-body-sm text-body-sm text-on-surface font-semibold font-mono">Value: AED 18,400,000</p>
+<div class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Snagging &gt; 85% complete</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. MAIN CONTENT GRID (2-column layout: 65% / 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: ACTIVE PROJECTS (65% -> 8 cols) -->
+<div class="lg:col-span-8 space-y-space-md">
+<!-- Area Header -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-md text-headline-md text-on-surface font-medium">Active Fit-Outs</h2>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface font-semibold">12 Active</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<!-- Search Inside List -->
+<div class="hidden sm:flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">filter_list</span>
+<input class="w-28 text-body-sm bg-transparent outline-none placeholder:text-outline" placeholder="Filter sites..." type="text"/>
+</div>
+<!-- View Switcher -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-low">
+<button class="p-1.5 rounded bg-surface-container-lowest text-on-surface shadow-sm" title="Architectural Cards" type="button">
+<span class="material-symbols-outlined text-[18px]">view_agenda</span>
+</button>
+<button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface transition-all" title="Compact Table" type="button">
+<span class="material-symbols-outlined text-[18px]">table_rows</span>
+</button>
+</div>
+</div>
+</div>
+<!-- PROJECT 1: Downtown Corporate Office -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 space-y-space-md">
+<!-- Top Row: Identifiers, Phase Badge, Health & Value -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono uppercase px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold tracking-wider">AZ-026</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">• Commercial HQ</span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold tracking-wider uppercase">On Track</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium hover:text-primary transition-colors cursor-pointer">
+                Downtown Corporate Office
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Apex Capital Holdings • Downtown Dubai (Emaar Square)</p>
+</div>
+<div class="text-left md:text-right">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Contract Value</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">AED 8,450,000</p>
+<p class="font-label-sm text-label-sm text-outline">Target: 28 Nov 2024</p>
+</div>
+</div>
+<!-- Segmented Phase Tracker: 7 distinct blocks -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="uppercase tracking-widest text-on-surface font-semibold">Phase 5 of 7: Execution</span>
+<span class="font-mono text-primary font-semibold text-body-sm">68% Total Completion</span>
+</div>
+<!-- Segmented Line (1.Planning, 2.Design, 3.Approval, 4.Procurement, 5.Execution, 6.Snagging, 7.Handover) -->
+<div class="grid grid-cols-7 gap-1.5 h-3">
+<!-- 1. Planning: Complete -->
+<div class="h-full rounded-sm bg-primary-container relative group cursor-pointer" title="Planning: 100% Complete"></div>
+<!-- 2. Design: Complete -->
+<div class="h-full rounded-sm bg-primary-container relative group cursor-pointer" title="Design: 100% Complete"></div>
+<!-- 3. Approval: Complete -->
+<div class="h-full rounded-sm bg-primary-container relative group cursor-pointer" title="Permits &amp; Authority: 100% Complete"></div>
+<!-- 4. Procurement: Complete -->
+<div class="h-full rounded-sm bg-primary-container relative group cursor-pointer" title="Procurement: 100% Complete"></div>
+<!-- 5. Execution: ACTIVE CURRENT -->
+<div class="h-full rounded-sm bg-primary relative overflow-hidden group cursor-pointer shadow-[0_0_8px_rgba(154,60,37,0.4)]" title="Execution: Active Phase (68%)">
+<div class="absolute inset-y-0 left-0 bg-primary-fixed-dim/40 w-[68%]"></div>
+</div>
+<!-- 6. Snagging: Upcoming -->
+<div class="h-full rounded-sm bg-surface-container-high group cursor-pointer" title="Snagging: Pending"></div>
+<!-- 7. Handover: Upcoming -->
+<div class="h-full rounded-sm bg-surface-container group cursor-pointer" title="Handover: Pending"></div>
+</div>
+<!-- Phase labels micro-grid -->
+<div class="grid grid-cols-7 gap-1 text-[10px] font-label-sm uppercase tracking-wider text-outline pt-0.5">
+<span>Plan</span>
+<span>Design</span>
+<span>Permit</span>
+<span>Procure</span>
+<span class="text-primary font-bold">Execution</span>
+<span>Snag</span>
+<span>Handover</span>
+</div>
+</div>
+<!-- Footer Metadata & Team Stakeholders -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-label-sm text-label-sm font-semibold">SM</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Sarah Mansoor</p>
+<p class="font-label-sm text-label-sm text-outline">Lead Fit-Out PM • 4 on site</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                MEP 1st Fix Cleared
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold uppercase tracking-wider flex items-center gap-0.5" type="button">
+                Inspect Site Log
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- PROJECT 2: Palm Jumeirah Private Villa -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono uppercase px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold tracking-wider">AZ-031</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">• Ultra-Prime Residential</span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-secondary-container text-on-secondary-container font-semibold tracking-wider uppercase">At Risk — Joinery Review</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium hover:text-primary transition-colors cursor-pointer">
+                Palm Jumeirah Private Villa
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Al-Zahra Residence • Palm Jumeirah (Frond G), Dubai</p>
+</div>
+<div class="text-left md:text-right">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Contract Value</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">AED 14,200,000</p>
+<p class="font-label-sm text-label-sm text-outline">Target: 15 Jan 2025</p>
+</div>
+</div>
+<!-- Phase Tracker -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="uppercase tracking-widest text-on-surface font-semibold">Phase 2 of 7: Detailed Design</span>
+<span class="font-mono text-secondary font-semibold text-body-sm">42% Total Completion</span>
+</div>
+<div class="grid grid-cols-7 gap-1.5 h-3">
+<!-- 1. Planning: Complete -->
+<div class="h-full rounded-sm bg-primary-container"></div>
+<!-- 2. Design: ACTIVE CURRENT (42%) -->
+<div class="h-full rounded-sm bg-secondary relative overflow-hidden shadow-[0_0_8px_rgba(116,90,55,0.3)]">
+<div class="absolute inset-y-0 left-0 bg-secondary-fixed-dim/40 w-[42%]"></div>
+</div>
+<!-- Remaining phases -->
+<div class="h-full rounded-sm bg-surface-container-high"></div>
+<div class="h-full rounded-sm bg-surface-container-high"></div>
+<div class="h-full rounded-sm bg-surface-container"></div>
+<div class="h-full rounded-sm bg-surface-container"></div>
+<div class="h-full rounded-sm bg-surface-container"></div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-[10px] font-label-sm uppercase tracking-wider text-outline pt-0.5">
+<span>Plan</span>
+<span class="text-secondary font-bold">Design</span>
+<span>Permit</span>
+<span>Procure</span>
+<span>Execution</span>
+<span>Snag</span>
+<span>Handover</span>
+</div>
+</div>
+<!-- Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-label-sm font-semibold">MV</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Marcus Vance</p>
+<p class="font-label-sm text-label-sm text-outline">Senior Architectural Designer</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-label-sm text-label-sm text-on-secondary-container bg-secondary-fixed/40 px-2 py-0.5 rounded">
+                Bespoke Joinery V3 Pending
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold uppercase tracking-wider flex items-center gap-0.5" type="button">
+                Open Dossier
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- PROJECT 3: Business Bay Luxury Retail Flagship -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono uppercase px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold tracking-wider">AZ-028</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">• Luxury Retail</span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-tertiary-fixed text-on-tertiary-fixed font-semibold tracking-wider uppercase">On Track</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium hover:text-primary transition-colors cursor-pointer">
+                Business Bay Luxury Retail Flagship
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Maison Velours Paris • Business Bay, Dubai</p>
+</div>
+<div class="text-left md:text-right">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Contract Value</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">AED 5,900,000</p>
+<p class="font-label-sm text-label-sm text-outline">Target: 18 Dec 2024</p>
+</div>
+</div>
+<!-- Phase Tracker -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="uppercase tracking-widest text-on-surface font-semibold">Phase 4 of 7: Procurement &amp; FF&amp;E</span>
+<span class="font-mono text-primary font-semibold text-body-sm">55% Total Completion</span>
+</div>
+<div class="grid grid-cols-7 gap-1.5 h-3">
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<!-- 4. Procurement ACTIVE CURRENT -->
+<div class="h-full rounded-sm bg-primary relative overflow-hidden shadow-[0_0_8px_rgba(154,60,37,0.3)]">
+<div class="absolute inset-y-0 left-0 bg-primary-fixed-dim/40 w-[55%]"></div>
+</div>
+<div class="h-full rounded-sm bg-surface-container-high"></div>
+<div class="h-full rounded-sm bg-surface-container"></div>
+<div class="h-full rounded-sm bg-surface-container"></div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-[10px] font-label-sm uppercase tracking-wider text-outline pt-0.5">
+<span>Plan</span>
+<span>Design</span>
+<span>Permit</span>
+<span class="text-primary font-bold">Procure</span>
+<span>Execution</span>
+<span>Snag</span>
+<span>Handover</span>
+</div>
+</div>
+<!-- Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold">ER</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Elena Rostova</p>
+<p class="font-label-sm text-label-sm text-outline">PM &amp; Procurement Lead</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">
+                Italian Joinery arriving 13 Oct
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold uppercase tracking-wider flex items-center gap-0.5" type="button">
+                Inspect Site Log
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+<!-- PROJECT 4: Abu Dhabi Executive Headquarters -->
+<article class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow duration-200 space-y-space-md">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="space-y-0.5">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm font-mono uppercase px-1.5 py-0.5 rounded bg-surface-container text-on-surface font-semibold tracking-wider">AZ-019</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">• Sovereign Hospitality / HQ</span>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold tracking-wider uppercase">Delayed — DCD Authority</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium hover:text-primary transition-colors cursor-pointer">
+                Abu Dhabi Executive Headquarters
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sovereign Wealth Group • Al Maryah Island, Abu Dhabi</p>
+</div>
+<div class="text-left md:text-right">
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Contract Value</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold font-mono">AED 11,800,000</p>
+<p class="font-label-sm text-label-sm text-outline">Target: 22 Oct 2024</p>
+</div>
+</div>
+<!-- Phase Tracker -->
+<div class="space-y-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="uppercase tracking-widest text-on-surface font-semibold">Phase 6 of 7: Snagging &amp; QA</span>
+<span class="font-mono text-tertiary font-semibold text-body-sm">91% Total Completion</span>
+</div>
+<div class="grid grid-cols-7 gap-1.5 h-3">
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<div class="h-full rounded-sm bg-primary-container"></div>
+<!-- 6. Snagging: ACTIVE CURRENT -->
+<div class="h-full rounded-sm bg-tertiary relative overflow-hidden shadow-[0_0_8px_rgba(41,74,52,0.3)]">
+<div class="absolute inset-y-0 left-0 bg-tertiary-fixed-dim/40 w-[91%]"></div>
+</div>
+<!-- 7. Handover Imminent -->
+<div class="h-full rounded-sm bg-surface-container-high"></div>
+</div>
+<div class="grid grid-cols-7 gap-1 text-[10px] font-label-sm uppercase tracking-wider text-outline pt-0.5">
+<span>Plan</span>
+<span>Design</span>
+<span>Permit</span>
+<span>Procure</span>
+<span>Execution</span>
+<span class="text-tertiary font-bold">Snagging</span>
+<span>Handover</span>
+</div>
+</div>
+<!-- Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-label-sm text-label-sm font-semibold">ZK</div>
+<div class="leading-tight">
+<p class="font-body-sm text-body-sm font-medium text-on-surface">Zaid Kareem</p>
+<p class="font-label-sm text-label-sm text-outline">Site Operations Director</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-body-sm text-body-sm">
+<span class="font-label-sm text-label-sm text-primary font-medium">
+                Civil Defense Sign-Off Pending
+              </span>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold uppercase tracking-wider flex items-center gap-0.5" type="button">
+                Inspect Site Log
+                <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- RIGHT COLUMN: SECONDARY COCKPIT MODULES (35% -> 4 cols) -->
+<aside class="lg:col-span-4 space-y-space-md">
+<!-- 1. NEEDS ATTENTION: Architectural Action Card -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md relative overflow-hidden">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Needs Attention</h3>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-error-container text-on-error-container font-semibold">6 Critical</span>
+</div>
+<!-- Overdue & Risk Items -->
+<div class="space-y-space-sm">
+<!-- Item 1: Overdue submittal -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-semibold">Overdue Task</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-019</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">MEP 2nd Fix Material Submittal</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Consultant response delayed 4 days • Electrical conduits</p>
+</div>
+<!-- Item 2: Design Approval -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-semibold">Client Approval</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-031</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">Bespoke Millwork Detail V3</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Palm Jumeirah Villa • Sign-off due 2 days ago</p>
+</div>
+<!-- Item 3: Snags Block -->
+<div class="p-space-sm rounded-lg bg-surface-container-low space-y-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface font-semibold">Open Snags (3)</span>
+<span class="font-label-sm text-label-sm text-outline font-mono">QA Logs</span>
+</div>
+<ul class="space-y-1 text-body-sm font-body-sm text-on-surface-variant divide-y divide-surface-container">
+<li class="pt-1 flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-primary flex-shrink-0 mt-0.5">error_outline</span>
+<span>Boardroom ceiling reveal misalignment (AZ-019)</span>
+</li>
+<li class="pt-1 flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary flex-shrink-0 mt-0.5">change_circle</span>
+<span>Reception Italian Calacatta vein mismatch</span>
+</li>
+<li class="pt-1 flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-outline flex-shrink-0 mt-0.5">tune</span>
+<span>Pivot door concealed closer tolerance check</span>
+</li>
+</ul>
+</div>
+<!-- Item 4: DCD Inspection Risk -->
+<div class="p-space-sm rounded-lg bg-surface-container-high space-y-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Milestone At Risk</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">DCD #982</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">DCD Authority Inspection this Thursday</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Civil Defense final smoke extract cert required before 10 AM</p>
+</div>
+</div>
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary transition-all flex items-center justify-center gap-1 shadow-sm" type="button">
+<span>Resolve Priority Items</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</section>
+<!-- 2. UPCOMING MILESTONES CARD -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Upcoming Milestones</h3>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Oct 2024</span>
+</div>
+<div class="space-y-space-md relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-[1px] before:bg-surface-container-highest">
+<!-- Timeline Item 1: TODAY -->
+<div class="relative pl-7 group">
+<span class="absolute left-1.5 top-1.5 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-space-xs">
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-container text-on-primary font-label-sm uppercase font-bold tracking-wider">Today</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-031</span>
+</div>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface mt-0.5">Client Design Approval</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Palm Jumeirah Villa • 16:00 Site Meeting</p>
+</div>
+<!-- Timeline Item 2: 10 OCT -->
+<div class="relative pl-7 group">
+<span class="absolute left-2 top-2 w-2 h-2 rounded-full bg-outline-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono font-semibold text-on-surface">10 Oct</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-026</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">MEP First Fix Complete</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Downtown Corporate Office • Consultant Sign-off</p>
+</div>
+<!-- Timeline Item 3: 13 OCT -->
+<div class="relative pl-7 group">
+<span class="absolute left-2 top-2 w-2 h-2 rounded-full bg-outline-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono font-semibold text-on-surface">13 Oct</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-028</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">Italian Joinery Installation</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Business Bay Retail • Port Delivery &amp; Hoisting</p>
+</div>
+<!-- Timeline Item 4: 17 OCT -->
+<div class="relative pl-7 group">
+<span class="absolute left-2 top-2 w-2 h-2 rounded-full bg-outline-variant ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono font-semibold text-on-surface">17 Oct</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-019</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">Final Client Snag Walkthrough</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Abu Dhabi Exec Office • Pre-Handover</p>
+</div>
+<!-- Timeline Item 5: 24 OCT -->
+<div class="relative pl-7 group">
+<span class="absolute left-2 top-2 w-2 h-2 rounded-full bg-tertiary ring-4 ring-surface-container-lowest"></span>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase font-mono font-semibold text-tertiary">24 Oct</span>
+<span class="font-label-sm text-label-sm font-mono text-outline">AZ-015</span>
+</div>
+<p class="font-body-sm text-body-sm font-medium text-on-surface mt-0.5">Key Handover &amp; As-Built Pack</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">DIFC Gallery Suite • Final Retention Release</p>
+</div>
+</div>
+</section>
+<!-- 3. TEAM WORKLOAD & CAPACITY CARD -->
+<section class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-medium">Team Allocation</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Site Execution &amp; Design Studio</p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-sm text-label-sm bg-surface-container text-on-surface font-semibold font-mono">39 Staff</span>
+</div>
+<div class="space-y-space-md">
+<!-- Role 1: Project Managers -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">Project Managers (6)</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">3 sites/PM</span>
+<span class="font-mono font-semibold text-on-surface">88%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-primary-container rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+<!-- Role 2: Interior Designers -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">Interior Designers (8)</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">Optimal</span>
+<span class="font-mono font-semibold text-on-surface">72%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-secondary rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Role 3: Site Engineers (Near limit) -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex items-center gap-1">
+<span class="text-on-surface font-medium">Site Engineers (11)</span>
+<span class="material-symbols-outlined text-[15px] text-primary" title="Near limit: Resource reallocation needed">warning</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary font-bold">Near Limit</span>
+<span class="font-mono font-bold text-primary">94%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-primary rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<!-- Role 4: MEP Engineers -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">MEP Engineers (5)</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-tertiary">Available for Bids</span>
+<span class="font-mono font-semibold text-on-surface">65%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-tertiary rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+<!-- Role 5: Site Supervisors -->
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface font-medium">Site Supervisors (9)</span>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline">Active Shifts</span>
+<span class="font-mono font-semibold text-on-surface">82%</span>
+</div>
+</div>
+<div class="h-2 w-full rounded-full bg-surface-container-high overflow-hidden flex">
+<div class="h-full bg-outline rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+<div class="pt-space-xs border-t border-surface-container flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Studio Shift: 07:00 - 19:00 GST</span>
+<button class="font-label-sm text-label-sm text-primary hover:text-primary-container font-semibold uppercase tracking-wider" type="button">
+              Resource Matrix →
+            </button>
+</div>
+</section>
+</aside>
+</div>
+<!-- 4. BOTTOM ARCHITECTURAL FOOTER NOTE -->
+<footer class="pt-space-md border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between text-on-surface-variant font-body-sm text-body-sm gap-space-sm pb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold text-on-surface">AZZORA SPECIFICATION PROTOCOL</span>
+<span class="text-outline">•</span>
+<span>Dubai Municipality &amp; Civil Defense Certified Compliance (ISO 9001 / 14001)</span>
+</div>
+<div class="flex items-center gap-space-md font-mono text-label-sm text-label-sm">
+<span>LAST AUDIT: TODAY 08:30 GST</span>
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+</div>
+</footer>
+</div>
+</div></main></div></body></html>

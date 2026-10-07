@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="h-full bg-background" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary-fixed-variant": "#802914", "inverse-primary": "#ffb4a2", "on-tertiary-fixed": "#00210f", "tertiary": "#294a34", "on-secondary-fixed": "#291800", "background": "#fdf8f6", "on-surface": "#1c1b1a", "on-secondary-container": "#785e3b", "on-error": "#ffffff", "error-container": "#ffdad6", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#5a4222", "secondary-container": "#fedaae", "inverse-surface": "#31302f", "inverse-on-surface": "#f4f0ee", "surface-container-low": "#f7f3f0", "on-primary": "#ffffff", "surface-variant": "#e6e2df", "surface-tint": "#a04029", "tertiary-fixed": "#c6ecce", "on-primary-container": "#ffc4b6", "on-tertiary-container": "#b6dcbf", "tertiary-fixed-dim": "#aacfb3", "outline": "#89726c", "surface-container-high": "#ece7e5", "outline-variant": "#ddc0ba", "primary-fixed-dim": "#ffb4a2", "secondary-fixed-dim": "#e3c197", "secondary": "#745a37", "surface-container-lowest": "#ffffff", "tertiary-container": "#40624b", "on-primary-fixed": "#3c0700", "surface-container-highest": "#e6e2df", "on-surface-variant": "#56423d", "on-tertiary-fixed-variant": "#2d4e38", "error": "#ba1a1a", "surface-container": "#f2edeb", "on-error-container": "#93000a", "surface-bright": "#fdf8f6", "surface": "#fdf8f6", "primary-container": "#9a3c25", "primary-fixed": "#ffdad2", "on-background": "#1c1b1a", "secondary-fixed": "#ffddb4", "on-secondary": "#ffffff", "primary": "#7b2510", "surface-dim": "#ddd9d7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-md": "1rem", "margin-mobile": "1.25rem", "margin": "2.5rem", "space-lg": "1.5rem", "space-xl": "2.5rem" }, "fontFamily": { "display-lg": ["Space Grotesk"], "label-sm": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "body-md": ["Inter"], "headline-md": ["Space Grotesk"], "label-lg": ["Space Grotesk"], "body-lg": ["Inter"], "label-md": ["Space Grotesk"], "body-sm": ["Inter"], "display-lg-mobile": ["Space Grotesk"], "headline-lg-mobile": ["Space Grotesk"], "headline-sm": ["Space Grotesk"] }, "fontSize": { "display-lg": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "label-md": ["11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "500" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:max(env(safe-area-inset-bottom,0px),0.5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}</style></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(43,41,39,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-xs"><div class="flex items-center gap-space-sm min-w-0 flex-1"><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm uppercase text-primary tracking-widest">AZZORA</span><span class="font-label-sm text-label-sm text-outline">/</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider truncate">Dubai</span></div><div class="flex items-center gap-1 min-w-0"><h1 class="font-headline-sm text-headline-sm text-on-surface truncate">Site Logs</h1></div></div></div><div class="flex items-center gap-1 shrink-0"><button aria-label="Search projects" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[20px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded-lg transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 bg-primary rounded-full"></span></button><div class="pl-1 flex items-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- TOP CONTEXT & FIELD QUICK-CAPTURE MODULE -->
+<div class="px-gutter-mobile py-space-sm bg-surface-container-low shadow-sm">
+<div class="flex items-center justify-between gap-space-sm mb-space-sm">
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary">AZ-026</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary truncate">DIFC Tower 2</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Downtown Corporate Office</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">schedule</span>
+          Today, 11 Oct 2024 · 10:45 AM
+        </p>
+</div>
+<div class="shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-surface-container text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">cloud_done</span>
+</div>
+</div>
+<!-- PRIMARY TACTILE CAPTURE TRIGGER -->
+<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm">
+<button class="w-full min-h-[52px] bg-primary text-on-primary rounded-lg flex items-center justify-center gap-2 px-space-md shadow-md active:scale-[0.98] transition-transform" id="trigger-camera-modal">
+<span class="material-symbols-outlined text-[22px]">photo_camera</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider">Capture Site Photo / Upload</span>
+</button>
+<!-- Immediate Tag Selection Pills -->
+<div class="flex items-center justify-between gap-1.5 mt-space-sm pt-space-xs overflow-x-auto no-scrollbar">
+<button class="quick-tag-pill active px-3 py-1.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap transition-colors">
+          Progress
+        </button>
+<button class="quick-tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap transition-colors">
+          Issue / Snag
+        </button>
+<button class="quick-tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap transition-colors">
+          Inspection
+        </button>
+<button class="quick-tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap transition-colors">
+          Before
+        </button>
+</div>
+</div>
+</div>
+<!-- METRIC TILES / SNAPSHOT -->
+<div class="px-gutter-mobile mt-space-md">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Today's Site Snapshot</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Site Active
+      </span>
+</div>
+<!-- 2x2 Bento Metric Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Progress Metric -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Overall</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">trending_up</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">68%</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">+3% wk</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-2 pt-1">Exec: 55% planned</span>
+</div>
+<!-- Manpower Metric -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Manpower</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">groups</span>
+</div>
+<div class="mt-space-sm">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold" id="headcount-stat">21</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Workers</span>
+</div>
+<div class="flex items-center gap-1 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="px-1.5 py-0.5 rounded bg-surface-container">Civ: 8</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container">MEP: 6</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container">Jnr: 7</span>
+</div>
+</div>
+</div>
+<!-- Tasks Metric -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Daily Tasks</span>
+<span class="material-symbols-outlined text-[18px] text-primary">fact_check</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">4 <span class="text-on-surface-variant text-body-lg font-normal">/ 6</span></span>
+<p class="font-body-sm text-body-sm text-tertiary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">done_all</span> 2 in progress
+          </p>
+</div>
+</div>
+<!-- Snags Metric -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Open Snags</span>
+<span class="material-symbols-outlined text-[18px] text-primary-container">assignment_late</span>
+</div>
+<div class="mt-space-sm">
+<span class="font-headline-md text-headline-md text-primary font-semibold">3</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">1 Critical (Painting)</p>
+</div>
+</div>
+</div>
+</div>
+<!-- SUPERVISOR DAILY SITE LOG FORM -->
+<div class="px-gutter-mobile mt-space-lg">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Field Dispatch</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Daily Site Log Entry</h3>
+</div>
+<span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+</span>
+</div>
+<form class="flex flex-col gap-space-md" id="daily-log-form" onsubmit="event.preventDefault(); triggerReportSubmitted();">
+<!-- Manpower Interactive Tally -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between">
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Active Labor On Site</label>
+<span class="font-body-sm text-body-sm text-secondary">Civil, Electrical &amp; Joinery</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm flex items-center justify-center active:bg-surface-container font-headline-sm" id="manpower-minus" type="button">-</button>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold w-8 text-center" id="manpower-count">21</span>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest text-on-surface shadow-sm flex items-center justify-center active:bg-surface-container font-headline-sm" id="manpower-plus" type="button">+</button>
+</div>
+</div>
+<!-- Work Completed Today -->
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5">
+            Work Completed Today <span class="text-primary">*</span>
+</label>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-space-sm font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none resize-none transition-all" placeholder="Specify completed work packages..." rows="2">Ceiling grid completed in Meeting Room 01 &amp; 02. MEP inspection passed for Zone A.</textarea>
+</div>
+<!-- Ongoing Work & Delays / Issues -->
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5">
+            Ongoing Work &amp; Site Blockers
+          </label>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-space-sm font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none resize-none transition-all" placeholder="Any material shortages, approval holds, or subcontractor delays..." rows="2">Awaiting batch verification for Italian walnut wall veneer from custom supplier.</textarea>
+</div>
+<!-- Tomorrow's Plan -->
+<div>
+<label class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block mb-1.5">
+            Tomorrow's Target Schedule
+          </label>
+<input class="w-full h-11 bg-surface-container-low text-on-surface rounded-lg px-space-sm font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Key goals for tomorrow..." type="text" value="Deliver and install glass partition channels."/>
+</div>
+<!-- Submit Button -->
+<button class="w-full h-12 bg-primary hover:bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg uppercase tracking-wider flex items-center justify-center gap-2 shadow-sm transition-all active:scale-[0.99] mt-space-xs" id="submit-log-btn" type="submit">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+          Submit Daily Site Report
+        </button>
+</form>
+</div>
+</div>
+<!-- FIELD PHOTO STREAM & EVIDENCE -->
+<div class="px-gutter-mobile mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Live Visuals</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Site Visual Stream</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-1 rounded text-on-surface-variant">14 Photos Today</span>
+</div>
+<!-- Filter Category Chips -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 mb-space-md">
+<button class="photo-stream-filter active px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap">
+        All (14)
+      </button>
+<button class="photo-stream-filter px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap">
+        Progress (8)
+      </button>
+<button class="photo-stream-filter px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap">
+        Snags (3)
+      </button>
+<button class="photo-stream-filter px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider whitespace-nowrap">
+        Inspections (3)
+      </button>
+</div>
+<!-- Mobile Photo Cards Stack -->
+<div class="flex flex-col gap-space-md" id="photo-card-container">
+<!-- Photo Card 1: Progress -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full h-48 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Architectural fit-out interior site photo showing metal frame ceiling grid installed in modern luxury office room with exposed HVAC ductwork under construction in Dubai DIFC, warm neutral ambient illumination, crisp raw finishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADupgyNmRi7YqmUitjdns2rBFtjsHWuACfFHxf93QdVeAMHkJFeYKw_7sd1urCcLC1rizCHc1r1DDle89EHEKtM2LDiIwB8l8ux3VNXXOwkXA32madPeeekPov6E7_xqSVCIyUa12q5K51gosklD8iEJnxK_Uu0dDom-9_ogSCmHDjuF5fzNJs1laBY8AQf9gO-gNFaTUg1uoYv7yHl6CapfVoiB0ZwpPHg2EbDA"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="bg-tertiary text-on-tertiary px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">Progress</span>
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">10:15 AM</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Sup: T.K.</span>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-[16px] text-on-surface truncate">Zone B Reception Ceiling Frame</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Grid level verified with laser datum. Suspensions anchored.</p>
+</div>
+<button aria-label="Expand image" class="w-10 h-10 flex items-center justify-center text-on-surface-variant rounded-lg bg-surface-container-low shrink-0 ml-2">
+<span class="material-symbols-outlined text-[20px]">zoom_in</span>
+</button>
+</div>
+</div>
+<!-- Photo Card 2: Snag SN-018 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full h-48 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up architectural construction defect photo showing uneven plastering and micro texture roller marks on a warm greige dry wall corner near aluminum door frame, high clarity raking architectural lighting highlighting snag." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIOhOYQbr5-bl_ro1D_UwJRrELD9j4lnKfxW0L_YwNuNv0ft1yPZ-m4BlFfJdEvprVIEU3YU8beqHH6goq6qy1xfiVpgfgL4_Ze5J3da4-FECUgx-Jkrpd3tqAOwYuMnmN-erd24CaDQo40_3PFrQDAbWkMhP4rgQedEKee_B1hsI9Vz-J9cwwunTI7uqjuzyTeQ0AnE4AOfUNRodOd50aHbcExy1ftTJjWChHQ"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="bg-primary text-on-primary px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">Snag SN-018</span>
+<span class="bg-error-container text-on-error-container px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">Open</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Sup: R.M.</span>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-[16px] text-on-surface truncate">Meeting Room 02 Paint Unevenness</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Touch-up roller striae near corridor doorway threshold.</p>
+</div>
+<button aria-label="Expand snag" class="w-10 h-10 flex items-center justify-center text-primary rounded-lg bg-primary-fixed shrink-0 ml-2">
+<span class="material-symbols-outlined text-[20px]">report</span>
+</button>
+</div>
+</div>
+<!-- Photo Card 3: Inspection Passed -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm">
+<div class="relative w-full h-48 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Detailed site engineering test photo showing calibrated analog pressure test gauge dial attached to heavy insulated galvanized steel HVAC ductwork in commercial interior plenum space, architectural high precision engineering atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH3EcTjoblbmUQcbtAj7QSsw_rXWfsxeCSfiHF-9G1xDp_C_QSJVVcmru7Av6lmKmTAGQKUanNwmHbyJXVtzgbzJYzoA43meKkKKL35si6BbhZE1i-6raeTg2l3wHmNCySW7K7fUHosqwJ536VRHPTghzOGQXQwG4AW-HOBe6_jDR-CieWK8h5fNSAdS7gxWmsN7OovCeXcFrcM1Kbi6803PWjIuXuRKmupzZpIw"/>
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5">
+<span class="bg-secondary text-on-secondary px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">Inspection</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-1 rounded font-label-sm text-label-sm uppercase tracking-wider shadow-sm">Passed</span>
+</div>
+<div class="absolute bottom-2.5 right-2.5">
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-2 py-0.5 rounded font-label-sm text-label-sm font-semibold">Inspector: J.D.</span>
+</div>
+</div>
+<div class="p-space-sm flex items-center justify-between">
+<div class="min-w-0 flex-1">
+<h4 class="font-headline-sm text-[16px] text-on-surface truncate">HVAC Duct Pressure Test Gauge</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Held 1.5 kPa pressure over 2hr cycle without drop.</p>
+</div>
+<button aria-label="View QA sign-off" class="w-10 h-10 flex items-center justify-center text-tertiary rounded-lg bg-surface-container-low shrink-0 ml-2">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- OPEN SNAGS & QA MOBILE ACTION LIST -->
+<div class="px-gutter-mobile mt-space-lg">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Priority Action</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Field Snagging &amp; QA</h3>
+</div>
+<button class="text-primary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-0.5">
+        View All (3) <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Active Snag Card: SN-018 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-xs">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold">SN-018</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-semibold">Critical Defect</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">Open</span>
+</div>
+<h4 class="font-headline-sm text-[17px] text-on-surface mt-1">Meeting Room 02 - Paint finish uneven near entrance</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Visible flashing under diagonal lighting fixture. Sanding down and 2-coat recoat required.</p>
+<!-- Meta Grid -->
+<div class="grid grid-cols-2 gap-2 mt-space-sm pt-space-xs border-t-0 bg-surface-container-low p-space-sm rounded-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Location</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Meeting Room 02 (D-04)</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Assignee</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium truncate block">Apex Painting Sub</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Target Due</span>
+<span class="font-body-sm text-body-sm text-primary font-medium">10 Oct (Overdue 1d)</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant block">Reported By</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Site QA Lead</span>
+</div>
+</div>
+<!-- Action Buttons for On-site Snag -->
+<div class="flex items-center gap-space-sm mt-space-md">
+<button class="flex-1 h-11 bg-primary text-on-primary rounded-lg font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform" id="rectify-photo-btn">
+<span class="material-symbols-outlined text-[18px]">add_a_photo</span>
+          Rectification Photo
+        </button>
+<button class="h-11 px-4 bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-lg font-label-md text-label-md uppercase tracking-wider flex items-center justify-center gap-1 active:scale-95 transition-transform" id="resolve-snag-btn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+          Resolve
+        </button>
+</div>
+</div>
+<!-- Additional Pending Snag Quick-Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md mt-space-sm shadow-sm flex items-center justify-between">
+<div class="min-w-0 flex-1 pr-2">
+<div class="flex items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase">SN-019</span>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Joinery</span>
+</div>
+<h5 class="font-headline-sm text-[15px] text-on-surface truncate">Executive Lounge Wall Sconce Cable Alignment</h5>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Due 14 Oct · Assigned to MEP Team</p>
+</div>
+<button aria-label="Inspect snag details" class="w-10 h-10 rounded-lg bg-surface-container text-on-surface flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- TOAST NOTIFICATION CONTAINER (FOR MOBILE FEEDBACK) -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 pointer-events-none transition-all duration-300 opacity-0 translate-y-4 px-4 py-3 rounded-xl bg-inverse-surface text-inverse-on-surface shadow-xl flex items-center gap-2.5 max-w-[90vw]" id="mobile-toast">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed" id="toast-icon">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="toast-message">Daily log submitted to Azzora Cloud.</span>
+</div>
+</div>
+<!-- SCRIPT FOR TACTILE ON-SITE INTERACTIONS -->
+<script>
+  // Manpower Counter
+  const countEl = document.getElementById('manpower-count');
+  const statEl = document.getElementById('headcount-stat');
+  const minusBtn = document.getElementById('manpower-minus');
+  const plusBtn = document.getElementById('manpower-plus');
+
+  let currentWorkers = 21;
+
+  if (minusBtn && plusBtn && countEl) {
+    minusBtn.addEventListener('click', () => {
+      if (currentWorkers > 1) {
+        currentWorkers--;
+        countEl.textContent = currentWorkers;
+        if (statEl) statEl.textContent = currentWorkers;
+      }
+    });
+
+    plusBtn.addEventListener('click', () => {
+      currentWorkers++;
+      countEl.textContent = currentWorkers;
+      if (statEl) statEl.textContent = currentWorkers;
+    });
+  }
+
+  // Toast Functionality
+  function showToast(message, icon = 'check_circle') {
+    const toast = document.getElementById('mobile-toast');
+    const toastMsg = document.getElementById('toast-message');
+    const toastIco = document.getElementById('toast-icon');
+    if (!toast) return;
+
+    toastMsg.textContent = message;
+    toastIco.textContent = icon;
+    toast.classList.remove('opacity-0', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2800);
+  }
+
+  function triggerReportSubmitted() {
+    showToast('Daily Report synced with PM & Client portal', 'cloud_done');
+  }
+
+  // Quick Tag Pill Selection
+  document.querySelectorAll('.quick-tag-pill').forEach(pill => {
+    pill.addEventListener('click', function() {
+      document.querySelectorAll('.quick-tag-pill').forEach(p => {
+        p.classList.remove('bg-primary-fixed', 'text-on-primary-fixed', 'active');
+        p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      this.classList.add('bg-primary-fixed', 'text-on-primary-fixed', 'active');
+    });
+  });
+
+  // Photo Stream Filter Selection
+  document.querySelectorAll('.photo-stream-filter').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.photo-stream-filter').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary', 'active');
+        b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+      });
+      this.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+      this.classList.add('bg-primary', 'text-on-primary', 'active');
+      showToast('Filtered: ' + this.textContent.trim(), 'filter_list');
+    });
+  });
+
+  // Camera Trigger Simulator
+  const camBtn = document.getElementById('trigger-camera-modal');
+  if (camBtn) {
+    camBtn.addEventListener('click', () => {
+      showToast('Opening high-res mobile camera capture...', 'photo_camera');
+    });
+  }
+
+  // Snag Rectification Action
+  const rectifyBtn = document.getElementById('rectify-photo-btn');
+  if (rectifyBtn) {
+    rectifyBtn.addEventListener('click', () => {
+      showToast('Camera ready for SN-018 verification photo', 'camera');
+    });
+  }
+
+  // Snag Resolution Action
+  const resolveBtn = document.getElementById('resolve-snag-btn');
+  if (resolveBtn) {
+    resolveBtn.addEventListener('click', function() {
+      this.innerHTML = '<span class="material-symbols-outlined text-[18px] text-tertiary">done</span> Resolved';
+      this.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+      showToast('SN-018 marked for QA sign-off', 'task_alt');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(43,41,39,0.05)]" data-active-classes="text-primary font-semibold bg-surface-container-high/60"><div class="flex justify-between items-center h-16 px-space-xs"><a class="flex-1 h-12 min-h-[44px] flex flex-col items-center justify-center gap-0.5 rounded-lg text-on-surface-variant transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Desk</span></a><a class="flex-1 h-12 min-h-[44px] flex flex-col items-center justify-center gap-0.5 rounded-lg text-on-surface-variant transition-colors" data-path="projects" href="#"><span class="material-symbols-outlined text-[22px]">apartment</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Projects</span></a><a class="flex-1 h-12 min-h-[44px] flex flex-col items-center justify-center gap-0.5 rounded-lg text-on-surface-variant transition-colors" data-path="site-tasks" href="#"><span class="material-symbols-outlined text-[22px]">checklist</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Tasks</span></a><a aria-current="page" class="flex-1 h-12 min-h-[44px] flex flex-col items-center justify-center gap-0.5 rounded-lg transition-colors text-primary font-semibold bg-surface-container-high/60" data-path="site-logs" href="#"><span class="material-symbols-outlined text-[22px]">nest_cam_outdoor</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Logs</span></a><a class="flex-1 h-12 min-h-[44px] flex flex-col items-center justify-center gap-0.5 rounded-lg text-on-surface-variant transition-colors" data-path="operations-hub" href="#"><span class="material-symbols-outlined text-[22px]">grid_view</span><span class="font-label-sm text-label-sm uppercase tracking-wider">More</span></a></div></nav></body></html>

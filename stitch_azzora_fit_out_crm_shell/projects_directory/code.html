@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","on-secondary-fixed":"#291800","surface-dim":"#ddd9d7","outline":"#89726c","primary-fixed":"#ffdad2","surface-container-highest":"#e6e2df","on-tertiary":"#ffffff","secondary-fixed":"#ffddb4","surface-variant":"#e6e2df","inverse-surface":"#31302f","surface-container-low":"#f7f3f0","on-tertiary-container":"#b6dcbf","on-background":"#1c1b1a","tertiary-fixed":"#c6ecce","tertiary-fixed-dim":"#aacfb3","primary-container":"#9a3c25","on-secondary-container":"#785e3b","tertiary":"#294a34","secondary":"#745a37","surface-bright":"#fdf8f6","secondary-fixed-dim":"#e3c197","surface":"#fdf8f6","primary":"#7b2510","outline-variant":"#ddc0ba","on-secondary":"#ffffff","surface-tint":"#a04029","on-secondary-fixed-variant":"#5a4222","on-error":"#ffffff","primary-fixed-dim":"#ffb4a2","on-surface":"#1c1b1a","on-tertiary-fixed":"#00210f","on-primary-fixed-variant":"#802914","on-error-container":"#93000a","on-surface-variant":"#56423d","on-primary-container":"#ffc4b6","inverse-on-surface":"#f4f0ee","inverse-primary":"#ffb4a2","on-primary":"#ffffff","surface-container-high":"#ece7e5","error":"#ba1a1a","tertiary-container":"#40624b","secondary-container":"#fedaae","background":"#fdf8f6","surface-container":"#f2edeb","on-tertiary-fixed-variant":"#2d4e38","on-primary-fixed":"#3c0700","surface-container-lowest":"#ffffff"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter-mobile":"1rem","space-lg":"1.5rem","margin-mobile":"1.25rem",margin:"2.5rem","space-xl":"2.5rem",gutter:"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","space-md":"1rem"},fontFamily:{"body-sm":["Inter"],"display-lg-mobile":["Space Grotesk"],"headline-lg":["Space Grotesk"],"label-lg":["Space Grotesk"],"label-sm":["Space Grotesk"],"body-lg":["Inter"],"body-md":["Inter"],"display-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"],"headline-md":["Space Grotesk"]},fontSize:{"body-sm":["12px",{lineHeight:"18px",letterSpacing:"0.01em",fontWeight:"400"}],"display-lg-mobile":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"500"}],"label-lg":["13px",{lineHeight:"18px",letterSpacing:"0.08em",fontWeight:"600"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.12em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",letterSpacing:"-0.01em",fontWeight:"400"}],"body-md":["14px",{lineHeight:"22px",letterSpacing:"0em",fontWeight:"400"}],"display-lg":["44px",{lineHeight:"52px",letterSpacing:"-0.03em",fontWeight:"600"}],"label-md":["11px",{lineHeight:"16px",letterSpacing:"0.1em",fontWeight:"600"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"500"}],"headline-sm":["20px",{lineHeight:"28px",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.01em",fontWeight:"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between py-space-lg"><div class="flex flex-col"><div class="px-space-lg pb-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary font-headline-sm text-headline-sm uppercase">A</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase font-bold leading-none">AZZORA</span><span class="font-label-sm text-label-sm tracking-widest text-on-surface-variant uppercase mt-1">Design • Build</span></div></div><span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase">UAE</span></div><div class="px-space-lg py-space-xs"><div class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-space-sm px-space-sm">Core Modules</div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span><span>Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-all bg-primary-container text-on-primary font-semibold" data-path="projects" href="#"><span class="material-symbols-outlined text-[20px]">apartment</span><span>Projects</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="planning" href="#"><span class="material-symbols-outlined text-[20px]">calendar_month</span><span>Planning</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="tasks" href="#"><span class="material-symbols-outlined text-[20px]">checklist</span><span>Tasks</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="team" href="#"><span class="material-symbols-outlined text-[20px]">badge</span><span>Team</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="site-updates" href="#"><span class="material-symbols-outlined text-[20px]">construction</span><span>Site Updates</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="snags-qa" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span>Snags &amp; QA</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="documents" href="#"><span class="material-symbols-outlined text-[20px]">folder_open</span><span>Documents</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="handover" href="#"><span class="material-symbols-outlined text-[20px]">key</span><span>Handover</span></a><div class="h-px bg-surface-container-highest my-space-sm mx-space-sm"></div><div class="px-space-sm mb-1"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Governance</span></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span>Reports</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-label-lg text-label-lg" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span><span>Settings</span></a></nav></div><div class="px-space-lg pt-space-md"><div class="bg-surface-container p-space-md rounded-xl flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">AED Fit-Out Capex</span><span class="font-headline-sm text-headline-sm text-primary font-bold">Active Phase</span></div><span class="material-symbols-outlined text-secondary">architecture</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter"><div class="flex items-center gap-space-lg flex-1 max-w-2xl"><div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider"><span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span><span>Dubai, UAE • HQ</span></div><div class="relative flex-1"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full h-10 pl-9 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest transition-colors" placeholder="Search projects, tasks or team..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="h-10 px-space-lg rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all flex items-center gap-space-xs font-label-lg text-label-lg" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Quick Add</span></button><div class="relative flex items-center justify-center w-10 h-10 rounded-lg hover:bg-surface-container-high text-on-surface-variant cursor-pointer transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary"></span></div><div class="h-6 w-px bg-surface-container-highest"></div><div class="flex items-center gap-space-sm pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/><div class="flex flex-col text-left"><span class="font-label-lg text-label-lg text-on-surface leading-tight">Tariq Al-Maktoum</span><span class="font-label-sm text-label-sm text-on-surface-variant">Head of Projects</span></div></div></div></header><main class="w-full pt-16 bg-background px-gutter py-space-lg"><div class="flex flex-col w-full">
+<!-- TOP CONTEXT & DIRECTORY HEADER -->
+<section class="flex flex-col gap-space-lg mb-space-xl">
+<!-- Breadcrumb & Metas -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">
+<span>Portfolio Management</span>
+<span class="text-outline-variant">•</span>
+<span class="text-primary font-semibold">Active Directory</span>
+<span class="text-outline-variant">•</span>
+<span class="text-secondary">Q4 Fit-Out Program</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          AED 142.8M Active Capex
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+          Sync: 12m ago
+        </span>
+</div>
+</div>
+<!-- Title Row & Main Action -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">Projects</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Plan, assign and monitor luxury architectural fit-out and joinery projects across Dubai, Abu Dhabi &amp; Northern Emirates.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm self-start lg:self-auto">
+<button class="h-11 px-4 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-lg text-label-lg flex items-center gap-2 shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Register</span>
+</button>
+<button class="h-11 px-6 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all flex items-center gap-2 font-label-lg text-label-lg shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>New Project</span>
+</button>
+</div>
+</div>
+<!-- QUICK STATS ARCHITECTURAL KPI BAR -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Total Portfolio</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">domain</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-3">
+<span class="font-display-lg text-display-lg leading-none font-bold text-on-surface">48</span>
+<span class="font-label-sm text-label-sm text-tertiary font-medium">9 Emirates Clusters</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-primary h-full" style="width: 100%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Active Site Ops</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">construction</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-3">
+<span class="font-display-lg text-display-lg leading-none font-bold text-on-surface">38</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">79.1% In Motion</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-tertiary-container h-full" style="width: 79%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Near Handover</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">key</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-3">
+<span class="font-display-lg text-display-lg leading-none font-bold text-on-surface">05</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Snags &lt; 8% remaining</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 10.4%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Critical Path / Risk</span>
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+</div>
+<div class="flex items-baseline gap-space-sm mt-3">
+<span class="font-display-lg text-display-lg leading-none font-bold text-error">05</span>
+<span class="font-label-sm text-label-sm text-error font-medium">Municipality &amp; Lead Time</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-3 overflow-hidden">
+<div class="bg-error h-full" style="width: 10.4%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONTROLS, TABS & FILTER TOOLBAR -->
+<section class="flex flex-col gap-space-md mb-space-lg">
+<!-- Horizontal Stage Filter Tabs -->
+<div class="bg-surface-container-lowest rounded-xl p-2 shadow-sm flex items-center overflow-x-auto no-scrollbar gap-1">
+<button class="px-3.5 py-2 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>All Projects</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-fixed text-on-primary-fixed font-bold leading-none">48</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Planning</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">4</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Design</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">6</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Approval</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">5</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Procurement</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">8</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Execution</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">12</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Snagging</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">7</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Handover</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">4</span>
+</button>
+<button class="px-3.5 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-label-md text-label-md uppercase tracking-wider whitespace-nowrap transition-all flex items-center gap-2">
+<span>Completed</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-surface-container-high text-on-surface-variant leading-none">2</span>
+</button>
+</div>
+<!-- Secondary Filter & Search Row -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search Input + Micro Selects -->
+<div class="flex flex-wrap items-center gap-space-sm flex-1">
+<div class="relative min-w-[280px] flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-10 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-on-surface-variant font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest" placeholder="Search by project, code, or client..." type="text"/>
+</div>
+<!-- Location Dropdown -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider focus:outline-none appearance-none cursor-pointer">
+<option>Location: All UAE</option>
+<option>Downtown Dubai</option>
+<option>Palm Jumeirah</option>
+<option>DIFC Precinct</option>
+<option>Business Bay</option>
+<option>Abu Dhabi (Al Maryah)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- PM Selector -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider focus:outline-none appearance-none cursor-pointer">
+<option>Manager: All PMs</option>
+<option>Sarah Mansour</option>
+<option>Karim Al-Nasser</option>
+<option>David Vance</option>
+<option>Layla Qasim</option>
+<option>Zaid Farouk</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Sector Selector -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider focus:outline-none appearance-none cursor-pointer">
+<option>Sector: All Types</option>
+<option>Commercial HQ</option>
+<option>Signature Residential</option>
+<option>Hospitality &amp; Lounge</option>
+<option>Luxury Retail Flagship</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+<!-- Health Status Selector -->
+<div class="relative">
+<select class="h-10 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider focus:outline-none appearance-none cursor-pointer">
+<option>Health: All Statuses</option>
+<option>On Track</option>
+<option>At Risk</option>
+<option>Delayed</option>
+<option>On Hold</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Right Toolbar: Sorting & Layout Views -->
+<div class="flex items-center gap-space-md justify-between xl:justify-end">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Showing 48 projects • 12 require site review</span>
+</div>
+<div class="h-6 w-px bg-surface-container-highest hidden sm:block"></div>
+<div class="flex items-center gap-space-xs">
+<!-- Sort dropdown -->
+<div class="relative">
+<select class="h-10 pl-3 pr-7 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm uppercase tracking-wider focus:outline-none appearance-none cursor-pointer">
+<option>Sort: Timeline (Nearest)</option>
+<option>Sort: Capex Budget</option>
+<option>Sort: Project Code</option>
+<option>Sort: Health Priority</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-on-surface-variant text-[16px] pointer-events-none">swap_vert</span>
+</div>
+<!-- View Toggles -->
+<div class="p-1 rounded-lg bg-surface-container-low flex items-center gap-0.5">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest text-on-surface shadow-sm font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">list</span>
+<span class="hidden sm:inline">List</span>
+</button>
+<button class="h-8 px-2.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">view_kanban</span>
+<span class="hidden sm:inline">Board</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ARCHITECTURAL LIFECYCLE LEGEND STRIP -->
+<div class="bg-surface-container-low rounded-xl px-space-md py-2.5 mb-space-md flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm">
+<div class="flex items-center gap-space-md">
+<span class="uppercase tracking-widest font-semibold text-on-surface">Architectural Lifecycle Matrix:</span>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-2 rounded-sm bg-primary-container inline-block"></span>
+<span>Completed Stage</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-2 rounded-sm bg-primary inline-block"></span>
+<span class="text-on-surface font-medium">Active Fit-Out Phase</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-2 rounded-sm bg-surface-container-highest inline-block"></span>
+<span>Future Phase</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-mono text-on-surface">P1:PLAN • P2:DES • P3:APP • P4:PROC • P5:EXEC • P6:SNAG • P7:HANDOVER</span>
+</div>
+</div>
+<!-- MASTER PROJECT DIRECTORY DATA TABLE -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden mb-space-xl">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3.5 px-space-md">Project Reference</th>
+<th class="py-3.5 px-space-md">Client Account</th>
+<th class="py-3.5 px-space-md">Location / Cluster</th>
+<th class="py-3.5 px-space-md">Stage</th>
+<th class="py-3.5 px-space-md">Project Lead</th>
+<th class="py-3.5 px-space-md">Site Team</th>
+<th class="py-3.5 px-space-md">Milestone Window</th>
+<th class="py-3.5 px-space-md min-w-[220px]">7-Stage Lifecycle &amp; Progress</th>
+<th class="py-3.5 px-space-md">Site Health</th>
+<th class="py-3.5 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm text-on-surface">
+<!-- ROW 1: Downtown Corporate Office -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-026</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Commercial Fit-Out</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Downtown Corporate Office</span>
+<span class="text-[11px] text-on-surface-variant font-mono">1,450 sq.m • Level 42</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">ABC Holdings</span>
+<span class="text-[11px] text-on-surface-variant">Corp Real Estate</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Downtown Dubai</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-primary-container/15 text-primary-container font-label-sm text-label-sm uppercase font-semibold">
+                Execution
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of Sarah Mansour, senior female architectural director in Dubai wearing professional linen blazer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3ueHycCTkhdJW_yS4cM-l7-oK5gLyzKQAQ5bFh9wuWTxfgouuTc_hEWp6vOEgw5zIhsGwyib5uro9xPYchucrFSoISfWvFPTOL9zUYDBED_YsP2z05-GMQPR54A9hjJzvlY8agv1cxkZEv-b0FSznnVt1I-MWZZV9gYNG0oFNbsipTyBG2ZjCESwJtk5Bln_Z-DhyJ5ovwJ-dOWbdMKYJZA6LcTbmy9kjFyB-og"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Sarah Mansour</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">ME</div>
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">JN</div>
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+4</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">01 Sep — 28 Nov 2024</span>
+<span class="text-[11px] text-tertiary font-medium mt-0.5">42 days remaining</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-primary">PHASE 5: EXECUTION</span>
+<span class="font-mono font-bold text-on-surface">68%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Planning: Done, Design: Done, Approval: Done, Procurement: Done, Execution: In Progress (68%), Snagging: Upcoming, Handover: Upcoming">
+<div class="h-2 rounded-sm bg-primary-container" title="1. Planning - Complete"></div>
+<div class="h-2 rounded-sm bg-primary-container" title="2. Design - Complete"></div>
+<div class="h-2 rounded-sm bg-primary-container" title="3. Approval - Complete"></div>
+<div class="h-2 rounded-sm bg-primary-container" title="4. Procurement - Complete"></div>
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden" title="5. Execution - In Progress">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest" title="6. Snagging - Queued"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest" title="7. Handover - Queued"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On Track
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors" title="View Architectural Drawings">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Project Details">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 2: Palm Jumeirah Signature Villa -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-031</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Luxury Villa Renovation</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Palm Jumeirah Signature Villa</span>
+<span class="text-[11px] text-on-surface-variant font-mono">2,800 sq.m • Frond N</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Private Family Office</span>
+<span class="text-[11px] text-on-surface-variant">High-End Residential</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Palm Jumeirah, Dubai</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm uppercase font-semibold">
+                Design
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Close up architectural portrait of Karim Al-Nasser, male project manager in Dubai wearing minimalist charcoal polo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEYoWwI0b60LBdyOr0V1ejWL-Z0nc3nD8j9nddLCgvW1xW8-WarjoNa6zoVNfr2aFDsB_kp1drhshJ2xfdeSzhSmwYG7V3JbOrK5r9szpvR5UZUEkjHsT6ZX7sJWh4HeaDPSU8JByBbzIP0xPJQOtoDk4w-7gEui4AgtvpFtFiTCPnX785ihBXm-W1GpMQss8To1ut7ggdZzSMoqe81Ppk93twS2RDTyH1_IIAvA"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Karim Al-Nasser</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">AR</div>
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+3</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">15 Aug — 10 Jan 2025</span>
+<span class="text-[11px] text-secondary font-medium mt-0.5">Marble spec revisions</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-secondary">PHASE 2: DETAILED DESIGN</span>
+<span class="font-mono font-bold text-on-surface">42%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Planning: Done, Design: Active (Revisions), Approval: Pending, Procurement: Pending, Execution: Pending, Snagging: Pending, Handover: Pending">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                At Risk
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 3: DIFC Private Wealth Suites -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-019</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Acoustic &amp; Boardrooms</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">DIFC Private Wealth Suites</span>
+<span class="text-[11px] text-on-surface-variant font-mono">920 sq.m • Gate Precinct 4</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Apex Capital DIFC</span>
+<span class="text-[11px] text-on-surface-variant">Investment Banking</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>DIFC Gate Tower, Dubai</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-tertiary-fixed/60 text-on-tertiary-fixed-variant font-label-sm text-label-sm uppercase font-semibold">
+                Snagging
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of David Vance, seasoned MEP and fit out supervisor in Dubai standing in architectural office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA29zJbWOWSPQLAYoybnDRx-XsdzjMhLmNKJhhTLEdaGyPRjsINJVxN2YMfuuZ1cb6H2X_IRNUZ_swefFpkkNhT1c5zrarmJcxtQnR7guX75v3QMifHtL1I2jdgmrMtPI__NahWqNe5HCMIxqZCZvkOYXGVvxTeZ9CKdr3NWQ4PesAk_M3z4NstbIzRpxK-mgzi0rUwQmIYWfrptSOTyQ2rVw-WvzdAJvFod0OgPQ"/>
+<span class="font-medium text-on-surface whitespace-nowrap">David Vance</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">QA</div>
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">ME</div>
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+5</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">01 Jun — 20 Oct 2024</span>
+<span class="text-[11px] text-tertiary font-medium mt-0.5">8 days to final audit</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">PHASE 6: SNAGGING (14 OPEN)</span>
+<span class="font-mono font-bold text-on-surface">94%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phases 1-5 Complete, Phase 6 Active (Snags)">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On Track
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 4: Business Bay Flagship Showroom -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-042</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Luxury Retail Boutique</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Business Bay Flagship Showroom</span>
+<span class="text-[11px] text-on-surface-variant font-mono">1,100 sq.m • Marasi Drive</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Luxury Retail LLC</span>
+<span class="text-[11px] text-on-surface-variant">Haute Joaillerie</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Business Bay, Dubai</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-error-container/40 text-on-error-container font-label-sm text-label-sm uppercase font-semibold">
+                Procurement
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of Layla Qasim, senior procurement and interior design specialist in the UAE" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1sUBhVKh3iMi-AvClwm86jFWrdJrcowIM-zrTkPz86LktofoVeShrKwpwP54shRtZM8-WriDHz1BYNOcXjQNxmgrhy4aW90TGaabaFA_0kVo8VTqbEZz0Pmu6VvjlRrLvqHVxwLcYQdJvceuVnMLzxi09Ie0AuY8rcpAIS9zSZYTx3B53zCzsoIOwFasL0NqiXTeTlY037Msa3OHAfmBDN-xx-XK4iilhLjWOdg"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Layla Qasim</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">PR</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+4</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">10 Sep — 15 Dec 2024</span>
+<span class="text-[11px] text-error font-medium mt-0.5">Custom Brass 18d Delay</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-error">PHASE 4: CUSTOM FABRICATION</span>
+<span class="font-mono font-bold text-on-surface">55%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phases 1-3 complete, Phase 4 stuck in Italian joinery customs">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-error relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                Delayed
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 5: Abu Dhabi Executive Penthouse -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-015</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Penthouse Fit-Out</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Abu Dhabi Executive Penthouse</span>
+<span class="text-[11px] text-on-surface-variant font-mono">1,850 sq.m • Level 54</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Al Maryah Properties</span>
+<span class="text-[11px] text-on-surface-variant">Sovereign Client</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Al Maryah Island, Abu Dhabi</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase font-semibold">
+                Handover
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of Sarah Mansour in front of modern minimalist architectural models" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXKsJDVgk3ynd7RRNGdwc0p1vvgN2nwApVIvW-sQ1MLdYItmcRg2CCNldXNkPE-wfU91xNVDJlBhwAbH4bCkAgPRVi-BLaaFdH8QohreqUrC8HOQNZ0BSrxWLHtgIILKrPDBfwU3BTC1W_NuuzYc8qe1q5EXdkwM_AP9LwiClsglndcAP-laRp1mCpEMcDZCRgbdBfmy5TVftV_KycvOQLdukeySsq5H_Ub5Y_yQ"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Sarah Mansour</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">CM</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+6</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">12 May — 15 Oct 2024</span>
+<span class="text-[11px] text-tertiary font-medium mt-0.5">3 days to Key Handover</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-tertiary">PHASE 7: KEY HANDOVER</span>
+<span class="font-mono font-bold text-on-surface">98%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phases 1-6 complete, Phase 7 active">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On Track
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 6: Jumeirah Golf Estates Residence -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-055</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Full Turnkey Villa</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Jumeirah Golf Estates Residence</span>
+<span class="text-[11px] text-on-surface-variant font-mono">3,200 sq.m • Orange Lake</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Emaar Living</span>
+<span class="text-[11px] text-on-surface-variant">Private Client</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Jumeirah Golf Estates</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase font-semibold">
+                Planning
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of Zaid Farouk, technical architect in Dubai with architectural drafting room background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgafEmXvmMK8bQYJPJYk2icTEyvtQRRc0xHNhCXClwvHxvNtT3DCvEmaqkikyh8QEW0ydNs_fKKQAabXciyTeihw73i7G6MGsW0yjxCz67wLXwWOWwTxaMxzJ1i8bcH8gL5icl9_p9RtxJ2Ljgew43k8vTOyJ_08gQaQAKnwIJ-2BXtNp__g4BEt9gag2gfGB8MuQS2feq0uL4OGzVhrOhyWzX7TaNNrkAcx24Xg"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Zaid Farouk</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">PL</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+2</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">01 Oct — 28 Feb 2025</span>
+<span class="text-[11px] text-on-surface-variant mt-0.5">Kickoff &amp; As-Built Scan</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-primary">PHASE 1: CHARTER &amp; LASER SCAN</span>
+<span class="font-mono font-bold text-on-surface">18%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phase 1 Active (18%)">
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On Track
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 7: Dubai Marina Wellness Clinic -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-038</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Medical &amp; Spa Fit-Out</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Dubai Marina Wellness Clinic</span>
+<span class="text-[11px] text-on-surface-variant font-mono">1,600 sq.m • Marina Promenade</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Aster Health Group</span>
+<span class="text-[11px] text-on-surface-variant">Healthcare &amp; MedSpa</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Dubai Marina</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-primary-container/15 text-primary-container font-label-sm text-label-sm uppercase font-semibold">
+                Execution
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of David Vance, structural site director in Dubai overlooking architectural blueprints" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPIs2LDv7GI6VMVRXs3NTgHxipAsdvdBcNVKc3mNlM1VTm3S6_S5cLtLyWKkEKNYnf9cnjEi3tMLMYJt1r0sebsUs-sJ3RzQG_xpMpTrd4BU4WUUt4bOYyV8N2qRyI8jUWi8c6snnuE7lfF_8mBN6gbpqGB_GWnXSxKG1xYxdFK8Y18hjFvewpBtoMdNWoPsp4DLHzsnk22n9z2W3-_1cZHo3ixh2KuWsb2-W9TA"/>
+<span class="font-medium text-on-surface whitespace-nowrap">David Vance</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">HV</div>
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">EL</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+5</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">20 Jul — 30 Nov 2024</span>
+<span class="text-[11px] text-tertiary font-medium mt-0.5">DHA MEP Inspection Passed</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-primary">PHASE 5: MEDICAL JOINERY</span>
+<span class="font-mono font-bold text-on-surface">74%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phases 1-4 Complete, Phase 5 in progress (74%)">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30 animate-pulse"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed-dim/30 text-tertiary font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                On Track
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- ROW 8: Al Quoz Creative Studio & Workshop -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm font-semibold tracking-wider text-primary">AZ-022</span>
+<span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="text-[11px] text-on-surface-variant">Adaptive Reuse / Gallery</span>
+</div>
+<span class="font-headline-sm text-[15px] font-semibold text-on-surface mt-0.5">Al Quoz Creative Studio &amp; Workshop</span>
+<span class="text-[11px] text-on-surface-variant font-mono">880 sq.m • Warehouse 19</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Alserkal Arts</span>
+<span class="text-[11px] text-on-surface-variant">Cultural Foundation</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>
+<span>Al Quoz Industrial 1</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex px-2 py-0.5 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase font-semibold">
+                Approval
+              </span>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover bg-surface-container" data-alt="Portrait photo of Layla Qasim, senior project designer in Dubai wearing bespoke linen attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsivr27YrrntWWsL07c4UcZ5HMopJwfzCygV214weZgRGaLn3wciS-wHZ58QKxFTRRQhivg0wzJN9Kiw-PRo0Vc9oz3sR6axjUq2MFje-Lsywl0ltzlrFILZ5HsD3aocaeVfLXtR87fNJbhqa8fO95Onf9Rf8LmkJokutt2TYkeEWGHIkFdQb9Dc1ETGwm1r_hsOdqZcoGovCt15SIB9464G0eS72YRdNHfNCX9A"/>
+<span class="font-medium text-on-surface whitespace-nowrap">Layla Qasim</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex items-center -space-x-2">
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">CD</div>
+<div class="w-6 h-6 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-[9px] flex items-center justify-center ring-2 ring-surface-container-lowest">+3</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col">
+<span class="font-mono text-[12px] text-on-surface whitespace-nowrap">05 Sep — 15 Dec 2024</span>
+<span class="text-[11px] text-outline font-medium mt-0.5">Dubai Civil Defense Pending</span>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface-variant text-[11px]">
+<span class="font-label-sm text-label-sm font-semibold text-outline">PHASE 3: MUNICIPAL NOC</span>
+<span class="font-mono font-bold text-on-surface">35%</span>
+</div>
+<!-- 7-Segment Lifecycle Indicator -->
+<div class="grid grid-cols-7 gap-1 w-full" title="Phase 1 &amp; 2 complete, Phase 3 NOC in review">
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-primary-container"></div>
+<div class="h-2 rounded-sm bg-outline relative overflow-hidden">
+<div class="absolute inset-0 bg-surface-container-lowest/30"></div>
+</div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+<div class="h-2 rounded-sm bg-surface-container-highest"></div>
+</div>
+</div>
+</td>
+<td class="py-4 px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                On Hold
+              </span>
+</td>
+<td class="py-4 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">architecture</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- DIRECTORY FOOTER & PAGINATION -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-md">
+<span>Showing <strong class="text-on-surface font-semibold">1 to 8</strong> of <strong class="text-on-surface font-semibold">48</strong> fit-out projects</span>
+<span class="hidden sm:inline text-outline-variant">•</span>
+<div class="hidden sm:flex items-center gap-1 text-[12px]">
+<span>Displaying 8 rows / page</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<!-- Export Mini Links -->
+<div class="hidden lg:flex items-center gap-space-sm text-label-sm text-label-sm uppercase font-semibold">
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">table_view</span> CSV Schedule
+          </a>
+<span class="text-outline-variant">/</span>
+<a class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">picture_as_pdf</span> PDF Report
+          </a>
+</div>
+<div class="h-5 w-px bg-surface-container-highest hidden lg:block"></div>
+<!-- Pagination Controls -->
+<div class="flex items-center gap-1">
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container disabled:opacity-50 font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chevron_left</span>
+<span class="hidden sm:inline">Previous</span>
+</button>
+<button class="h-9 w-9 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-bold shadow-sm">1</button>
+<button class="h-9 w-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md">2</button>
+<button class="h-9 w-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md">3</button>
+<span class="px-1 text-on-surface-variant font-mono">...</span>
+<button class="h-9 w-9 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md">6</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span class="hidden sm:inline">Next</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- BOTTOM ARCHITECTURAL SPOTLIGHT / SITE QUICK INSPECTION DRAWER -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Card 1: Dubai Municipality Approvals Radar -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Regulatory Compliance</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold uppercase">All Clean</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Authority Approvals Tracker</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          DCD (Civil Defense), Dubai Municipality, and TECOM permit status across current execution sites.
+        </p>
+</div>
+<div class="mt-space-md space-y-2">
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface">Downtown Corp (AZ-026)</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Permitted
+          </span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface">Al Quoz Workshop (AZ-022)</span>
+<span class="text-secondary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">pending</span> DCD NOC In Review
+          </span>
+</div>
+<div class="flex items-center justify-between text-[13px]">
+<span class="text-on-surface">Palm Villa (AZ-031)</span>
+<span class="text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Nakheel Master Pass
+          </span>
+</div>
+</div>
+</div>
+<!-- Card 2: Italian & European Joinery Procurement Lead Time -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold">Materiality &amp; FF&amp;E</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-error-container text-on-error-container font-bold uppercase">1 Critical</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Joinery &amp; Stone Lead Times</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Custom Calacatta Viola slabs and bespoke brass fabrication currently en route to Jebel Ali Port.
+        </p>
+</div>
+<div class="mt-space-md">
+<div class="flex items-center justify-between text-[12px] mb-1">
+<span class="text-on-surface-variant font-mono">AZ-042 Custom Hardware</span>
+<span class="text-error font-semibold font-mono">18d Delay</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full" style="width: 45%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant mt-2 font-mono">
+<span>Supplier: Milan Joinery Ltd</span>
+<span>ETA: 22 Nov</span>
+</div>
+</div>
+</div>
+<!-- Card 3: Quality Assurance Snag Defect Density -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-bold">QA / Site Audits</span>
+<span class="px-2 py-0.5 rounded text-[10px] bg-tertiary-fixed text-on-tertiary-fixed font-bold uppercase">92% Sign-Off</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Handover Readiness</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Snag density across AZ-015 and AZ-019 nearing zero defects before formal client walk-through.
+        </p>
+</div>
+<div class="mt-space-md flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="text-[11px] uppercase font-label-sm text-label-sm text-on-surface-variant">Active Snag Items</span>
+<span class="font-headline-sm text-[18px] font-bold text-on-surface">22 Remaining</span>
+</div>
+<button class="h-8 px-3 rounded bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm shadow-sm transition-colors flex items-center gap-1">
+<span>Open QA Log</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary-fixed":"#ffdad2","surface-bright":"#fdf8f6","surface-tint":"#a04029","on-surface":"#1c1b1a","primary-container":"#9a3c25","tertiary-fixed":"#c6ecce","on-tertiary-fixed-variant":"#2d4e38","secondary-fixed-dim":"#e3c197","inverse-surface":"#31302f","tertiary-container":"#40624b","surface":"#fdf8f6","on-primary-container":"#ffc4b6","on-secondary":"#ffffff","on-surface-variant":"#56423d","primary-fixed-dim":"#ffb4a2","surface-container":"#f2edeb","background":"#fdf8f6","secondary-fixed":"#ffddb4","inverse-on-surface":"#f4f0ee","error":"#ba1a1a","surface-container-high":"#ece7e5","surface-container-lowest":"#ffffff","outline-variant":"#ddc0ba","on-primary-fixed":"#3c0700","tertiary-fixed-dim":"#aacfb3","tertiary":"#294a34","outline":"#89726c","on-background":"#1c1b1a","on-error":"#ffffff","on-secondary-fixed":"#291800","surface-dim":"#ddd9d7","on-secondary-fixed-variant":"#5a4222","on-primary":"#ffffff","error-container":"#ffdad6","secondary":"#745a37","surface-variant":"#e6e2df","on-error-container":"#93000a","on-tertiary-fixed":"#00210f","surface-container-highest":"#e6e2df","on-tertiary":"#ffffff","on-tertiary-container":"#b6dcbf","on-secondary-container":"#785e3b","primary":"#7b2510","on-primary-fixed-variant":"#802914","inverse-primary":"#ffb4a2","secondary-container":"#fedaae","surface-container-low":"#f7f3f0"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-lg":"1.5rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","gutter":"1.5rem","margin":"2.5rem"},"fontFamily":{"headline-lg":["Space Grotesk"],"label-lg":["Space Grotesk"],"display-lg":["Space Grotesk"],"label-md":["Space Grotesk"],"label-sm":["Space Grotesk"],"body-md":["Inter"],"headline-md":["Space Grotesk"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-lg-mobile":["Space Grotesk"],"display-lg-mobile":["Space Grotesk"],"headline-sm":["Space Grotesk"]},"fontSize":{"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"500"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["44px",{"lineHeight":"52px","letterSpacing":"-0.03em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.1em","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.12em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["16px",{"lineHeight":"26px","letterSpacing":"-0.01em","fontWeight":"400"}],"headline-lg-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"500"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-20 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="w-8 h-8 rounded-DEFAULT bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-body-lg">architecture</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg tracking-wider text-on-surface uppercase">AZZORA</span><span class="font-label-sm text-label-sm tracking-widest text-outline uppercase">DESIGN • BUILD</span></div></div><span class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container font-label-sm text-label-sm uppercase text-secondary">UAE</span></div><div class="px-space-md py-space-sm"><button class="w-full flex items-center justify-between px-space-md py-space-sm rounded-lg bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] text-left hover:bg-surface-container transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="material-symbols-outlined text-outline text-body-lg">domain</span><div class="truncate"><p class="font-label-sm text-label-sm uppercase text-primary truncate">AZ-026 • Corporate</p><p class="font-body-sm text-body-sm text-on-surface truncate">Downtown Dubai</p></div></div><span class="material-symbols-outlined text-outline text-body-sm">unfold_more</span></button></div><div class="px-space-md pt-space-md"><span class="px-space-sm font-label-sm text-label-sm uppercase tracking-wider text-outline">Project Stages</span><nav class="mt-space-sm flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-lg"><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="overview" href="#"><span class="material-symbols-outlined text-body-lg">grid_view</span><span class="font-label-md text-label-md uppercase tracking-wider">Overview</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="timeline" href="#"><span class="material-symbols-outlined text-body-lg">calendar_month</span><span class="font-label-md text-label-md uppercase tracking-wider">Timeline</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="tasks" href="#"><span class="material-symbols-outlined text-body-lg">checklist</span><span class="font-label-md text-label-md uppercase tracking-wider">Tasks</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="team" href="#"><span class="material-symbols-outlined text-body-lg">group</span><span class="font-label-md text-label-md uppercase tracking-wider">Team</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="site-updates" href="#"><span class="material-symbols-outlined text-body-lg">engineering</span><span class="font-label-md text-label-md uppercase tracking-wider">Site Updates</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="documents" href="#"><span class="material-symbols-outlined text-body-lg">folder_open</span><span class="font-label-md text-label-md uppercase tracking-wider">Documents</span></a><a class="flex items-center gap-space-md px-space-md py-2.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="snags-and-qa" href="#"><span class="material-symbols-outlined text-body-lg">fact_check</span><span class="font-label-md text-label-md uppercase tracking-wider">Snags &amp; QA</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-2.5 transition-all bg-primary-container text-on-primary-container font-bold rounded-lg" data-path="handover" href="#"><span class="material-symbols-outlined text-body-lg">key</span><span class="font-label-md text-label-md uppercase tracking-wider">Handover</span></a></nav></div></div><div class="p-space-md"><div class="p-space-md rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary">Site Active</span></div><span class="font-body-sm text-body-sm text-outline">Phase IV</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-sm px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant w-80 shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-body-lg">search</span><span class="font-body-sm text-body-sm text-outline flex-1">Search drawings, BOQs, snags...</span><kbd class="px-1.5 py-0.5 rounded-DEFAULT bg-surface-container font-label-sm text-label-sm text-outline uppercase">⌘K</kbd></div><div class="flex items-center gap-space-xs font-label-md text-label-md uppercase tracking-wider text-outline"><span class="material-symbols-outlined text-body-sm text-secondary">location_on</span><span>Dubai / UAE</span></div></div><div class="flex items-center gap-space-lg"><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="text-primary font-bold"><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#">Overview</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="timeline" href="#">Timeline</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="tasks" href="#">Tasks</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="team" href="#">Team</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="site-updates" href="#">Site Updates</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="documents" href="#">Documents</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface transition-colors" data-path="snags-and-qa" href="#">Snags &amp; QA</a><a aria-current="page" class="uppercase tracking-wider transition-colors text-primary font-bold" data-path="handover" href="#">Handover</a></nav><div class="flex items-center gap-space-md"><button class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors relative"><span class="material-symbols-outlined text-body-lg">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Wf72IOP3daQMOpnlqLQtislTWSw94cvsjueDmbORUGs6nwru5l3iU4-SlhQrcRW_mFE9ErRvcLvt1Kh9Tx0OOIoMe1GEeXk5RzPS2E3TMYszkZ0_JjBR_We13uP_mEv_c4a7jc0CBkPG_IIhp5FaO9J-0EMJYl8uiLGIvfzmXmR1jZcnFwS1GSCwNIYlWsyzLWTB1Hn2UdQSeUvc0lhVWl0G3EtLFaUPovz5T402krTfPrgr1vCuNn"/><div class="hidden md:flex flex-col text-left"><span class="font-label-md text-label-md uppercase tracking-wider text-on-surface">T. Al-Mansoor</span><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Lead Architect</span></div></div></div></div></header><main class="relative pt-20 bg-surface min-h-screen w-full px-space-xl"><div class="flex flex-col w-full pb-16">
+<!-- SUB-HEADER / STAGE BANNER -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="px-2.5 py-0.5 rounded-DEFAULT bg-surface-container font-label-sm text-label-sm uppercase tracking-widest text-primary font-medium">Stage 07 • Closeout Protocol</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline">Ref: AZ-026-DXB-CORP</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+<span class="px-2.5 py-0.5 rounded-DEFAULT bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">82% Readiness • 3 Items Pending</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">
+        Downtown Corporate Office Fit-Out
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span>Handover Target: <strong class="text-on-surface font-medium">30 Oct 2024</strong></span>
+<span>•</span>
+<span class="inline-flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+          Status: Handover Verification Phase
+        </span>
+</p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="h-11 px-space-lg rounded-lg bg-surface-container-lowest text-on-surface font-label-lg text-label-lg uppercase tracking-wider shadow-sm hover:bg-surface-container transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-body-lg text-outline">description</span>
+<span>Export Handover Dossier</span>
+</button>
+<button class="h-11 px-space-lg rounded-lg bg-primary-container text-on-secondary font-label-lg text-label-lg uppercase tracking-wider shadow-md hover:bg-primary transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-body-lg">verified</span>
+<span>Generate Client Handover Certificate</span>
+</button>
+</div>
+</div>
+<!-- TOP HERO AUDIT & SUMMARY SECTION (Bento Split) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Left Hero Card: Readiness Engine -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between mb-space-lg">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Tectonic Audit Engine</span>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-0.5">Handover Readiness Index</h2>
+<p class="font-body-sm text-body-sm text-outline mt-1">Algorithmic validation across statutory, spatial, and contractual gates.</p>
+</div>
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">14 of 17 Passed</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg items-center pt-2 pb-space-lg">
+<!-- Radial Progress SVG -->
+<div class="md:col-span-5 flex flex-col items-center justify-center relative">
+<div class="relative w-44 h-44 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 160 160">
+<circle class="text-surface-container" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-primary-container transition-all duration-1000" cx="80" cy="80" fill="none" r="68" stroke="currentColor" stroke-dasharray="427.25" stroke-dashoffset="76.9" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-display-lg text-display-lg text-on-surface tracking-tighter" id="readiness-percent-display">82<span class="text-headline-sm text-primary">%</span></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Verified</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-center text-on-surface-variant mt-2 font-medium">3 Mandatory Clearances Remain</p>
+</div>
+<!-- Category Progress Stacks -->
+<div class="md:col-span-7 flex flex-col gap-3">
+<!-- Progress Line 1 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Site Execution &amp; Fit-Out</span>
+<span class="font-label-sm text-label-sm font-medium text-tertiary">100% (3/3)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Progress Line 2 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Quality &amp; Defect Clearance</span>
+<span class="font-label-sm text-label-sm font-medium text-tertiary">100% (3/3)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 100%"></div>
+</div>
+</div>
+<!-- Progress Line 3 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Technical Dossiers &amp; As-Builts</span>
+<span class="font-label-sm text-label-sm font-medium text-secondary">80% (4/5)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 80%"></div>
+</div>
+</div>
+<!-- Progress Line 4 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Client Authority Approvals</span>
+<span class="font-label-sm text-label-sm font-medium text-secondary">67% (2/3)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 67%"></div>
+</div>
+</div>
+<!-- Progress Line 5 -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Commercial &amp; DLP Retention Closure</span>
+<span class="font-label-sm text-label-sm font-medium text-secondary">67% (2/3)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 67%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-space-md">
+<span class="material-symbols-outlined text-primary-container text-body-lg mt-0.5">lock_clock</span>
+<div class="text-left">
+<p class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-semibold">Final Seal Gating Mechanism</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Full compliance of all 17 provisions unlocks the permanent cryptographic executive sign-off seal. Currently blocked by 1 compliance cert, 1 director signature, and 1 bank guarantee draft.
+          </p>
+</div>
+</div>
+</div>
+<!-- Right Summary Card: Architectural Specification Sheet -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-xl -mt-space-xl p-space-lg rounded-t-xl">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Project Record</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-0.5">AZ-026 Fit-Out Specification</h3>
+</div>
+<span class="px-2.5 py-1 rounded-DEFAULT bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">Physical 100%</span>
+</div>
+<div class="space-y-2.5 text-left font-body-sm text-body-sm">
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Client Entity</span>
+<span class="font-medium text-on-surface text-right">Al Futtaim Prestige / Emaar</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Location / Unit</span>
+<span class="font-medium text-on-surface text-right">Level 42, Downtown Business Tower</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Site Possession Date</span>
+<span class="font-medium text-on-surface text-right">15 May 2024</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Target Handover</span>
+<span class="font-medium text-on-surface text-right">30 Oct 2024 (168 Days Total)</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Lead Project Manager</span>
+<span class="font-medium text-on-surface text-right">Sarah Mansoor, PMP</span>
+</div>
+<div class="flex justify-between py-1 px-2">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Gross Floor Area (GFA)</span>
+<span class="font-medium text-on-surface text-right">14,500 sq.ft</span>
+</div>
+<div class="flex justify-between py-1 bg-surface-container-low/50 px-2 rounded">
+<span class="text-outline uppercase font-label-sm text-label-sm tracking-wider">Contract Sum</span>
+<span class="font-medium text-on-surface text-right">AED 4,850,000</span>
+</div>
+</div>
+</div>
+<!-- Quick site photo preview thumbnail strip -->
+<div class="mt-space-lg pt-space-md bg-surface-container-low -mx-space-xl -mb-space-xl p-space-md rounded-b-xl flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img class="w-12 h-12 rounded object-cover shadow-sm" data-alt="High-end completed luxury boardroom interior in Downtown Dubai with architectural travertine accents, linear brass lighting, and panoramic Burj Khalifa views through floor-to-ceiling glass." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5sdTkDxTO39bC-9gsuVr7ZLN6NEPgVU4_fLvtN3uDoDtK-8vp5lNyD9lADkGS7pjuGsmfZEZOwmjQkPaDoBG5A9zu57t2_MqR32bc1ZEES2GAdwsjcRtXPgkRoR5RniIoGGJMZ4qhZ0PUdHBk7HsvX6Jw1CptWt0PcmyNH6XfDkwtBX9vOIpswvey5NH2TKduBmKOfbUlqVK4wBMUqRh7mY-cY4QKGr4IqvfWUA"/>
+<div>
+<p class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Architectural Capture</p>
+<p class="font-body-sm text-body-sm text-outline">36 Final 4K Photographs Verified</p>
+</div>
+</div>
+<button class="px-space-md py-1.5 rounded-DEFAULT bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors shadow-sm">View Archive</button>
+</div>
+</div>
+</div>
+<!-- DETAILED HANDOVER CHECKLIST SECTIONS -->
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Verification Protocols &amp; Dossier Checklist</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Review required documentation, technical submittals, and signed handoffs prior to final closeout seal.</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:text-on-surface transition-colors flex items-center gap-1.5" id="toggle-expand-all">
+<span class="material-symbols-outlined text-body-sm">unfold_more</span>
+<span>Expand All</span>
+</button>
+</div>
+</div>
+<!-- Category 1: Site Completion -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-tertiary-container flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-body-lg">construction</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category 01 • Site Physical Completion</h3>
+<p class="font-body-sm text-body-sm text-outline">Trade sign-offs, deep cleansing, and key transfer custody</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+          100% Completed (3/3)
+        </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 1.1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">All Project Execution Tasks Complete</p>
+<p class="font-body-sm text-body-sm text-outline">MEP 2nd fix, bespoke joinery, acoustic ceilings, and micro-cement surfaces verified by Site Engineer Riyas K.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Sign-off 22 Oct</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">visibility</span></button>
+</div>
+</div>
+<!-- Item 1.2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Deep Site Cleaning &amp; Protection Removal</p>
+<p class="font-body-sm text-body-sm text-outline">Industrial floor polish applied, architectural glazing degreased, and surface films stripped clean.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Sign-off 24 Oct</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">visibility</span></button>
+</div>
+</div>
+<!-- Item 1.3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Keys, Master Smart Access Cards &amp; RFID Handover Kit</p>
+<p class="font-body-sm text-body-sm text-outline">Physical key safe indexed, 45 NFC door credentials encoded and presented in velvet presentation box.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Ready for Custody</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">inventory_2</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 2: Quality & Defect Closure -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-tertiary-container flex items-center justify-center text-on-tertiary">
+<span class="material-symbols-outlined text-body-lg">fact_check</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category 02 • Quality &amp; Defect Closure</h3>
+<p class="font-body-sm text-body-sm text-outline">Snag mitigation, acoustic decibel verification, and authority test runs</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">check_circle</span>
+          100% Completed (3/3)
+        </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 2.1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">All 68 Site Snags Fully Rectified</p>
+<p class="font-body-sm text-body-sm text-outline">100% snag rectification rate. Final sign-off logged by QA Lead Ahmed R. with photographic validation stamps.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">68/68 Cleared</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">checklist_rtl</span></button>
+</div>
+</div>
+<!-- Item 2.2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Final Internal QA Audit Passed</p>
+<p class="font-body-sm text-body-sm text-outline">Zero critical or major observations recorded. Joinery tolerance gap metrics within ±0.5mm specifications.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Audit Passed</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">verified_user</span></button>
+</div>
+</div>
+<!-- Item 2.3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">MEP Testing &amp; Balancing (TAB) &amp; Dubai Civil Defense Reports</p>
+<p class="font-body-sm text-body-sm text-outline">VAV box air balancing balanced, fire alarm interface certified, and emergency exit lighting lux levels verified.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">DCD Certified</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">task</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 3: Documents & As-Builts -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-body-lg">folder_zip</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category 03 • Technical Dossiers &amp; As-Builts</h3>
+<p class="font-body-sm text-body-sm text-outline">BIM federated models, manufacturer warranties, and O&amp;M documentation</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">pending</span>
+          80% Completed (4/5)
+        </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 3.1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">As-Built CAD &amp; BIM Drawings Uploaded</p>
+<p class="font-body-sm text-body-sm text-outline">Architectural, MEP, Joinery &amp; Reflected Ceiling Plans • Version 2.4 Final (.DWG &amp; IFC 4.3 format).</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Ver. 2.4 Approved</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">download</span></button>
+</div>
+</div>
+<!-- Item 3.2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Manufacturer Warranties Dossier</p>
+<p class="font-body-sm text-body-sm text-outline">Acoustic glass partitions, Daikin VRV HVAC chillers, and 10-year engineered oak flooring structural warranty.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">10-Yr Bound</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">attachment</span></button>
+</div>
+</div>
+<!-- Item 3.3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Operations &amp; Maintenance (O&amp;M) Comprehensive Manual</p>
+<p class="font-body-sm text-body-sm text-outline">184-page compiled manual detailing architectural finish care, automated blind protocols, and lighting matrix maps.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">184 Pages</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">menu_book</span></button>
+</div>
+</div>
+<!-- Item 3.4 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Architectural Professional Photographs Uploaded</p>
+<p class="font-body-sm text-body-sm text-outline">36 high-resolution catalog images captured by AZZORA media team showing day and twilight lighting schemes.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">36 Assets</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">photo_library</span></button>
+</div>
+</div>
+<!-- Item 3.5 [PENDING] -->
+<div class="p-space-md rounded-lg bg-primary-fixed/20 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-primary-fixed text-primary flex items-center justify-center mt-0.5 shrink-0 font-bold">
+<span class="material-symbols-outlined text-body-sm">hourglass_top</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-body-md text-body-md text-on-surface font-semibold">Subcontractor Lien Waivers &amp; Material Compliance Certificates</p>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Action Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">1 supplier pending: Acoustic ceiling baffles manufacturer warranty &amp; final lien waiver certificate.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-primary">upload_file</span>
+<span>Upload Certificate</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-secondary font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-primary transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm">send</span>
+<span>Request Vendor</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 4: Client Approval -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-body-lg">handshake</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category 04 • Client Authority Approval</h3>
+<p class="font-body-sm text-body-sm text-outline">Joint walk-through witness protocols and executive sign-off seal</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">pending</span>
+          67% Completed (2/3)
+        </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 4.1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Joint Client Walk-Through &amp; Snag Audit Complete</p>
+<p class="font-body-sm text-body-sm text-outline">Attended on site by Client Representative Tariq Al-Nuaimi and AZZORA PM Sarah Mansoor on 26 Oct 2024.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">Walk-Through Signed</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">history_edu</span></button>
+</div>
+</div>
+<!-- Item 4.2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Facilities Management Operational Demonstration</p>
+<p class="font-body-sm text-body-sm text-outline">BMS lighting zones, motorized executive blinds, and server room emergency purge systems handed to FM team.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">FM Signed Off</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">rule</span></button>
+</div>
+</div>
+<!-- Item 4.3 [PENDING] -->
+<div class="p-space-md rounded-lg bg-primary-fixed/20 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-primary-fixed text-primary flex items-center justify-center mt-0.5 shrink-0 font-bold">
+<span class="material-symbols-outlined text-body-sm">hourglass_top</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-body-md text-body-md text-on-surface font-semibold">Final Client Handover Certificate Digital Sign-Off</p>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Action Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">Pending digital cryptographic signature from Managing Director (Al Futtaim Prestige Holdings).</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-primary">notifications_active</span>
+<span>Send SMS Reminder</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-secondary font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-primary transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm">draw</span>
+<span>Sign via UAE Pass / Portal</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category 5: Commercial Closure -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-low -mx-space-lg -mt-space-lg p-space-md rounded-t-xl">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-DEFAULT bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-body-lg">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Category 05 • Commercial &amp; Retention Closure</h3>
+<p class="font-body-sm text-body-sm text-outline">Final statement of accounts, variation reconciliation, and DLP guarantee bonds</p>
+</div>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-body-sm">pending</span>
+          67% Completed (2/3)
+        </span>
+</div>
+<div class="space-y-space-sm">
+<!-- Item 5.1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Final Variation Account Agreed &amp; Signed</p>
+<p class="font-body-sm text-body-sm text-outline">Variation Orders VO#01 to VO#07 mutually resolved (+AED 210,000 net addition reconciled).</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">VOs Reconciled</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">receipt_long</span></button>
+</div>
+</div>
+<!-- Item 5.2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-tertiary-container text-on-tertiary flex items-center justify-center mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-body-sm">check</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Final Payment Invoice Submitted (Invoice #INV-2024-089)</p>
+<p class="font-body-sm text-body-sm text-outline">Final milestone claim of AED 485,000 processed for standard 30-day corporate disbursement.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-md shrink-0 self-end md:self-auto">
+<span class="px-2.5 py-1 rounded-DEFAULT bg-surface-container-lowest font-label-sm text-label-sm uppercase tracking-wider text-tertiary font-semibold">AED 485,000 Submitted</span>
+<button class="text-outline hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-body-lg">request_quote</span></button>
+</div>
+</div>
+<!-- Item 5.3 [PENDING] -->
+<div class="p-space-md rounded-lg bg-primary-fixed/20 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-6 h-6 rounded bg-primary-fixed text-primary flex items-center justify-center mt-0.5 shrink-0 font-bold">
+<span class="material-symbols-outlined text-body-sm">hourglass_top</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<p class="font-body-md text-body-md text-on-surface font-semibold">Defects Liability Period (DLP) Bank Guarantee / Retention Release Confirmation</p>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider font-semibold">Action Required</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline mt-0.5">AED 242,500 (5% Retention) 12-month Emirates NBD performance guarantee draft requires legal counsel countersign.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 self-end md:self-auto">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm text-primary">visibility</span>
+<span>Review Draft BG</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary-container text-on-secondary font-label-sm text-label-sm uppercase tracking-wider shadow-sm hover:bg-primary transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-body-sm">check_box</span>
+<span>Confirm Retention Release</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ARCHITECTURAL COMPLETION SEAL & EXECUTIVE CONTROLLER -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-md border-primary/20 relative overflow-hidden">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-space-xl relative z-10">
+<!-- Seal Watermark & State Info -->
+<div class="flex items-center gap-space-lg w-full lg:w-auto">
+<!-- Seal Placeholder SVG -->
+<div class="relative w-24 h-24 rounded-full bg-surface-container-low flex items-center justify-center shrink-0 border-2 border-dashed border-outline/30 transition-all duration-500" id="seal-container">
+<svg class="w-16 h-16 text-outline/40 transition-colors duration-500" fill="none" id="seal-svg" stroke="currentColor" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="46" stroke-dasharray="4 2" stroke-width="2"></circle>
+<circle cx="50" cy="50" r="38" stroke-width="1.5"></circle>
+<polygon points="50,18 54,34 70,34 57,44 62,60 50,50 38,60 43,44 30,34 46,34" stroke-width="1.5"></polygon>
+</svg>
+<span class="material-symbols-outlined absolute text-outline text-headline-sm" id="seal-lock-icon">lock</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">AZZORA Master Sign-Off Lock</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider font-semibold" id="state-badge">14/17 Completed</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1" id="seal-title">Pending Gate Resolution</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xl" id="seal-desc">
+            Upon clearing the 3 remaining prerequisites, this module will activate cryptographic multi-party authorization and bind the official Completion Certificate into the Dubai Municipality archive.
+          </p>
+</div>
+</div>
+<!-- Controls & Toggle Simulator -->
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto justify-end">
+<!-- Interactive Preview Toggle -->
+<label class="flex items-center gap-space-sm cursor-pointer select-none bg-surface-container px-3 py-2 rounded-lg">
+<input class="sr-only" id="simulate-toggle" type="checkbox"/>
+<div class="w-9 h-5 bg-outline/40 rounded-full transition-colors relative" id="toggle-track">
+<div class="w-3.5 h-3.5 bg-surface-container-lowest rounded-full absolute top-0.75 left-0.75 transition-transform" id="toggle-knob"></div>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Simulate 100% Cleared</span>
+</label>
+<!-- Override Button -->
+<button class="h-11 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-container transition-colors shadow-sm whitespace-nowrap">
+          Override &amp; Request Exec Sign-off
+        </button>
+<!-- Primary Complete Project Button -->
+<button class="h-11 px-space-xl rounded-lg bg-surface-container-high text-outline cursor-not-allowed font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center gap-2 whitespace-nowrap group relative" disabled="" id="complete-project-btn">
+<span class="material-symbols-outlined text-body-lg">verified</span>
+<span>Complete Project</span>
+<span class="absolute -top-10 left-1/2 -translate-x-1/2 hidden group-hover:block px-2.5 py-1 rounded bg-inverse-surface text-inverse-on-surface font-body-sm text-body-sm whitespace-nowrap shadow-lg">
+            Unlocks when 17/17 items are certified complete
+          </span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple interactive prototype behavior for simulation toggle
+  const simulateToggle = document.getElementById('simulate-toggle');
+  const toggleTrack = document.getElementById('toggle-track');
+  const toggleKnob = document.getElementById('toggle-knob');
+  const completeBtn = document.getElementById('complete-project-btn');
+  const sealContainer = document.getElementById('seal-container');
+  const sealSvg = document.getElementById('seal-svg');
+  const sealLockIcon = document.getElementById('seal-lock-icon');
+  const stateBadge = document.getElementById('state-badge');
+  const sealTitle = document.getElementById('seal-title');
+  const sealDesc = document.getElementById('seal-desc');
+  const readinessPercentDisplay = document.getElementById('readiness-percent-display');
+
+  if (simulateToggle) {
+    simulateToggle.addEventListener('change', function() {
+      if (this.checked) {
+        // Toggle visual
+        toggleTrack.classList.remove('bg-outline/40');
+        toggleTrack.classList.add('bg-primary');
+        toggleKnob.classList.add('translate-x-4');
+
+        // Button state
+        completeBtn.disabled = false;
+        completeBtn.classList.remove('bg-surface-container-high', 'text-outline', 'cursor-not-allowed');
+        completeBtn.classList.add('bg-primary-container', 'text-on-secondary', 'hover:bg-primary', 'cursor-pointer', 'shadow-lg');
+
+        // Seal state
+        sealContainer.classList.remove('bg-surface-container-low', 'border-outline/30');
+        sealContainer.classList.add('bg-tertiary-fixed', 'border-tertiary', 'shadow-md');
+        sealSvg.classList.remove('text-outline/40');
+        sealSvg.classList.add('text-tertiary');
+        sealLockIcon.textContent = 'verified';
+        sealLockIcon.classList.remove('text-outline');
+        sealLockIcon.classList.add('text-tertiary');
+
+        // Text & Badge
+        stateBadge.textContent = '17/17 Cleared &bull; Ready';
+        stateBadge.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed');
+        stateBadge.classList.add('bg-tertiary-container', 'text-on-tertiary');
+
+        sealTitle.textContent = 'Ready for Official Handover Seal';
+        sealDesc.textContent = 'All statutory, architectural, and financial prerequisites verified. Click "Complete Project" to generate certified handover token and archive immutable records.';
+        readinessPercentDisplay.innerHTML = '100<span class="text-headline-sm text-tertiary">%</span>';
+      } else {
+        // Revert to real 82% state
+        toggleTrack.classList.add('bg-outline/40');
+        toggleTrack.classList.remove('bg-primary');
+        toggleKnob.classList.remove('translate-x-4');
+
+        completeBtn.disabled = true;
+        completeBtn.classList.add('bg-surface-container-high', 'text-outline', 'cursor-not-allowed');
+        completeBtn.classList.remove('bg-primary-container', 'text-on-secondary', 'hover:bg-primary', 'cursor-pointer', 'shadow-lg');
+
+        sealContainer.classList.add('bg-surface-container-low', 'border-outline/30');
+        sealContainer.classList.remove('bg-tertiary-fixed', 'border-tertiary', 'shadow-md');
+        sealSvg.classList.add('text-outline/40');
+        sealSvg.classList.remove('text-tertiary');
+        sealLockIcon.textContent = 'lock';
+        sealLockIcon.classList.add('text-outline');
+        sealLockIcon.classList.remove('text-tertiary');
+
+        stateBadge.textContent = '14/17 Completed';
+        stateBadge.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+        stateBadge.classList.remove('bg-tertiary-container', 'text-on-tertiary');
+
+        sealTitle.textContent = 'Pending Gate Resolution';
+        sealDesc.textContent = 'Upon clearing the 3 remaining prerequisites, this module will activate cryptographic multi-party authorization and bind the official Completion Certificate into the Dubai Municipality archive.';
+        readinessPercentDisplay.innerHTML = '82<span class="text-headline-sm text-primary">%</span>';
+      }
+    });
+  }
+
+  // Complete Project action event
+  completeBtn.addEventListener('click', function() {
+    if (!this.disabled) {
+      alert('Certificate AZ-026-DXB-HANDOVER-2024 generated and signed successfully. Archival dossier dispatched to Al Futtaim Prestige Holdings & Dubai Municipality.');
+    }
+  });
+</script></main></div></body></html>
