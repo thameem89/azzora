@@ -4,7 +4,7 @@ import type { Database, Task, Project, SnagStatus, Activity } from "./model";
 import { seed, generatePlan } from "./seed";
 import {
   uid,
-  validDependency,
+  dependencyError,
   handoverState,
   canTransition,
   taskProgress,
@@ -82,21 +82,8 @@ export function record(
 }
 export function saveTask(db: Database, task: Task) {
   taskSchema.parse(task);
-  if (
-    !validDependency(
-      {
-        ...db,
-        tasks: db.tasks.some((t) => t.id === task.id)
-          ? db.tasks
-          : [...db.tasks, task],
-      },
-      task.id,
-      task.dependencies,
-    )
-  )
-    throw Error(
-      "Dependencies must be in this project and cannot form a cycle.",
-    );
+  const dependencyMessage = dependencyError(db, task, task.dependencies);
+  if (dependencyMessage) throw Error(dependencyMessage);
   const old = db.tasks.find((t) => t.id === task.id);
   if (task.parentId) {
     const parent = db.tasks.find((t) => t.id === task.parentId);

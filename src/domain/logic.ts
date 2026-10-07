@@ -133,29 +133,50 @@ export function handoverState(db: Database, id: string) {
       items.filter((h) => h.required).every((h) => h.complete),
   };
 }
+export function dependencyError(
+  db: Database,
+  task: Task,
+  dependencies: string[],
+): string | undefined {
+  if (dependencies.includes(task.id))
+    return "An activity cannot depend on itself.";
+  if (new Set(dependencies).size !== dependencies.length)
+    return "This dependency already exists.";
+  const tasks = new Map(db.tasks.map((t) => [t.id, t]));
+  for (const id of dependencies) {
+    if (tasks.get(id)?.projectId !== task.projectId)
+      return "Choose an existing activity from the same project.";
+    const seen = new Set<string>();
+    const pending = [id];
+    while (pending.length) {
+      const node = pending.pop()!;
+      if (node === task.id)
+        return "This dependency cannot be added because it would create a circular dependency.";
+      if (seen.has(node)) continue;
+      seen.add(node);
+      pending.push(...(tasks.get(node)?.dependencies || []));
+    }
+  }
+}
 export function validDependency(
   db: Database,
   id: string,
   dependencies: string[],
 ) {
   const task = db.tasks.find((t) => t.id === id);
-  if (!task) return false;
-  const visits = (node: string, seen: Set<string>): boolean => {
-    if (node === id) return true;
-    if (seen.has(node)) return false;
-    seen.add(node);
-    return (
-      db.tasks
-        .find((t) => t.id === node)
-        ?.dependencies.some((d) => visits(d, seen)) || false
-    );
+  return !!task && !dependencyError(db, task, dependencies);
+}
+export function dependencyState(db: Database, task: Task) {
+  const byId = new Map(db.tasks.map((t) => [t.id, t]));
+  const predecessors = task.dependencies
+    .map((id) => byId.get(id))
+    .filter((t): t is Task => !!t && t.projectId === task.projectId);
+  return {
+    blockers: predecessors.filter(
+      (t) => t.status !== "Completed" && taskProgress(db, t) < 100,
+    ),
+    conflicts: predecessors.filter((t) => task.start < t.due),
   };
-  return dependencies.every(
-    (d) =>
-      d !== id &&
-      db.tasks.some((t) => t.id === d && t.projectId === task.projectId) &&
-      !visits(d, new Set()),
-  );
 }
 export function canTransition(from: SnagStatus, to: SnagStatus) {
   const steps = [

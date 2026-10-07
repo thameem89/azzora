@@ -16,13 +16,13 @@ import { trades } from "../domain/model";
 import { record, projectSchema } from "../domain/repository";
 import { Header, Badge, Progress, personName, Empty, Modal, Field } from "./ui";
 import { TaskList, Tasks } from "./Tasks";
-import { Planning } from "./Planning";
+import { ProjectTimeline } from "./ProjectTimeline";
 import { Team } from "./Team";
 import { SiteUpdates, Snags, Documents } from "./Operations";
 import { Handover } from "./Handover";
 const tabs = [
   ["overview", "Overview"],
-  ["timeline", "Timeline"],
+  ["timeline", "Dependencies / Timeline"],
   ["tasks", "Tasks"],
   ["team", "Team"],
   ["site-updates", "Site Updates"],
@@ -240,7 +240,7 @@ export function Workspace({
           </div>
         </>
       ) : tab === "timeline" ? (
-        <Planning projectId={id} onTask={onTask} />
+        <ProjectTimeline projectId={id} onTask={onTask} />
       ) : tab === "tasks" ? (
         <Tasks projectId={id} onTask={onTask} />
       ) : tab === "team" ? (

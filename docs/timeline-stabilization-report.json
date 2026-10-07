@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-08",
+  "timezone": "Asia/Dubai",
+  "baseline_commit": "242ed7bce617f8557cc74c2a1d716f9120c5a1df",
+  "scope": "Final stabilization of existing frontend Dependencies / Timeline; no redesign, backend migrations, storage reset, customer-data edits, merge or deployment.",
+  "passed_checks": {
+    "typecheck": {
+      "command": "npm run typecheck",
+      "result": "passed"
+    },
+    "lint": {
+      "command": "npm run lint",
+      "result": "passed"
+    },
+    "full_test_suite": {
+      "command": "npm test",
+      "result": "47 tests passed across 4 files"
+    },
+    "production_build": {
+      "command": "npm run build",
+      "result": "passed"
+    },
+    "crm_browser": {
+      "command": "AZZORA_TEST_URL=http://127.0.0.1:5176 npm run test:browser",
+      "result": "passed",
+      "route_viewport_checks": 66,
+      "journey_checks": [
+        "Project creation generated existing task, phase and assignment records",
+        "Project opens from project directory",
+        "Project timeline tab navigation",
+        "Timeline drawer edits and dependency arrow persist after refresh",
+        "Existing overview TaskDrawer opens and saves activity edits",
+        "All 38 activities completed through existing task-list TaskDrawer",
+        "Existing project records and quotations unchanged by complete CRM journey",
+        "Project handover/completion persists after refresh"
+      ],
+      "errors": [],
+      "trace": "docs/crm-regression-trace.zip"
+    },
+    "timeline_browser": {
+      "command": "AZZORA_TEST_URL=http://127.0.0.1:5176 node tests/timeline.mjs",
+      "result": "passed",
+      "checks": [
+        "Existing 37 activities rendered",
+        "Self dependency rejected",
+        "Duplicate rejected",
+        "Indirect cycle rejected",
+        "Direct cycle rejected",
+        "Add updates arrow and blocker immediately",
+        "Remove updates arrow immediately",
+        "Multiple predecessors and blockers shown",
+        "Activity opens existing TaskDrawer",
+        "Date edit recalculates conflict without rescheduling",
+        "Saved multiple predecessors and their arrows persist after reload",
+        "1440px: contained horizontal scroll, aligned arrows, bidirectional vertical sync",
+        "1440px: touch-friendly add/remove and self-link rejection",
+        "1024px: contained horizontal scroll, aligned arrows, bidirectional vertical sync",
+        "1024px: touch-friendly add/remove and self-link rejection",
+        "768px: contained horizontal scroll, aligned arrows, bidirectional vertical sync",
+        "768px: touch-friendly add/remove and self-link rejection",
+        "390px: contained horizontal scroll, aligned arrows, bidirectional vertical sync",
+        "390px: touch-friendly add/remove and self-link rejection",
+        "Arrow endpoints remain attached at compact, day and expanded scales",
+        "Assignee filtering removes connectors whose endpoints are no longer visible",
+        "Restoring predecessor finish removes its date conflict immediately",
+        "All bar widths match inclusive date durations",
+        "Completing one predecessor from existing task view removes only its blocker",
+        "Completing remaining predecessor from timeline clears all blockers immediately",
+        "Date conflict remains visible after predecessor completion when dates still overlap",
+        "Predecessor completion does not move successor dates",
+        "Completed predecessor states and unblocked activity persist after refresh",
+        "All project records, other project activities and quotations preserved"
+      ],
+      "errors": []
+    },
+    "timeline_free_baseline": {
+      "commit": "242ed7b",
+      "checkout": "/tmp/azzora-pre-timeline-242ed7b",
+      "command": "npm test -- --root /tmp/azzora-pre-timeline-242ed7b",
+      "result": "42 tests passed, including all quotation tests, without timeline changes"
+    },
+    "whitespace": "git diff --check passed"
+  },
+  "failed_current_required_checks": [],
+  "quotation_investigation": {
+    "payment_test": {
+      "failure": "Expected 9465155 fils for the 45% milestone; received 9465156 fils.",
+      "cause": "The initial referenceQuotation seed supplied an override only for its 50% milestone. 210336.79 \u00d7 45% = 94651.5555, so the correct default half-up calculation produced 94651.56; the source document explicitly prints 94651.55.",
+      "resolution": "Separate quotation commit 242ed7b adds q.payments[1].amountOverride = \"94651.55\". Financial calculation logic remains unchanged."
+    },
+    "pagination_test": {
+      "failure": "Expected seven reference pages; initial quotation renderer produced eleven.",
+      "cause": "The initial renderer used Helvetica wrapping measurements, a 697pt body boundary, extra row/header spacing, and source pageBreakBefore flags. Natural overflow created continuation pages before subsequent forced source breaks. Debug output showed separate pages ending before the Block partition continuation and before the Tiling / Interior Painting source breaks.",
+      "resolution": "The quotation implementation reduced table-header advance from 17 to 14pt, row text padding from 3 to 0.2pt, section-heading height, changed body boundary to 710pt, applied 0.95 to source minHeight, moved the painting break to the section opening, and later registered Cera fonts. The completed quotation baseline renders seven pages."
+    },
+    "causal_control": {
+      "checkout": "/tmp/azzora-quotation-original-draft",
+      "source": "Original quotation seed/document/test text recovered read-only from the Build quotation management module implementation history; original painting-break placement reconstructed from its recorded change. Temporary files only; no shell commands from chat history were executed.",
+      "command": "npx vitest run --root /tmp/azzora-quotation-original-draft src/quotation/quotation.test.ts -t 'calculates milestones|renders seven reference pages'",
+      "result": "Both original failures reproduced identically with timeline code absent: 9465156 versus 9465155, and 11 versus 7 pages.",
+      "classification": "Independent unfinished quotation-draft defects, corrected by the separate quotation commit; not timeline regressions.",
+      "chronology_limit": "Quotation code was under concurrent development and uncommitted during the initial timeline work. Available per-command history lacks timestamps proving whether these failures first existed before the first timeline edit; the original CRM baseline had no quotation module."
+    },
+    "quotation_code_changes_in_this_pass": []
+  },
+  "browser_timeout_investigation": {
+    "original_failure": "Timed out waiting for Mark Complete after a task-row click in the broader CRM journey.",
+    "current_reproduction": "The original journey reran successfully in a fresh browser context against a dedicated local server; no TaskDrawer application fix was required.",
+    "stabilization": "Exact route headings, task count and selected drawer identity are awaited/asserted; persisted overview edits and dependency arrows are checked; complete journey tracing and failure screenshots/HTML are captured; try/finally closes the isolated browser context.",
+    "resolved_test_harness_issue": "An added project-tab check initially used role=button, but the existing tab is an anchor with role=link. Corrected only the test selector and reran successfully.",
+    "historical_limit": "The earlier timeout had no saved trace. Its exact historical cause remains unconfirmed; do not claim it was a fixed application defect."
+  },
+  "changes_in_this_pass": [
+    "tests/browser.mjs",
+    "tests/timeline.mjs",
+    "docs/crm-regression-trace.zip",
+    "docs/timeline-validation.json",
+    "docs/timeline*.png",
+    "docs/timeline-stabilization-report.json"
+  ],
+  "data_safety": {
+    "isolated_browser_contexts": true,
+    "customer_browser_profile_accessed": false,
+    "storage_reset": false,
+    "existing_project_records_preserved": true,
+    "assertions": "CRM journey asserts unchanged pre-existing projects, tasks, phases, assignments, documents, handover records and quotations. Timeline journey asserts all project records, other project activities and quotations unchanged.",
+    "backend_migrations": false,
+    "product_code_changed_in_stabilization": false,
+    "git_commit_created_in_stabilization": false,
+    "merged": false,
+    "deployed": false
+  },
+  "unresolved_issues": [
+    {
+      "type": "historical attribution only",
+      "description": "Exact cause of the original untraced browser timeout cannot be proven retrospectively. Current required journey fully passes."
+    },
+    {
+      "type": "historical chronology only",
+      "description": "Exact first-occurrence ordering of unfinished quotation defects versus first timeline edit is not recoverable; timeline-independent reproduction establishes causality."
+    }
+  ],
+  "untested_required_journeys": [],
+  "evidence": [
+    "docs/browser-validation.json",
+    "docs/crm-regression-trace.zip",
+    "docs/timeline-validation.json",
+    "docs/timeline-chain.png",
+    "docs/timeline-1440.png",
+    "docs/timeline-390.png",
+    "docs/timeline-add.png",
+    "docs/timeline-remove.png"
+  ],
+  "push_preparation": {
+    "branch": "codex/project-timeline",
+    "base_commit": "b7e6b6a",
+    "base": "origin/main",
+    "typecheck": "passed",
+    "lint": "passed",
+    "unit_tests": "41 passed across 3 files",
+    "build": "passed",
+    "runtime_source_matches_verified_workspace": true,
+    "test_count_explanation": "The main-based checkout excludes the six tests belonging to separate backend preparation work. All 41 frontend tests pass.",
+    "browser_evidence": "The runtime source and generated production asset hashes match the CRM/timeline browser-verified workspace.",
+    "excluded_artifacts": [
+      "docs/crm-regression-trace.zip (retained locally)",
+      "docs/quotation-release-validation.json (unrelated quotation release work)"
+    ]
+  }
+}

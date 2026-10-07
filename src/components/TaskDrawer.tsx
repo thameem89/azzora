@@ -6,6 +6,7 @@ import { saveTask } from "../domain/repository";
 import { uid } from "../domain/logic";
 import { Modal, Field, Empty, personName } from "./ui";
 import { Attachments } from "./uploads";
+import { DependencyEditor } from "./DependencyEditor";
 export function TaskDrawer({
   task,
   onClose,
@@ -212,30 +213,10 @@ export function TaskDrawer({
             ))}
           </select>
         </Field>
-        <Field label="Finish-to-start predecessors">
-          <select
-            multiple
-            value={draft.dependencies}
-            onChange={(e) =>
-              set(
-                "dependencies",
-                Array.from(e.target.selectedOptions, (o) => o.value),
-              )
-            }
-          >
-            {db.tasks
-              .filter((t) => t.projectId === task.projectId && t.id !== task.id)
-              .map((t) => (
-                <option key={t.id} value={t.id}>
-                  {t.name}
-                </option>
-              ))}
-          </select>
-        </Field>
-        <p className="muted">
-          Select multiple with Ctrl / Cmd. Dependencies flag risk; dates change
-          only when you edit them.
-        </p>
+        <DependencyEditor
+          task={draft}
+          onChange={(ids) => set("dependencies", ids)}
+        />
         <Field label="Notes">
           <textarea
             value={draft.notes}
