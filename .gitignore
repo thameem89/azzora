@@ -46,3 +46,7 @@ blob-report/
 /temp/
 .vscode/
 .idea/
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/
