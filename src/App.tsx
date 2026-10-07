@@ -1,3 +1,4 @@
+import { Quotations } from "./quotation/LazyQuotations";
 import { useEffect, useState } from "react";
 import {
   LayoutDashboard,
@@ -41,6 +42,7 @@ const navigation = [
   ["site-updates", "Site Updates", HardHat],
   ["snags-qa", "Snags & QA", ClipboardCheck],
   ["documents", "Documents", Files],
+  ["quotations", "Quotations", Files],
   ["handover", "Handover", KeyRound],
   ["reports", "Reports", ChartNoAxesCombined],
   ["settings", "Settings", Settings],
@@ -140,6 +142,8 @@ export default function App() {
   else if (page === "site-updates") content = <SiteUpdates />;
   else if (page === "snags-qa") content = <Snags />;
   else if (page === "documents") content = <Documents />;
+  else if (page === "quotations")
+    content = <Quotations key={id || "list"} id={id} mode={tab} />;
   else if (page === "handover") content = <Handover />;
   else if (page === "reports")
     content = (
@@ -240,6 +244,33 @@ export default function App() {
             Current demo user: Sarah Mansoor · Project Manager. Role labels are
             demo behavior only.
           </p>
+        </section>
+        <section className="panel">
+          <h2>Quotation numbering</h2>
+          <Field label="Quotation number prefix">
+            <input
+              value={db.quotationNumbering.prefix}
+              onChange={(e) =>
+                mutate((d) => {
+                  d.quotationNumbering.prefix = e.target.value;
+                }, "")
+              }
+            />
+          </Field>
+          <Field label="Next quotation sequence">
+            <input
+              type="number"
+              min="1"
+              value={db.quotationNumbering.next}
+              onChange={(e) => {
+                const next = Number(e.target.value);
+                if (Number.isSafeInteger(next) && next > 0)
+                  mutate((d) => {
+                    d.quotationNumbering.next = next;
+                  }, "");
+              }}
+            />
+          </Field>
         </section>
         <section className="panel">
           <h2>Phase Weights</h2>

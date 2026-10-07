@@ -1,0 +1,167 @@
+{
+  "branch": "codex/quotation-module",
+  "base_commit": "db4ea53",
+  "reference_quotation": "QTN-AF-26049",
+  "seed_status": "Draft",
+  "sections": 13,
+  "rows": 110,
+  "terms": 11,
+  "routes": [
+    "#/quotations",
+    "#/quotations/:id/edit",
+    "#/quotations/:id/preview",
+    "#/projects/:id/quotations"
+  ],
+  "model": [
+    "Quotation",
+    "QuotationCustomerSnapshot",
+    "QuotationProjectSnapshot",
+    "QuotationSection",
+    "QuotationLineItem",
+    "QuotationPaymentTerm",
+    "QuotationTermCondition",
+    "QuotationRevision",
+    "QuotationCompanyDetails"
+  ],
+  "calculations": "BigInt rational decimal arithmetic, half-up rounding to fils; section, summary, VAT and payment amounts derive from persisted BOQ data.",
+  "renderer": "Shared deterministic vector layout commands feed SVG A4 preview/print and jsPDF downloadable PDF. Source stationery and embedded Cera font subsets are extracted assets; PDF content comes from typed quotation data.",
+  "source_page_size_points": [
+    612,
+    792
+  ],
+  "generated_page_size_points": [
+    595.28,
+    841.89
+  ],
+  "reference_pages": 7,
+  "generated_pages": 7,
+  "reference_totals": {
+    "subtotal": "200320.75",
+    "vat": "10016.04",
+    "grand": "210336.79"
+  },
+  "generated_totals": {
+    "subtotal": "200320.75",
+    "vat": "10016.04",
+    "grand": "210336.79"
+  },
+  "source_discrepancies_preserved": [
+    "3.1.2: 6.1 \u00d7 90 is printed as 551.25; explicit row override.",
+    "6.1.2: 7.6 \u00d7 85 is printed as 641.75; explicit row override.",
+    "50% and 45% payment amounts are truncated in the source; explicit milestone overrides.",
+    "Source payment amounts sum to 210336.78, one fils below grand total.",
+    "Source amount in words says Seventy Eight Fills; manual historical wording override.",
+    "Wall / Ceiling share one lump sum; Included row and source price span retained."
+  ],
+  "visual_comparison": [
+    {
+      "page": 1,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 9.73
+    },
+    {
+      "page": 2,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 17.17
+    },
+    {
+      "page": 3,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 12.88
+    },
+    {
+      "page": 4,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 14.81
+    },
+    {
+      "page": 5,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 18.68
+    },
+    {
+      "page": 6,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 10.67
+    },
+    {
+      "page": 7,
+      "reviewed": true,
+      "normalized_mean_pixel_difference_0_255": 7.14
+    }
+  ],
+  "remaining_visual_differences": [
+    "A4 output adapts the US Letter source proportions, as expressly requested.",
+    "Section 5 heading moves from the bottom of page 2 to page 3 to avoid an orphan.",
+    "Interior Painting heading/main item move from page 4 to page 5 to stay with their priced rows.",
+    "BOQ row spacing is slightly tighter to retain seven pages while keeping headings with content.",
+    "Browser/printer rasterization may differ slightly; unsupported source font subset characters in new content use Helvetica/Arial fallbacks."
+  ],
+  "unit_tests": {
+    "quotation_only_checkout": 42,
+    "shared_worktree": 47,
+    "quotation_tests": 23,
+    "status": "passed"
+  },
+  "browser_tests": {
+    "checks": [
+      {
+        "width": 1440,
+        "journey": "create \u2192 relationships \u2192 nested BOQ/edit/reorder/duplicate/delete \u2192 VAT \u2192 milestones \u2192 terms \u2192 autosave/reload \u2192 preview \u2192 PDF \u2192 print \u2192 finalize/lock \u2192 sent \u2192 revision \u2192 duplicate \u2192 controlled return \u2192 project history"
+      },
+      {
+        "width": 768,
+        "journey": "create \u2192 relationships \u2192 nested BOQ/edit/reorder/duplicate/delete \u2192 VAT \u2192 milestones \u2192 terms \u2192 autosave/reload \u2192 preview \u2192 PDF \u2192 print \u2192 finalize/lock \u2192 sent \u2192 revision \u2192 duplicate \u2192 controlled return \u2192 project history"
+      },
+      {
+        "width": 390,
+        "journey": "create \u2192 relationships \u2192 nested BOQ/edit/reorder/duplicate/delete \u2192 VAT \u2192 milestones \u2192 terms \u2192 autosave/reload \u2192 preview \u2192 PDF \u2192 print \u2192 finalize/lock \u2192 sent \u2192 revision \u2192 duplicate \u2192 controlled return \u2192 project history"
+      }
+    ],
+    "failures": []
+  },
+  "typecheck": "passed",
+  "lint": "passed",
+  "build": "passed",
+  "existing_browser_suite": "passed: 66 route/viewport checks and project-to-handover journey",
+  "mobile_verification": "390px cards, 768px tablet and 1440px desktop workflows; no horizontal document overflow.",
+  "persistence": "azzora-demo-v1 additive migration, immediate atomic draft autosave; finalized revisions locked, controlled reopening retains issued snapshots.",
+  "deployment": "Not deployed or merged to main.",
+  "exact_staged_checkout_validation": {
+    "typecheck": "passed",
+    "lint": "passed",
+    "unit": "42 passed",
+    "build": "passed",
+    "quotation_browser": "passed at 1440px / 768px / 390px",
+    "original_crm_browser": "passed: 66 checks + delivery journey",
+    "location": "/private/tmp/azzora-quotation-verify"
+  },
+  "files_changed": [
+    "package-lock.json",
+    "package.json",
+    "public/assets/quotation/cera-bold.ttf",
+    "public/assets/quotation/cera-italic.ttf",
+    "public/assets/quotation/logo.png",
+    "public/assets/quotation/watermark.png",
+    "src/App.tsx",
+    "src/components/Workspace.tsx",
+    "src/domain/model.ts",
+    "src/domain/repository.ts",
+    "src/domain/seed.ts",
+    "src/quotation/LazyQuotations.tsx",
+    "src/quotation/Quotations.tsx",
+    "src/quotation/calculations.ts",
+    "src/quotation/document.ts",
+    "src/quotation/fonts.json",
+    "src/quotation/model.ts",
+    "src/quotation/quotation.test.ts",
+    "src/quotation/reference.json",
+    "src/quotation/repository.ts",
+    "src/quotation/seed.ts",
+    "src/styles.css",
+    "tests/quotation-browser.mjs",
+    "docs/quotation-validation.json",
+    "output/pdf/QTN-AF-26049.pdf"
+  ],
+  "generated_pdf_bytes": 89241
+}

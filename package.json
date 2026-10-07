@@ -10,9 +10,11 @@
     "lint": "eslint src",
     "test": "vitest run",
     "test:browser": "node tests/browser.mjs",
-    "format": "prettier --write src tests *.json *.ts *.js index.html"
+    "format": "prettier --write src tests *.json *.ts *.js index.html",
+    "test:quotations:browser": "node tests/quotation-browser.mjs"
   },
   "dependencies": {
+    "jspdf": "^4.2.1",
     "lucide-react": "^0.468.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
