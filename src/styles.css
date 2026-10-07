@@ -1462,3 +1462,150 @@ dialog::backdrop {
     transition: none !important;
   }
 }
+
+/* Quotation editing stays within the existing CRM tokens; stationery is isolated. */
+.quotation-module {
+  min-width: 0;
+}
+.quote-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.quote-list-details {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin: 12px 0 22px;
+}
+.quote-list-details dt {
+  font-size: 11px;
+  color: var(--muted);
+}
+.quote-list-details dd {
+  margin: 2px 0;
+  overflow-wrap: anywhere;
+}
+.quote-editor {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+  display: grid;
+  gap: 18px;
+}
+.quote-editor:disabled {
+  opacity: 0.85;
+}
+.quote-section {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  background: #fcfaf8;
+}
+.quote-line {
+  border: 1px solid var(--line);
+  padding: 12px;
+  background: white;
+  border-radius: 7px;
+  margin: 12px 0;
+  min-width: 0;
+}
+.quote-line-fields {
+  display: grid;
+  grid-template-columns:
+    70px minmax(170px, 3fr) repeat(3, minmax(65px, 1fr))
+    minmax(110px, 1.5fr);
+  gap: 10px;
+}
+.quote-line-fields input,
+.quote-line-fields select,
+.quote-line-fields textarea {
+  width: 100%;
+  min-width: 0;
+}
+.quote-line .between {
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.quote-line .actions {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.quote-line .actions button {
+  padding: 5px 9px;
+  font-size: 12px;
+}
+.heading-line {
+  background: #f1eeeb;
+}
+.quote-totals {
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+  margin: 12px 0;
+}
+.quotation-module summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.quotation-module .form-grid > * {
+  min-width: 0;
+}
+.quotation-module .form-grid input,
+.quotation-module .form-grid textarea {
+  max-width: 100%;
+}
+.quotation-preview {
+  display: grid;
+  gap: 22px;
+  padding: 16px;
+  background: #e3dfda;
+}
+.quote-sheet {
+  aspect-ratio: 210/297;
+  width: 100%;
+  max-width: 794px;
+  background: white;
+  margin: auto;
+  box-shadow: 0 2px 14px #0002;
+}
+.quote-sheet svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .quote-line-fields {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .quote-line-fields .field:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 600px) {
+  .quote-list-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .quote-line-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .quote-line-fields .field:nth-child(2) {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+  .quote-section {
+    padding: 10px;
+  }
+  .quotation-preview {
+    padding: 4px;
+  }
+  .quotation-module .page-header {
+    gap: 16px;
+  }
+  .quotation-module .actions {
+    flex-wrap: wrap;
+  }
+}

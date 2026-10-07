@@ -1,3 +1,4 @@
+import { Quotations } from "../quotation/LazyQuotations";
 import { useState } from "react";
 import { useStore } from "../store";
 import type { Task, Project } from "../domain/model";
@@ -26,6 +27,7 @@ const tabs = [
   ["team", "Team"],
   ["site-updates", "Site Updates"],
   ["documents", "Documents"],
+  ["quotations", "Quotations"],
   ["snags-qa", "Snags & QA"],
   ["handover", "Handover"],
 ];
@@ -245,6 +247,8 @@ export function Workspace({
         <Team projectId={id} onTask={onTask} />
       ) : tab === "site-updates" ? (
         <SiteUpdates projectId={id} />
+      ) : tab === "quotations" ? (
+        <Quotations projectId={id} />
       ) : tab === "documents" ? (
         <Documents projectId={id} />
       ) : tab === "snags-qa" ? (

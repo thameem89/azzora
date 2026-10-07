@@ -1,3 +1,4 @@
+import { initializeQuotations } from "../quotation/repository";
 import { z } from "zod";
 import type { Database, Task, Project, SnagStatus, Activity } from "./model";
 import { seed, generatePlan } from "./seed";
@@ -26,6 +27,7 @@ export const localRepository: Repository = {
       throw Error(
         "Saved demo data is incompatible. Export it or reset from Settings.",
       );
+    initializeQuotations(value);
     return value;
   },
   save(db) {

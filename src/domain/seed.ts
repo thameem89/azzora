@@ -1,3 +1,4 @@
+import { initializeQuotations } from "../quotation/repository";
 import type { Database, Project, Task, HandoverItem } from "./model";
 import { roles } from "./model";
 import { addDays, today, uid } from "./logic";
@@ -190,6 +191,8 @@ export function generatePlan(db: Database, p: Project, standard = true) {
 export function seed(): Database {
   const db: Database = {
     version: 1,
+    quotations: [],
+    quotationNumbering: { prefix: "QTN-AF-", next: 26050 },
     people: [],
     clients: [],
     projects: [],
@@ -402,6 +405,7 @@ export function seed(): Database {
       },
     );
   });
+  initializeQuotations(db, true);
   return db;
 }
 export function blankTask(

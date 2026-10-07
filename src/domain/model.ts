@@ -1,3 +1,4 @@
+import type { Quotation } from "../quotation/model";
 export type TaskStatus =
   "Not Started" | "In Progress" | "Waiting" | "Blocked" | "Completed";
 export type Priority = "Low" | "Normal" | "High" | "Critical";
@@ -163,6 +164,8 @@ export interface Activity {
 }
 export interface Database {
   version: 1;
+  quotations: Quotation[];
+  quotationNumbering: { prefix: string; next: number };
   people: Person[];
   clients: Client[];
   projects: Project[];
