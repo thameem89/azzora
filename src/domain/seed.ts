@@ -405,6 +405,59 @@ export function seed(): Database {
       },
     );
   });
+  // Fit-out dependency example only for fresh demo data; saved projects are untouched.
+  const demo = db.tasks.filter((t) => t.projectId === "project-0");
+  const demoNames = [
+    "Detailed Drawings",
+    "MEP First Fix",
+    "Internal Inspection",
+    "Ceiling Closure",
+    "Painting",
+    "Material Delivery",
+    "Joinery",
+  ];
+  const displayNames = [
+    "Drawing Approval",
+    "MEP First-Fix",
+    "Inspection",
+    "Ceiling Closure",
+    "Painting",
+    "Material Delivery",
+    "Installation",
+  ];
+  const demoTasks = demoNames.map((name) => demo.find((t) => t.name === name)!);
+  const offsets = [
+    [0, 3],
+    [4, 10],
+    [9, 11],
+    [12, 16],
+    [17, 21],
+    [2, 8],
+    [11, 15],
+  ];
+  demoTasks.forEach((t, i) => {
+    t.name = displayNames[i];
+    t.start = addDays(today(), offsets[i][0]);
+    t.due = addDays(today(), offsets[i][1]);
+    t.progress = i === 0 ? 100 : i === 1 ? 45 : i === 5 ? 70 : 0;
+    t.status =
+      t.progress === 100
+        ? "Completed"
+        : t.progress
+          ? "In Progress"
+          : "Not Started";
+    t.dependencies =
+      i > 0 && i < 5
+        ? [demoTasks[i - 1].id]
+        : i === 6
+          ? [demoTasks[1].id, demoTasks[5].id]
+          : [];
+    db.milestones
+      .filter((m) => m.taskId === t.id)
+      .forEach((m) => {
+        m.due = t.due;
+      });
+  });
   initializeQuotations(db, true);
   return db;
 }
