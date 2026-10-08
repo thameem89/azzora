@@ -11,7 +11,7 @@ const failures = [],
 fs.mkdirSync("output/pdf", { recursive: true });
 fs.mkdirSync("tmp/quotation-qa", { recursive: true });
 try {
-  for (const width of [1440, 768, 390]) {
+  for (const width of [1440, 1024, 768, 390]) {
     const context = await browser.newContext({
       viewport: { width, height: 900 },
     });
@@ -129,6 +129,7 @@ try {
       .nth(5)
       .getByRole("button", { name: "Delete row", exact: true })
       .click();
+    await section.locator(".boq-more summary").click();
     await section
       .getByRole("button", { name: "Duplicate section", exact: true })
       .click();
@@ -145,10 +146,20 @@ try {
     await page
       .getByTestId("quote-section")
       .nth(1)
+      .locator(".boq-more summary")
+      .click();
+    await page
+      .getByTestId("quote-section")
+      .nth(1)
       .getByRole("button", { name: "Delete section", exact: true })
       .click();
     await section
       .getByRole("button", { name: "Add subsection", exact: true })
+      .click();
+    await page
+      .getByTestId("quote-section")
+      .nth(1)
+      .locator(".boq-more summary")
       .click();
     await page
       .getByTestId("quote-section")
@@ -280,11 +291,9 @@ try {
       .click();
     await expect(page.getByLabel("Customer", exact())).toBeEnabled();
     await page.goto(url + "/#/quotations");
-    const duplicateCard = page
-      .locator(".quote-card")
-      .filter({
-        has: page.locator(`a[href="#/quotations/${duplicateId}/edit"]`),
-      });
+    const duplicateCard = page.locator(".quote-card").filter({
+      has: page.locator(`a[href="#/quotations/${duplicateId}/edit"]`),
+    });
     await duplicateCard
       .getByRole("button", { name: "Delete Draft", exact: true })
       .click();
