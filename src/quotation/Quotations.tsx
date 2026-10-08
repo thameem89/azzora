@@ -743,10 +743,11 @@ export function Quotations({
                 ))}
               </div>
             </details>
-            <section className="panel">
+            <section className="panel boq-builder">
               <div className="between">
                 <h2>Scope / BOQ Builder</h2>
                 <button
+                  className="primary"
                   onClick={() =>
                     update((n) => {
                       n.sections.push({
@@ -768,93 +769,137 @@ export function Quotations({
               {q.sections.map((s, si) => (
                 <section
                   key={s.id}
-                  className="quote-section"
+                  className={
+                    "quote-section" + (s.parentId ? " boq-subsection" : "")
+                  }
                   data-testid="quote-section"
                 >
-                  <div className="form-grid">
-                    <Field label="Section No.">
-                      <input
-                        value={s.number}
-                        onChange={(e) =>
-                          update((n) => {
-                            n.sections[si].number = e.target.value;
-                          })
-                        }
-                      />
-                    </Field>
-                    <Field label="Section description">
-                      <input
-                        value={s.title}
-                        onChange={(e) =>
-                          update((n) => {
-                            n.sections[si].title = e.target.value;
-                          })
-                        }
-                      />
-                    </Field>
-                    <Field label="Parent section">
-                      <select
-                        value={s.parentId || ""}
-                        onChange={(e) =>
-                          update((n) => {
-                            n.sections[si].parentId =
-                              e.target.value || undefined;
-                          })
-                        }
-                      >
-                        <option value="">Top level</option>
-                        {q.sections.slice(0, si).map((parent) => (
-                          <option key={parent.id} value={parent.id}>
-                            {parent.number} {parent.title}
-                          </option>
-                        ))}
-                      </select>
-                    </Field>
+                  <div className="boq-section-heading">
+                    <span>
+                      {s.parentId ? "Subsection" : "Section"} {s.number}
+                    </span>
+                    <strong className="boq-subtotal">
+                      Section subtotal:{" "}
+                      {safe(
+                        () => formatMoney(sectionAmount(s), true),
+                        "Check line values",
+                      )}
+                    </strong>
                   </div>
-                  <div className="actions">
-                    <Order
-                      label={"section " + s.number}
-                      index={si}
-                      length={q.sections.length}
-                      move={(d) =>
-                        update((n) => {
-                          n.sections = reorder(n.sections, si, d);
-                        })
-                      }
-                    />
-                    <button
-                      onClick={() =>
-                        update((n) => {
-                          const copy = structuredClone(s);
-                          copy.id = uid();
-                          const ids = new Map(
-                            copy.rows.map((r) => [r.id, uid()]),
-                          );
-                          copy.rows = copy.rows.map((r) => ({
-                            ...r,
-                            id: ids.get(r.id)!,
-                            parentId: r.parentId
-                              ? ids.get(r.parentId)
-                              : undefined,
-                          }));
-                          n.sections.splice(si + 1, 0, copy);
-                        })
-                      }
-                    >
-                      Duplicate section
-                    </button>
-                    <button
-                      onClick={() =>
-                        update((n) => {
-                          n.sections.splice(si, 1);
-                          n.sections.forEach((x) => {
-                            if (x.parentId === s.id) delete x.parentId;
-                          });
-                        })
-                      }
-                    >
-                      Delete section
-                    </button>
+                  <div className="boq-section-header">
+                    <div className="boq-section-fields">
+                      <Field label="Section No.">
+                        <input
+                          value={s.number}
+                          onChange={(e) =>
+                            update((n) => {
+                              n.sections[si].number = e.target.value;
+                            })
+                          }
+                        />
+                      </Field>
+                      <Field label="Section description">
+                        <input
+                          value={s.title}
+                          onChange={(e) =>
+                            update((n) => {
+                              n.sections[si].title = e.target.value;
+                            })
+                          }
+                        />
+                      </Field>
+                      <Field label="Parent section">
+                        <select
+                          value={s.parentId || ""}
+                          onChange={(e) =>
+                            update((n) => {
+                              n.sections[si].parentId =
+                                e.target.value || undefined;
+                            })
+                          }
+                        >
+                          <option value="">Top level</option>
+                          {q.sections.slice(0, si).map((parent) => (
+                            <option key={parent.id} value={parent.id}>
+                              {parent.number} {parent.title}
+                            </option>
+                          ))}
+                        </select>
+                      </Field>
+                    </div>
+                    <div className="boq-section-controls">
+                      <Order
+                        label={"section " + s.number}
+                        index={si}
+                        length={q.sections.length}
+                        move={(d) =>
+                          update((n) => {
+                            n.sections = reorder(n.sections, si, d);
+                          })
+                        }
+                      />
+                      <details
+                        className="boq-more"
+                        onKeyDown={(e) => {
+                          if (e.key === "Escape") {
+                            e.currentTarget.open = false;
+                            e.currentTarget.querySelector("summary")?.focus();
+                          }
+                        }}
+                      >
+                        <summary
+                          aria-label={"More actions for section " + s.number}
+                        >
+                          •••
+                        </summary>
+                        <div
+                          className="boq-more-options"
+                          onClick={(e) => {
+                            if ((e.target as HTMLElement).closest("button")) {
+                              const details =
+                                e.currentTarget.closest("details");
+                              if (details) details.open = false;
+                            }
+                          }}
+                        >
+                          <button
+                            onClick={() =>
+                              update((n) => {
+                                const copy = structuredClone(s);
+                                copy.id = uid();
+                                const ids = new Map(
+                                  copy.rows.map((r) => [r.id, uid()]),
+                                );
+                                copy.rows = copy.rows.map((r) => ({
+                                  ...r,
+                                  id: ids.get(r.id)!,
+                                  parentId: r.parentId
+                                    ? ids.get(r.parentId)
+                                    : undefined,
+                                }));
+                                n.sections.splice(si + 1, 0, copy);
+                              })
+                            }
+                          >
+                            Duplicate section
+                          </button>
+                          <button
+                            onClick={() =>
+                              update((n) => {
+                                n.sections.splice(si, 1);
+                                n.sections.forEach((x) => {
+                                  if (x.parentId === s.id) delete x.parentId;
+                                });
+                              })
+                            }
+                          >
+                            Delete section
+                          </button>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                  <div className="boq-section-toolbar">
                     <button
                       onClick={() =>
                         update((n) => {
@@ -868,9 +913,10 @@ export function Quotations({
                         })
                       }
                     >
-                      Add subsection
+                      <span aria-hidden="true">+ </span>Add subsection
                     </button>
                     <button
+                      className="primary boq-add-main"
                       onClick={() =>
                         update((n) => {
                           n.sections[si].rows.push({
@@ -886,7 +932,7 @@ export function Quotations({
                         })
                       }
                     >
-                      Add main item
+                      <span aria-hidden="true">+ </span>Add main item
                     </button>
                     <button
                       onClick={() =>
@@ -901,7 +947,7 @@ export function Quotations({
                         })
                       }
                     >
-                      Add line
+                      <span aria-hidden="true">+ </span>Add line
                     </button>
                   </div>
                   {s.rows.map((r, ri) => {
@@ -1129,13 +1175,6 @@ export function Quotations({
                       </article>
                     );
                   })}
-                  <strong>
-                    Section subtotal:{" "}
-                    {safe(
-                      () => formatMoney(sectionAmount(s), true),
-                      "Check line values",
-                    )}
-                  </strong>
                 </section>
               ))}
               <datalist id="quotation-units">
